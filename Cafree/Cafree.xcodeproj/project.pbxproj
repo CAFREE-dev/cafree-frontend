@@ -17,6 +17,8 @@
 		1373C2CD29252BFC00FA2130 /* CafreeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1373C2CC29252BFC00FA2130 /* CafreeTests.swift */; };
 		1373C2D729252BFC00FA2130 /* CafreeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1373C2D629252BFC00FA2130 /* CafreeUITests.swift */; };
 		1373C2D929252BFC00FA2130 /* CafreeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1373C2D829252BFC00FA2130 /* CafreeUITestsLaunchTests.swift */; };
+		13C27341292A0584000887B8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C27340292A0584000887B8 /* HomeViewController.swift */; };
+		13C27343292A058E000887B8 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C27342292A058E000887B8 /* FeedViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		1373C2D229252BFC00FA2130 /* CafreeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CafreeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1373C2D629252BFC00FA2130 /* CafreeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafreeUITests.swift; sourceTree = "<group>"; };
 		1373C2D829252BFC00FA2130 /* CafreeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafreeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		13C27340292A0584000887B8 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		13C27342292A058E000887B8 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +109,8 @@
 				1373C2B429252BFA00FA2130 /* SceneDelegate.swift */,
 				1373C2B629252BFA00FA2130 /* ViewController.swift */,
 				1373C2B829252BFA00FA2130 /* Main.storyboard */,
+				13C27340292A0584000887B8 /* HomeViewController.swift */,
+				13C27342292A058E000887B8 /* FeedViewController.swift */,
 				1373C2BE29252BFC00FA2130 /* Assets.xcassets */,
 				1373C2C029252BFC00FA2130 /* LaunchScreen.storyboard */,
 				1373C2C329252BFC00FA2130 /* Info.plist */,
@@ -261,9 +267,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13C27341292A0584000887B8 /* HomeViewController.swift in Sources */,
 				1373C2B729252BFA00FA2130 /* ViewController.swift in Sources */,
 				1373C2BD29252BFA00FA2130 /* Cafree.xcdatamodeld in Sources */,
 				1373C2B329252BFA00FA2130 /* AppDelegate.swift in Sources */,
+				13C27343292A058E000887B8 /* FeedViewController.swift in Sources */,
 				1373C2B529252BFA00FA2130 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
