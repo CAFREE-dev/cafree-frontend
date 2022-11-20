@@ -82,6 +82,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		13652856292A3789008670AF /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				13652857292A3795008670AF /* Cell */,
+				13C27342292A058E000887B8 /* FeedViewController.swift */,
+			);
+			path = Feed;
+			sourceTree = "<group>";
+		};
+		13652857292A3795008670AF /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
 		1373C2A629252BFA00FA2130 = {
 			isa = PBXGroup;
 			children = (
@@ -110,7 +126,7 @@
 				1373C2B629252BFA00FA2130 /* ViewController.swift */,
 				1373C2B829252BFA00FA2130 /* Main.storyboard */,
 				13C27340292A0584000887B8 /* HomeViewController.swift */,
-				13C27342292A058E000887B8 /* FeedViewController.swift */,
+				13652856292A3789008670AF /* Feed */,
 				1373C2BE29252BFC00FA2130 /* Assets.xcassets */,
 				1373C2C029252BFC00FA2130 /* LaunchScreen.storyboard */,
 				1373C2C329252BFC00FA2130 /* Info.plist */,
