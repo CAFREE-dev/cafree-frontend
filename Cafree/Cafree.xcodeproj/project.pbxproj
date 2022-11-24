@@ -17,6 +17,8 @@
 		1373C2CD29252BFC00FA2130 /* CafreeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1373C2CC29252BFC00FA2130 /* CafreeTests.swift */; };
 		1373C2D729252BFC00FA2130 /* CafreeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1373C2D629252BFC00FA2130 /* CafreeUITests.swift */; };
 		1373C2D929252BFC00FA2130 /* CafreeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1373C2D829252BFC00FA2130 /* CafreeUITestsLaunchTests.swift */; };
+		13DB1824292EFA5A00B9CA90 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13DB1823292EFA5A00B9CA90 /* HomeViewController.swift */; };
+		13DB1826292EFA6500B9CA90 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13DB1825292EFA6500B9CA90 /* FeedViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		1373C2D229252BFC00FA2130 /* CafreeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CafreeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1373C2D629252BFC00FA2130 /* CafreeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafreeUITests.swift; sourceTree = "<group>"; };
 		1373C2D829252BFC00FA2130 /* CafreeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafreeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		13DB1823292EFA5A00B9CA90 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		13DB1825292EFA6500B9CA90 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +105,8 @@
 		1373C2B129252BFA00FA2130 /* Cafree */ = {
 			isa = PBXGroup;
 			children = (
+				13DB1821292EFA2F00B9CA90 /* Home */,
+				13DB1822292EFA3800B9CA90 /* Feed */,
 				1373C2B229252BFA00FA2130 /* AppDelegate.swift */,
 				1373C2B429252BFA00FA2130 /* SceneDelegate.swift */,
 				1373C2B629252BFA00FA2130 /* ViewController.swift */,
@@ -128,6 +134,22 @@
 				1373C2D829252BFC00FA2130 /* CafreeUITestsLaunchTests.swift */,
 			);
 			path = CafreeUITests;
+			sourceTree = "<group>";
+		};
+		13DB1821292EFA2F00B9CA90 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				13DB1823292EFA5A00B9CA90 /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		13DB1822292EFA3800B9CA90 /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				13DB1825292EFA6500B9CA90 /* FeedViewController.swift */,
+			);
+			path = Feed;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,9 +283,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13DB1824292EFA5A00B9CA90 /* HomeViewController.swift in Sources */,
 				1373C2B729252BFA00FA2130 /* ViewController.swift in Sources */,
 				1373C2BD29252BFA00FA2130 /* Cafree.xcdatamodeld in Sources */,
 				1373C2B329252BFA00FA2130 /* AppDelegate.swift in Sources */,
+				13DB1826292EFA6500B9CA90 /* FeedViewController.swift in Sources */,
 				1373C2B529252BFA00FA2130 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
