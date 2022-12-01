@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		130C557529336ABE001DDE02 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 130C557429336ABE001DDE02 /* ListViewController.swift */; };
 		1373C2B329252BFA00FA2130 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1373C2B229252BFA00FA2130 /* AppDelegate.swift */; };
 		1373C2B529252BFA00FA2130 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1373C2B429252BFA00FA2130 /* SceneDelegate.swift */; };
 		1373C2B729252BFA00FA2130 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1373C2B629252BFA00FA2130 /* ViewController.swift */; };
@@ -17,8 +18,13 @@
 		1373C2CD29252BFC00FA2130 /* CafreeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1373C2CC29252BFC00FA2130 /* CafreeTests.swift */; };
 		1373C2D729252BFC00FA2130 /* CafreeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1373C2D629252BFC00FA2130 /* CafreeUITests.swift */; };
 		1373C2D929252BFC00FA2130 /* CafreeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1373C2D829252BFC00FA2130 /* CafreeUITestsLaunchTests.swift */; };
+		13CADBEF2930BF3800E4E1F3 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 13CADBEE2930BF3800E4E1F3 /* SnapKit */; };
+		13CADBF42930C67200E4E1F3 /* BaseScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13CADBF32930C67200E4E1F3 /* BaseScrollView.swift */; };
+		13CADBF62930C77A00E4E1F3 /* HorizontalScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13CADBF52930C77A00E4E1F3 /* HorizontalScrollView.swift */; };
+		13CADBF82930C82600E4E1F3 /* SomeDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13CADBF72930C82600E4E1F3 /* SomeDataModel.swift */; };
 		13DB1824292EFA5A00B9CA90 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13DB1823292EFA5A00B9CA90 /* HomeViewController.swift */; };
 		13DB1826292EFA6500B9CA90 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13DB1825292EFA6500B9CA90 /* FeedViewController.swift */; };
+		13E660B82938C57F00F4B8F2 /* GridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E660B72938C57F00F4B8F2 /* GridViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		130C557429336ABE001DDE02 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		1373C2AF29252BFA00FA2130 /* Cafree.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cafree.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1373C2B229252BFA00FA2130 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1373C2B429252BFA00FA2130 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -53,8 +60,12 @@
 		1373C2D229252BFC00FA2130 /* CafreeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CafreeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1373C2D629252BFC00FA2130 /* CafreeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafreeUITests.swift; sourceTree = "<group>"; };
 		1373C2D829252BFC00FA2130 /* CafreeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafreeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		13CADBF32930C67200E4E1F3 /* BaseScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseScrollView.swift; sourceTree = "<group>"; };
+		13CADBF52930C77A00E4E1F3 /* HorizontalScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalScrollView.swift; sourceTree = "<group>"; };
+		13CADBF72930C82600E4E1F3 /* SomeDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SomeDataModel.swift; sourceTree = "<group>"; };
 		13DB1823292EFA5A00B9CA90 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		13DB1825292EFA6500B9CA90 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		13E660B72938C57F00F4B8F2 /* GridViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13CADBEF2930BF3800E4E1F3 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,6 +94,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		130C557329336A7A001DDE02 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				130C557429336ABE001DDE02 /* ListViewController.swift */,
+				13E660B72938C57F00F4B8F2 /* GridViewController.swift */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
 		1373C2A629252BFA00FA2130 = {
 			isa = PBXGroup;
 			children = (
@@ -136,6 +157,16 @@
 			path = CafreeUITests;
 			sourceTree = "<group>";
 		};
+		13CADBF22930C5B000E4E1F3 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				13CADBF32930C67200E4E1F3 /* BaseScrollView.swift */,
+				13CADBF52930C77A00E4E1F3 /* HorizontalScrollView.swift */,
+				13CADBF72930C82600E4E1F3 /* SomeDataModel.swift */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
 		13DB1821292EFA2F00B9CA90 /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -147,6 +178,8 @@
 		13DB1822292EFA3800B9CA90 /* Feed */ = {
 			isa = PBXGroup;
 			children = (
+				130C557329336A7A001DDE02 /* List */,
+				13CADBF22930C5B000E4E1F3 /* Category */,
 				13DB1825292EFA6500B9CA90 /* FeedViewController.swift */,
 			);
 			path = Feed;
@@ -168,6 +201,9 @@
 			dependencies = (
 			);
 			name = Cafree;
+			packageProductDependencies = (
+				13CADBEE2930BF3800E4E1F3 /* SnapKit */,
+			);
 			productName = Cafree;
 			productReference = 1373C2AF29252BFA00FA2130 /* Cafree.app */;
 			productType = "com.apple.product-type.application";
@@ -240,6 +276,9 @@
 				Base,
 			);
 			mainGroup = 1373C2A629252BFA00FA2130;
+			packageReferences = (
+				13CADBED2930BF3800E4E1F3 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 1373C2B029252BFA00FA2130 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -284,10 +323,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				13DB1824292EFA5A00B9CA90 /* HomeViewController.swift in Sources */,
+				13CADBF82930C82600E4E1F3 /* SomeDataModel.swift in Sources */,
+				13CADBF62930C77A00E4E1F3 /* HorizontalScrollView.swift in Sources */,
 				1373C2B729252BFA00FA2130 /* ViewController.swift in Sources */,
+				13E660B82938C57F00F4B8F2 /* GridViewController.swift in Sources */,
 				1373C2BD29252BFA00FA2130 /* Cafree.xcdatamodeld in Sources */,
 				1373C2B329252BFA00FA2130 /* AppDelegate.swift in Sources */,
+				13CADBF42930C67200E4E1F3 /* BaseScrollView.swift in Sources */,
 				13DB1826292EFA6500B9CA90 /* FeedViewController.swift in Sources */,
+				130C557529336ABE001DDE02 /* ListViewController.swift in Sources */,
 				1373C2B529252BFA00FA2130 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -638,6 +682,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		13CADBED2930BF3800E4E1F3 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		13CADBEE2930BF3800E4E1F3 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 13CADBED2930BF3800E4E1F3 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		1373C2BB29252BFA00FA2130 /* Cafree.xcdatamodeld */ = {
