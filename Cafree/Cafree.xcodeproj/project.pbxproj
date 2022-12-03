@@ -55,6 +55,7 @@
 		6F02926E293BB87C003D9FF1 /* daum_th_line.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F029252293BB87C003D9FF1 /* daum_th_line.png */; };
 		6F02926F293BB87C003D9FF1 /* map_pin_shadow.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F029253293BB87C003D9FF1 /* map_pin_shadow.png */; };
 		6F029270293BB87C003D9FF1 /* DaumMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F029254293BB87C003D9FF1 /* DaumMap.framework */; };
+		6F029272293BC3CA003D9FF1 /* MyLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F029271293BC3CA003D9FF1 /* MyLocationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -136,6 +137,7 @@
 		6F029252293BB87C003D9FF1 /* daum_th_line.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = daum_th_line.png; sourceTree = "<group>"; };
 		6F029253293BB87C003D9FF1 /* map_pin_shadow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map_pin_shadow.png; sourceTree = "<group>"; };
 		6F029254293BB87C003D9FF1 /* DaumMap.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DaumMap.framework; sourceTree = "<group>"; };
+		6F029271293BC3CA003D9FF1 /* MyLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyLocationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -232,6 +234,7 @@
 			children = (
 				6F0291D7293B9DDE003D9FF1 /* HomeTabViewController.swift */,
 				6F0291D5293B990D003D9FF1 /* HomeTab.storyboard */,
+				6F029271293BC3CA003D9FF1 /* MyLocationViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -479,6 +482,7 @@
 			files = (
 				1373C2B729252BFA00FA2130 /* ViewController.swift in Sources */,
 				1373C2BD29252BFA00FA2130 /* Cafree.xcdatamodeld in Sources */,
+				6F029272293BC3CA003D9FF1 /* MyLocationViewController.swift in Sources */,
 				1373C2B329252BFA00FA2130 /* AppDelegate.swift in Sources */,
 				13DB1826292EFA6500B9CA90 /* FeedViewController.swift in Sources */,
 				1373C2B529252BFA00FA2130 /* SceneDelegate.swift in Sources */,
