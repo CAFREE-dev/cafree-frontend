@@ -9,39 +9,31 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--홈-->
-        <scene sceneID="goP-uJ-0cU">
-            <objects>
-                <viewController id="OQg-fx-VYw" customClass="HomeViewController" customModule="Cafree" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="3jn-df-GCA">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="if2-qP-2K5"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="홈" id="VZp-P4-YAn"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="SDt-OA-esq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1230" y="12"/>
-        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="TgI-7L-ihC">
             <objects>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="vOF-ik-aVm" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="pZp-TG-mmX">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="OQg-fx-VYw" kind="relationship" relationship="viewControllers" id="Ko5-U1-Msg"/>
                         <segue destination="jeP-aS-Uok" kind="relationship" relationship="viewControllers" id="1Ph-hQ-Efq"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sAQ-4Y-e7r" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="278.62595419847327" y="11.971830985915494"/>
+        </scene>
+        <!--HomeTab-->
+        <scene sceneID="xm9-QI-yRw">
+            <objects>
+                <viewControllerPlaceholder storyboardName="HomeTab" referencedIdentifier="HomeTab" id="Vpb-ax-5P6" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ooz-bp-TIl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1088" y="-207"/>
         </scene>
         <!--피드-->
         <scene sceneID="ZUK-MS-OfT">
