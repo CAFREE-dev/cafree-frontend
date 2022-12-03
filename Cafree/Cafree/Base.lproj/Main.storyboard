@@ -20,6 +20,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
+                        <segue destination="Vpb-ax-5P6" kind="relationship" relationship="viewControllers" id="Qoc-Wc-o9D"/>
                         <segue destination="jeP-aS-Uok" kind="relationship" relationship="viewControllers" id="1Ph-hQ-Efq"/>
                     </connections>
                 </tabBarController>
@@ -27,13 +28,15 @@
             </objects>
             <point key="canvasLocation" x="278.62595419847327" y="11.971830985915494"/>
         </scene>
-        <!--HomeTab-->
+        <!--HomeTabViewController-->
         <scene sceneID="xm9-QI-yRw">
             <objects>
-                <viewControllerPlaceholder storyboardName="HomeTab" referencedIdentifier="HomeTab" id="Vpb-ax-5P6" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardIdentifier="HomeTabViewController" storyboardName="HomeTab" referencedIdentifier="HomeTabViewController" id="Vpb-ax-5P6" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="5rw-yM-M1I"/>
+                </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ooz-bp-TIl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1088" y="-207"/>
+            <point key="canvasLocation" x="923" y="-84"/>
         </scene>
         <!--피드-->
         <scene sceneID="ZUK-MS-OfT">

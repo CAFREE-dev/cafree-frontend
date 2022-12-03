@@ -19,6 +19,7 @@
 		1373C2D929252BFC00FA2130 /* CafreeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1373C2D829252BFC00FA2130 /* CafreeUITestsLaunchTests.swift */; };
 		13DB1826292EFA6500B9CA90 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13DB1825292EFA6500B9CA90 /* FeedViewController.swift */; };
 		6F0291D6293B990D003D9FF1 /* HomeTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F0291D5293B990D003D9FF1 /* HomeTab.storyboard */; };
+		6F0291D8293B9DDE003D9FF1 /* HomeTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F0291D7293B9DDE003D9FF1 /* HomeTabViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		1373C2D829252BFC00FA2130 /* CafreeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafreeUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		13DB1825292EFA6500B9CA90 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		6F0291D5293B990D003D9FF1 /* HomeTab.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeTab.storyboard; sourceTree = "<group>"; };
+		6F0291D7293B9DDE003D9FF1 /* HomeTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +141,7 @@
 		13DB1821292EFA2F00B9CA90 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				6F0291D7293B9DDE003D9FF1 /* HomeTabViewController.swift */,
 				6F0291D5293B990D003D9FF1 /* HomeTab.storyboard */,
 			);
 			path = Home;
@@ -289,6 +292,7 @@
 				1373C2B329252BFA00FA2130 /* AppDelegate.swift in Sources */,
 				13DB1826292EFA6500B9CA90 /* FeedViewController.swift in Sources */,
 				1373C2B529252BFA00FA2130 /* SceneDelegate.swift in Sources */,
+				6F0291D8293B9DDE003D9FF1 /* HomeTabViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
