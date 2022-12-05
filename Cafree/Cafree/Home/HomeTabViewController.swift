@@ -9,8 +9,7 @@ import UIKit
 
 class HomeTabViewController: UIViewController {
 
-    //@IBOutlet var btn : UIButton!
-    
+
     @IBOutlet weak var popCafeView: UIView!
     @IBOutlet weak var nearCafeView: UIView!
     @IBOutlet weak var conseptCafeView: UIView!
@@ -21,14 +20,6 @@ class HomeTabViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    //버튼 클릭시
-    //@IBAction func touchBtn(_ sender: UIButton){
-    //    // 뷰 전환
-//
-    //
-    //    guard let myLocaionView = self.storyboard?.instantiateViewController(identifier: "MyLocationViewController") else //{return}
-    //      self.present(myLocaionView, animated: true)
-    //}
     
     @IBAction func switchView(_ sender: UISegmentedControl) {
         if sender.selectedSegmentIndex == 0 {
