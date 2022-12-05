@@ -29,15 +29,6 @@
                                     <action selector="switchView:" destination="Y6W-OH-hqX" eventType="valueChanged" id="V1p-XW-TOd"/>
                                 </connections>
                             </segmentedControl>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cMG-A2-12m">
-                                <rect key="frame" x="36" y="16" width="88" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="위치 설정"/>
-                                <connections>
-                                    <action selector="touchBtn:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="FOh-FB-Old"/>
-                                </connections>
-                            </button>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HZr-4x-nqE">
                                 <rect key="frame" x="0.0" y="106" width="393" height="663"/>
                                 <connections>
@@ -91,7 +82,6 @@
                     <tabBarItem key="tabBarItem" title="홈" selectedImage="homekit" catalog="system" id="bQq-Mw-BLl"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="btn" destination="cMG-A2-12m" id="Zp2-M4-NgX"/>
                         <outlet property="conseptCafeView" destination="6Oh-Xy-yA5" id="FLj-z0-4ya"/>
                         <outlet property="nearCafeView" destination="jJa-9a-CHQ" id="7ZZ-Hg-FrE"/>
                         <outlet property="newCafeView" destination="cJ0-al-l87" id="zIc-fO-M5l"/>
@@ -117,10 +107,10 @@
             </objects>
             <point key="canvasLocation" x="847" y="-28"/>
         </scene>
-        <!--View Controller-->
+        <!--Pop Cafe View Controller-->
         <scene sceneID="I2y-4s-2Fx">
             <objects>
-                <viewController id="QDi-JE-eas" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PopCafeViewController" id="QDi-JE-eas" customClass="PopCafeViewController" customModule="Cafree" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zau-4i-40x">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="663"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -131,10 +121,10 @@
             </objects>
             <point key="canvasLocation" x="-883" y="654"/>
         </scene>
-        <!--View Controller-->
+        <!--Consept Cafe View Controller-->
         <scene sceneID="H5c-ir-RU5">
             <objects>
-                <viewController id="TOa-l2-WcP" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ConseptCafeViewController" id="TOa-l2-WcP" customClass="ConseptCafeViewController" customModule="Cafree" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rwJ-y3-gX0">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="663"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -145,10 +135,10 @@
             </objects>
             <point key="canvasLocation" x="407" y="654"/>
         </scene>
-        <!--View Controller-->
+        <!--New Cafe View Controller-->
         <scene sceneID="DTN-cK-Lfj">
             <objects>
-                <viewController id="e6j-d8-B6J" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NewCafeViewController" id="e6j-d8-B6J" customClass="NewCafeViewController" customModule="Cafree" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ERS-IH-w9y">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="663"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -159,10 +149,10 @@
             </objects>
             <point key="canvasLocation" x="1050" y="654"/>
         </scene>
-        <!--View Controller-->
+        <!--Near Cafe View Controller-->
         <scene sceneID="2Me-44-KMu">
             <objects>
-                <viewController id="3Os-hT-KQQ" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NearCafeViewController" id="3Os-hT-KQQ" customClass="NearCafeViewController" customModule="Cafree" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rGw-bf-Qe3">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="663"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
