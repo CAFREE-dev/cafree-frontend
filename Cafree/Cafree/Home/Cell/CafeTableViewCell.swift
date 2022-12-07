@@ -10,7 +10,6 @@ import UIKit
 class CafeTableViewCell: UITableViewCell {
 
    
-    @IBOutlet var cafeView: UIView!
     @IBOutlet var cafeImgView: UIImageView!
     @IBOutlet var cafeName: UILabel!
     @IBOutlet var cafeInfo: UILabel!
@@ -20,6 +19,7 @@ class CafeTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        cafeImgView.layer.cornerRadius = 10
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
