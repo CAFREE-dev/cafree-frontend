@@ -115,8 +115,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="663"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y9Z-kZ-fFM">
-                                <rect key="frame" x="244" y="152" width="92" height="35"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="Y9Z-kZ-fFM">
+                                <rect key="frame" x="0.0" y="314" width="393" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="나의 위치 "/>
@@ -124,16 +124,28 @@
                                     <action selector="touchBtnLocation:" destination="QDi-JE-eas" eventType="touchUpInside" id="vQ3-zP-3Jd"/>
                                 </connections>
                             </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Unl-bu-HNH">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="663"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="JiR-Wb-AlO"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Unl-bu-HNH" firstAttribute="top" secondItem="zau-4i-40x" secondAttribute="top" id="6Cy-s6-cJm"/>
+                            <constraint firstItem="JiR-Wb-AlO" firstAttribute="bottom" secondItem="Unl-bu-HNH" secondAttribute="bottom" id="8Q0-1s-vC7"/>
+                            <constraint firstItem="JiR-Wb-AlO" firstAttribute="trailing" secondItem="Unl-bu-HNH" secondAttribute="trailing" id="ABW-ul-qVw"/>
+                            <constraint firstItem="Unl-bu-HNH" firstAttribute="leading" secondItem="JiR-Wb-AlO" secondAttribute="leading" id="B33-Ac-cK8"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="btnLocation" destination="Y9Z-kZ-fFM" id="5Qa-Bc-D77"/>
+                        <outlet property="cafeTableView" destination="Unl-bu-HNH" id="D3H-Mx-1dy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qzG-Mq-2tf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-883" y="654"/>
+            <point key="canvasLocation" x="-883.20610687022895" y="653.87323943661977"/>
         </scene>
         <!--Consept Cafe View Controller-->
         <scene sceneID="H5c-ir-RU5">
@@ -153,6 +165,7 @@
                                 </connections>
                             </button>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="vLx-hI-iuw"/>
                         <color key="backgroundColor" systemColor="systemYellowColor"/>
                     </view>
                     <connections>
@@ -181,6 +194,7 @@
                                 </connections>
                             </button>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="nP6-4v-jk8"/>
                         <color key="backgroundColor" systemColor="systemPinkColor"/>
                     </view>
                     <connections>
@@ -209,6 +223,7 @@
                                 </connections>
                             </button>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="gQ0-ZA-FLd"/>
                         <color key="backgroundColor" systemColor="systemBrownColor"/>
                     </view>
                     <connections>
