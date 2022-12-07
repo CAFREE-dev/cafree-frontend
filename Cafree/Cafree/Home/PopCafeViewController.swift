@@ -44,7 +44,7 @@ class PopCafeViewController: UIViewController, UITableViewDelegate, UITableViewD
         return cellSpacingHeight
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 220
+        return 210
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
