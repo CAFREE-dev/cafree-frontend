@@ -46,6 +46,9 @@ class PopCafeViewController: UIViewController, UITableViewDelegate, UITableViewD
         return cellSpacingHeight
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if indexPath.section == 0 {
+            return 230
+        }
         return 210
     }
     
@@ -88,6 +91,7 @@ class PopCafeViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         let nibNameAnother = UINib(nibName: "TitleTableViewCell", bundle: nil)
         cafeTableView.register(nibNameAnother, forCellReuseIdentifier: "titleCell")
+        
     }
     
     //지역 버튼 클릭시
