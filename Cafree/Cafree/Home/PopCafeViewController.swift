@@ -19,6 +19,7 @@ class PopCafeViewController: UIViewController, UITableViewDelegate, UITableViewD
     let cellName = "CafeTableViewCell"
     let cellReuseIdentifier = "cafeCell"
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -34,9 +35,10 @@ class PopCafeViewController: UIViewController, UITableViewDelegate, UITableViewD
         return 1
     }
     
+    
     // Section의 수
     func numberOfSections(in tableView: UITableView) -> Int {
-        return cafes.count
+        return cafes.count+1
     }
     
     // 각 Section 사이의 간격 설정
@@ -44,25 +46,52 @@ class PopCafeViewController: UIViewController, UITableViewDelegate, UITableViewD
         return cellSpacingHeight
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if indexPath.section == 0 {
+            return 230
+        }
         return 210
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = cafeTableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier, for: indexPath) as! CafeTableViewCell
-        let cafe = cafes[indexPath.section]
+        if indexPath.section == 0 {
+            let cell = cafeTableView.dequeueReusableCell(withIdentifier: "titleCell", for: indexPath) as! TitleTableViewCell
+            cell.titleImg.image = UIImage(named: "titlePopImg")
+            cell.titleName1.text = "사람들이 많이 찾는 카페가"
+            cell.titleName2.text = "궁금하신가요?"
+            
+            return cell
+        } else{
+            let cell = cafeTableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier, for: indexPath) as! CafeTableViewCell
+            let cafe = cafes[indexPath.section-1]
+        
+            cell.cafeName.text = cafe
+            cell.cafeImgView.image = UIImage(named: "sampleCafeImg"+String(indexPath.section+1))
+            cell.cafeLocal.text = "sample"
+            cell.cafeDist.text = "5.0km"
+            cell.cafeInfo.text = "sample"
+            
+            return cell
+        }
+        
+        //let cell = cafeTableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier, for: indexPath) as! CafeTableViewCell
+        //let cafe = cafes[indexPath.section]
+    //
+        //cell.cafeName.text = cafe
+        //cell.cafeImgView.image = UIImage(named: "sampleCafeImg"+String(indexPath.section+1))
+        //cell.cafeLocal.text = "sample"
+        //cell.cafeDist.text = "5.0km"
+        //cell.cafeInfo.text = "sample"
     
-        cell.cafeName.text = cafe
-        cell.cafeImgView.image = UIImage(named: "sampleCafeImg"+String(indexPath.section+1))
-        cell.cafeLocal.text = "sample"
-        cell.cafeDist.text = "5.0km"
-        cell.cafeInfo.text = "sample"
-    
-        return cell
+        //return cell
     }
     
     private func registerXib() {
         let nibName = UINib(nibName: cellName, bundle: nil)
         cafeTableView.register(nibName, forCellReuseIdentifier: cellReuseIdentifier)
+        
+        let nibNameAnother = UINib(nibName: "TitleTableViewCell", bundle: nil)
+        cafeTableView.register(nibNameAnother, forCellReuseIdentifier: "titleCell")
+        
     }
     
     //지역 버튼 클릭시
