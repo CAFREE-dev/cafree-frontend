@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--홈-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="HomeTabViewController" id="Y6W-OH-hqX" customClass="HomeTabViewController" customModule="Cafree" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="eg1-RK-LKX">
+                                <rect key="frame" x="0.0" y="75" width="393" height="32"/>
+                                <segments>
+                                    <segment title="많이찾는"/>
+                                    <segment title="주변카페"/>
+                                    <segment title="콘셉트별"/>
+                                    <segment title="새로생긴"/>
+                                </segments>
+                                <connections>
+                                    <action selector="switchView:" destination="Y6W-OH-hqX" eventType="valueChanged" id="V1p-XW-TOd"/>
+                                </connections>
+                            </segmentedControl>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HZr-4x-nqE">
+                                <rect key="frame" x="0.0" y="106" width="393" height="663"/>
+                                <connections>
+                                    <segue destination="QDi-JE-eas" kind="embed" id="2qq-9e-F86"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Oh-Xy-yA5">
+                                <rect key="frame" x="0.0" y="106" width="393" height="663"/>
+                                <connections>
+                                    <segue destination="TOa-l2-WcP" kind="embed" id="tDx-uH-xa0"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cJ0-al-l87">
+                                <rect key="frame" x="0.0" y="106" width="393" height="663"/>
+                                <connections>
+                                    <segue destination="e6j-d8-B6J" kind="embed" id="o4U-Js-4gT"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jJa-9a-CHQ">
+                                <rect key="frame" x="0.0" y="106" width="393" height="663"/>
+                                <connections>
+                                    <segue destination="3Os-hT-KQQ" kind="embed" id="Szv-fp-TeK"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Oh-Xy-yA5" firstAttribute="top" secondItem="eg1-RK-LKX" secondAttribute="bottom" id="1bc-uf-lsi"/>
+                            <constraint firstItem="HZr-4x-nqE" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="2I7-lL-Tee"/>
+                            <constraint firstItem="jJa-9a-CHQ" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="2LI-wV-vzi"/>
+                            <constraint firstItem="eg1-RK-LKX" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="83k-TQ-XCf"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="jJa-9a-CHQ" secondAttribute="bottom" id="9LI-Gt-dSM"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="eg1-RK-LKX" secondAttribute="trailing" id="A0F-zO-jeq"/>
+                            <constraint firstItem="cJ0-al-l87" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="CcG-wE-Kng"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="jJa-9a-CHQ" secondAttribute="trailing" id="FIW-bX-TcI"/>
+                            <constraint firstItem="HZr-4x-nqE" firstAttribute="top" secondItem="eg1-RK-LKX" secondAttribute="bottom" id="Hjz-6K-ve5"/>
+                            <constraint firstItem="eg1-RK-LKX" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="16" id="Mlm-KX-GiH"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="6Oh-Xy-yA5" secondAttribute="trailing" id="TAl-em-uRM"/>
+                            <constraint firstItem="eg1-RK-LKX" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="XFQ-sG-wWa"/>
+                            <constraint firstItem="jJa-9a-CHQ" firstAttribute="top" secondItem="eg1-RK-LKX" secondAttribute="bottom" id="Xz2-NU-Ybb"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="cJ0-al-l87" secondAttribute="bottom" id="YsJ-TY-kwh"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="HZr-4x-nqE" secondAttribute="trailing" id="ch9-wQ-9GV"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="cJ0-al-l87" secondAttribute="trailing" id="ghS-79-lq6"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="HZr-4x-nqE" secondAttribute="bottom" id="iMd-bn-qpa"/>
+                            <constraint firstItem="cJ0-al-l87" firstAttribute="top" secondItem="eg1-RK-LKX" secondAttribute="bottom" id="kGn-dv-gZz"/>
+                            <constraint firstItem="6Oh-Xy-yA5" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="v9Q-xq-3Cz"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="6Oh-Xy-yA5" secondAttribute="bottom" id="yNW-S4-BJw"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="홈" selectedImage="homekit" catalog="system" id="bQq-Mw-BLl"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="conseptCafeView" destination="6Oh-Xy-yA5" id="FLj-z0-4ya"/>
+                        <outlet property="nearCafeView" destination="jJa-9a-CHQ" id="7ZZ-Hg-FrE"/>
+                        <outlet property="newCafeView" destination="cJ0-al-l87" id="zIc-fO-M5l"/>
+                        <outlet property="popCafeView" destination="HZr-4x-nqE" id="WCF-Bg-Cqu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="32.824427480916029" y="-28.169014084507044"/>
+        </scene>
+        <!--My Location View Controller-->
+        <scene sceneID="0y0-yz-6xx">
+            <objects>
+                <viewController storyboardIdentifier="MyLocationViewController" id="twq-U4-a2j" customClass="MyLocationViewController" customModule="Cafree" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Abd-lw-UXR">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="ebx-CV-nWA"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zad-Dp-Npj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="847" y="-28"/>
+        </scene>
+        <!--Pop Cafe View Controller-->
+        <scene sceneID="I2y-4s-2Fx">
+            <objects>
+                <viewController storyboardIdentifier="PopCafeViewController" id="QDi-JE-eas" customClass="PopCafeViewController" customModule="Cafree" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zau-4i-40x">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="663"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="Y9Z-kZ-fFM">
+                                <rect key="frame" x="0.0" y="314" width="393" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="나의 위치 "/>
+                                <connections>
+                                    <action selector="touchBtnLocation:" destination="QDi-JE-eas" eventType="touchUpInside" id="vQ3-zP-3Jd"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Unl-bu-HNH">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="663"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <edgeInsets key="layoutMargins" top="0.0" left="8" bottom="8" right="8"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="JiR-Wb-AlO"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Unl-bu-HNH" firstAttribute="top" secondItem="zau-4i-40x" secondAttribute="top" id="6Cy-s6-cJm"/>
+                            <constraint firstItem="JiR-Wb-AlO" firstAttribute="bottom" secondItem="Unl-bu-HNH" secondAttribute="bottom" id="8Q0-1s-vC7"/>
+                            <constraint firstItem="JiR-Wb-AlO" firstAttribute="trailing" secondItem="Unl-bu-HNH" secondAttribute="trailing" id="ABW-ul-qVw"/>
+                            <constraint firstItem="Unl-bu-HNH" firstAttribute="leading" secondItem="JiR-Wb-AlO" secondAttribute="leading" id="B33-Ac-cK8"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btnLocation" destination="Y9Z-kZ-fFM" id="5Qa-Bc-D77"/>
+                        <outlet property="cafeTableView" destination="Unl-bu-HNH" id="D3H-Mx-1dy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qzG-Mq-2tf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-883.20610687022895" y="653.87323943661977"/>
+        </scene>
+        <!--Consept Cafe View Controller-->
+        <scene sceneID="H5c-ir-RU5">
+            <objects>
+                <viewController storyboardIdentifier="ConseptCafeViewController" id="TOa-l2-WcP" customClass="ConseptCafeViewController" customModule="Cafree" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rwJ-y3-gX0">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="663"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MuQ-yL-z45">
+                                <rect key="frame" x="269" y="149" width="88" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="나의 위치"/>
+                                <connections>
+                                    <action selector="touchBtnLocation:" destination="TOa-l2-WcP" eventType="touchUpInside" id="oS1-uv-36H"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vLx-hI-iuw"/>
+                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                    </view>
+                    <connections>
+                        <outlet property="btnLocation" destination="MuQ-yL-z45" id="KuI-Hj-uit"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S6w-mH-s1W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="407" y="654"/>
+        </scene>
+        <!--New Cafe View Controller-->
+        <scene sceneID="DTN-cK-Lfj">
+            <objects>
+                <viewController storyboardIdentifier="NewCafeViewController" id="e6j-d8-B6J" customClass="NewCafeViewController" customModule="Cafree" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ERS-IH-w9y">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="663"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AaX-NK-ZHQ">
+                                <rect key="frame" x="168" y="162" width="88" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="나의 위치"/>
+                                <connections>
+                                    <action selector="touchBtnLocation:" destination="e6j-d8-B6J" eventType="touchUpInside" id="Wjw-Ky-QwD"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="nP6-4v-jk8"/>
+                        <color key="backgroundColor" systemColor="systemPinkColor"/>
+                    </view>
+                    <connections>
+                        <outlet property="btnLocation" destination="AaX-NK-ZHQ" id="dwd-cM-2hg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BL0-11-umb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1050" y="654"/>
+        </scene>
+        <!--Near Cafe View Controller-->
+        <scene sceneID="2Me-44-KMu">
+            <objects>
+                <viewController storyboardIdentifier="NearCafeViewController" id="3Os-hT-KQQ" customClass="NearCafeViewController" customModule="Cafree" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rGw-bf-Qe3">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="663"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JKP-RN-4aa">
+                                <rect key="frame" x="264" y="169" width="88" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="나의 위치"/>
+                                <connections>
+                                    <action selector="touchBtnLocation:" destination="3Os-hT-KQQ" eventType="touchUpInside" id="Lbz-42-z4P"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="gQ0-ZA-FLd"/>
+                        <color key="backgroundColor" systemColor="systemBrownColor"/>
+                    </view>
+                    <connections>
+                        <outlet property="btnLocation" destination="JKP-RN-4aa" id="Tkf-K8-3ji"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mOA-a4-ufH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-236" y="654"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="homekit" catalog="system" width="128" height="104"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBrownColor">
+            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
