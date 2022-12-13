@@ -79,7 +79,7 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="6Oh-Xy-yA5" secondAttribute="bottom" id="yNW-S4-BJw"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="홈" selectedImage="homekit" catalog="system" id="bQq-Mw-BLl"/>
+                    <tabBarItem key="tabBarItem" title="홈" image="HomeTabImgDefault" selectedImage="HomeTabImg" id="bQq-Mw-BLl"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="conseptCafeView" destination="6Oh-Xy-yA5" id="FLj-z0-4ya"/>
@@ -237,7 +237,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="homekit" catalog="system" width="128" height="104"/>
+        <image name="HomeTabImg" width="24" height="20"/>
+        <image name="HomeTabImgDefault" width="24" height="20"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

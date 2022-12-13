@@ -65,7 +65,7 @@ class PopCafeViewController: UIViewController, UITableViewDelegate, UITableViewD
             let cafe = cafes[indexPath.section-1]
         
             cell.cafeName.text = cafe
-            cell.cafeImgView.image = UIImage(named: "sampleCafeImg"+String(indexPath.section+1))
+            cell.cafeImgView.image = UIImage(named: "sampleCafeImg"+String(indexPath.section))
             cell.cafeLocal.text = "sample"
             cell.cafeDist.text = "5.0km"
             cell.cafeInfo.text = "sample"
