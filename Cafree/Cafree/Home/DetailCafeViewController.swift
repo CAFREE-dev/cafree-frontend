@@ -12,15 +12,21 @@ class DetailCafeViewController: UIViewController {
     @IBOutlet var sampleLabel: UILabel!
     var receiveItem = ""
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         sampleLabel.text = receiveItem
         // Do any additional setup after loading the view.
+        
     }
     func receiveItem(_ item: String){
             receiveItem = item
     }
 
+    @IBAction func btnBack(_ sender: Any) {
+        self.dismiss(animated: true)
+        print("뒤로가기버튼")
+    }
     /*
     // MARK: - Navigation
 
