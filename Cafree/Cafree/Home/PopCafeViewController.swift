@@ -13,7 +13,7 @@ class PopCafeViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     @IBOutlet weak var cafeTableView: UITableView!
     
-    var cafes = ["sample1","sample2"]
+    var cafes = ["garbage","sample1","sample2"]
     let cellSpacingHeight: CGFloat = 1
     
     let cellName = "CafeTableViewCell"
@@ -38,7 +38,14 @@ class PopCafeViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     // Section의 수
     func numberOfSections(in tableView: UITableView) -> Int {
-        return cafes.count+1
+        return cafes.count
+    }
+    
+    // 셀 클릭 시 뷰 이동
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.section != 0 {
+            performSegue(withIdentifier: "showDetailCafe", sender: cafeTableView.cellForRow(at: indexPath))
+        }
     }
     
     // 각 Section 사이의 간격 설정
@@ -62,7 +69,7 @@ class PopCafeViewController: UIViewController, UITableViewDelegate, UITableViewD
             return cell
         } else{
             let cell = cafeTableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier, for: indexPath) as! CafeTableViewCell
-            let cafe = cafes[indexPath.section-1]
+            let cafe = cafes[indexPath.section]
         
             cell.cafeName.text = cafe
             cell.cafeImgView.image = UIImage(named: "sampleCafeImg"+String(indexPath.section))
@@ -102,6 +109,18 @@ class PopCafeViewController: UIViewController, UITableViewDelegate, UITableViewD
         
     }
     
+    // 세그웨이를 이용하여 디테일 뷰로 전환하기
+    // performSegue랑 연동
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+        if segue.identifier == "showDetailCafe" {
+            let cell = sender as! CafeTableViewCell
+            let indexPath = self.cafeTableView.indexPath(for: cell)
+            let detailCafeView = segue.destination as! DetailCafeViewController
+            detailCafeView.receiveItem(cafes[((indexPath as NSIndexPath?)?.section)!])
+        }
+    }
 }
 
 //extension PopCafeViewController: UITableViewDataSource {

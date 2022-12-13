@@ -142,11 +142,40 @@
                     <connections>
                         <outlet property="btnLocation" destination="Y9Z-kZ-fFM" id="5Qa-Bc-D77"/>
                         <outlet property="cafeTableView" destination="Unl-bu-HNH" id="D3H-Mx-1dy"/>
+                        <segue destination="Sc9-xf-nJX" kind="show" identifier="showDetailCafe" id="Nss-dw-hC0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qzG-Mq-2tf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-883.20610687022895" y="653.87323943661977"/>
+        </scene>
+        <!--Detail Cafe View Controller-->
+        <scene sceneID="vWJ-zw-bdG">
+            <objects>
+                <viewController storyboardIdentifier="DetailCafeViewController" id="Sc9-xf-nJX" customClass="DetailCafeViewController" customModule="Cafree" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tvH-kT-t1N">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="594"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="cafe" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lZS-Dr-gM3">
+                                <rect key="frame" x="128" y="89" width="136" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="nRb-xJ-52W"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="HGn-Y8-N8e"/>
+                    <connections>
+                        <outlet property="sampleLabel" destination="lZS-Dr-gM3" id="yaQ-mg-KXx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Ap-Bv-AYl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-219.08396946564883" y="1287.6760563380283"/>
         </scene>
         <!--Consept Cafe View Controller-->
         <scene sceneID="H5c-ir-RU5">
