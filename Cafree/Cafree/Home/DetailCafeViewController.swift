@@ -20,6 +20,8 @@ class DetailCafeViewController: UIViewController, UITableViewDelegate, UITableVi
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
+        registerXib()
+        
         cafeDetailTableView.delegate = self
         cafeDetailTableView.dataSource = self
     }
@@ -29,6 +31,10 @@ class DetailCafeViewController: UIViewController, UITableViewDelegate, UITableVi
         return 1
     }
     
+    // Section의 수
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
     
     // 각 Section 사이의 간격 설정
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
@@ -37,15 +43,18 @@ class DetailCafeViewController: UIViewController, UITableViewDelegate, UITableVi
     
     // Section의 높이
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if indexPath.section == 0 {
-            return 230
-        }
-        return 210
+        
+        return 110
     }
 
     // 셀 넣는 함수
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
+        let cell = cafeDetailTableView.dequeueReusableCell(withIdentifier: "detailInfoCell", for: indexPath) as! CafeDetailInfoTableViewCell
+        cell.cafeName.text = receiveItem
+        cell.cafeInfo.text = "카페 상세 정보, 설명 라벨입니다. 2줄을 테스트 하기 위해 길게 씁니다."
+        cell.cafeScore.text = String(3.0)+"점"
+        
+        return cell
     }
     
     
@@ -69,4 +78,10 @@ class DetailCafeViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     */
 
+    
+    // 테이블 뷰 셀 레지스터 함수
+    private func registerXib() {
+        let nibName = UINib(nibName: "CafeDetailInfoTableViewCell", bundle: nil)
+        cafeDetailTableView.register(nibName, forCellReuseIdentifier: "detailInfoCell")
+    }
 }

@@ -62,6 +62,8 @@ class PopCafeViewController: UIViewController, UITableViewDelegate, UITableViewD
         return 210
     }
     
+    
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.section == 0 {
             let cell = cafeTableView.dequeueReusableCell(withIdentifier: "titleCell", for: indexPath) as! TitleTableViewCell
@@ -95,6 +97,7 @@ class PopCafeViewController: UIViewController, UITableViewDelegate, UITableViewD
         //return cell
     }
     
+    // 테이블 뷰 셀 레지스터 함수
     private func registerXib() {
         let nibName = UINib(nibName: cellName, bundle: nil)
         cafeTableView.register(nibName, forCellReuseIdentifier: cellReuseIdentifier)
