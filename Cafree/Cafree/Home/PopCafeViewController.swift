@@ -52,6 +52,9 @@ class PopCafeViewController: UIViewController, UITableViewDelegate, UITableViewD
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return cellSpacingHeight
     }
+    
+    
+    // Section의 높이
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.section == 0 {
             return 230
