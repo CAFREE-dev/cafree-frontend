@@ -15,8 +15,6 @@ class TitleTableViewCell: UITableViewCell {
     
     @IBOutlet var titleName2: UILabel!
     
-    @IBOutlet var btnLocal: UIButton!
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

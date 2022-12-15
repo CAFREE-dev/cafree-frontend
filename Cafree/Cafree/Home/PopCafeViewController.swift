@@ -52,12 +52,14 @@ class PopCafeViewController: UIViewController, UITableViewDelegate, UITableViewD
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return cellSpacingHeight
     }
+    
+    
+    // Section의 높이
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if indexPath.section == 0 {
-            return 230
-        }
         return 210
     }
+    
+    
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.section == 0 {
@@ -92,6 +94,7 @@ class PopCafeViewController: UIViewController, UITableViewDelegate, UITableViewD
         //return cell
     }
     
+    // 테이블 뷰 셀 레지스터 함수
     private func registerXib() {
         let nibName = UINib(nibName: cellName, bundle: nil)
         cafeTableView.register(nibName, forCellReuseIdentifier: cellReuseIdentifier)
