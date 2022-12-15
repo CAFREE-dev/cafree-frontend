@@ -24,6 +24,8 @@ class DetailCafeViewController: UIViewController, UITableViewDelegate, UITableVi
         
         cafeDetailTableView.delegate = self
         cafeDetailTableView.dataSource = self
+        
+        cafeDetailTableView.backgroundColor = UIColor.clear.withAlphaComponent(0)
     }
     
     // Section 당 Row 수
@@ -53,6 +55,7 @@ class DetailCafeViewController: UIViewController, UITableViewDelegate, UITableVi
         cell.cafeName.text = receiveItem
         cell.cafeInfo.text = "카페 상세 정보, 설명 라벨입니다. 2줄을 테스트 하기 위해 길게 씁니다."
         cell.cafeScore.text = String(3.0)+"점"
+        cell.backgroundColor = UIColor.clear.withAlphaComponent(0)
         
         return cell
     }
