@@ -6,13 +6,17 @@
 //
 
 import UIKit
+import CoreLocation
 
-class DetailCafeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class DetailCafeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, MTMapViewDelegate {
 
     @IBOutlet weak var cafeDetailTableView: UITableView!
     let cellSpacingHeight: CGFloat = 1
     
+    var mapView: MTMapView!
     
+    
+    //데이터 받아오는 변수
     var receiveItem = ""
 
     
@@ -26,6 +30,10 @@ class DetailCafeViewController: UIViewController, UITableViewDelegate, UITableVi
         cafeDetailTableView.dataSource = self
         
         cafeDetailTableView.backgroundColor = UIColor.clear.withAlphaComponent(0)
+        
+        
+        
+        
     }
     
     // Section 당 Row 수
@@ -35,7 +43,7 @@ class DetailCafeViewController: UIViewController, UITableViewDelegate, UITableVi
     
     // Section의 수
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return 2
     }
     
     // 각 Section 사이의 간격 설정
@@ -45,19 +53,37 @@ class DetailCafeViewController: UIViewController, UITableViewDelegate, UITableVi
     
     // Section의 높이
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        
+        if indexPath.section == 1 {
+            return 420
+        }
         return 110
     }
 
     // 셀 넣는 함수
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = cafeDetailTableView.dequeueReusableCell(withIdentifier: "detailInfoCell", for: indexPath) as! CafeDetailInfoTableViewCell
-        cell.cafeName.text = receiveItem
-        cell.cafeInfo.text = "카페 상세 정보, 설명 라벨입니다. 2줄을 테스트 하기 위해 길게 씁니다."
-        cell.cafeScore.text = String(3.0)+"점"
-        cell.backgroundColor = UIColor.clear.withAlphaComponent(0)
-        
-        return cell
+        if indexPath.section == 0 {
+            let cell = cafeDetailTableView.dequeueReusableCell(withIdentifier: "detailInfoCell", for: indexPath) as! CafeDetailInfoTableViewCell
+            cell.cafeName.text = receiveItem
+            cell.cafeInfo.text = "카페 상세 정보, 설명 라벨입니다. 2줄을 테스트 하기 위해 길게 씁니다."
+            cell.cafeScore.text = String(3.0)+"점"
+            cell.backgroundColor = UIColor.clear.withAlphaComponent(0)
+            
+            return cell
+        } else {
+            let cell = cafeDetailTableView.dequeueReusableCell(withIdentifier: "detailLocalCell", for: indexPath) as! CafeDetailLocalTableViewCell
+            
+            mapView = MTMapView(frame: cell.mapView.frame)
+            mapView.delegate = self
+            mapView.baseMapType = .standard
+            mapView.setMapCenter(MTMapPoint(geoCoord: MTMapPointGeo(latitude:  37.4044, longitude: 126.8918)), zoomLevel: 4, animated: true)
+            
+            cell.mapView.addSubview(mapView)
+            
+            
+            cell.backgroundColor = UIColor.clear.withAlphaComponent(0)
+            
+            return cell
+        }
     }
     
     
@@ -84,7 +110,15 @@ class DetailCafeViewController: UIViewController, UITableViewDelegate, UITableVi
     
     // 테이블 뷰 셀 레지스터 함수
     private func registerXib() {
-        let nibName = UINib(nibName: "CafeDetailInfoTableViewCell", bundle: nil)
-        cafeDetailTableView.register(nibName, forCellReuseIdentifier: "detailInfoCell")
+        let nibDetailInfo = UINib(nibName: "CafeDetailInfoTableViewCell", bundle: nil)
+        cafeDetailTableView.register(nibDetailInfo, forCellReuseIdentifier: "detailInfoCell")
+        
+        let nibDetailLocal = UINib(nibName: "CafeDetailLocalTableViewCell", bundle: nil)
+        cafeDetailTableView.register(nibDetailLocal, forCellReuseIdentifier: "detailLocalCell")
+    }
+    
+    //맵뷰
+    func mapView(_ mapView: MTMapView?, updateDeviceHeading headingAngle: MTMapRotationAngle) {
+        print("MTMapView updateDeviceHeading (\(headingAngle)) degrees")
     }
 }
