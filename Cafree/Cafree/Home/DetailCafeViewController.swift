@@ -6,13 +6,17 @@
 //
 
 import UIKit
+import CoreLocation
 
-class DetailCafeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class DetailCafeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, MTMapViewDelegate {
 
     @IBOutlet weak var cafeDetailTableView: UITableView!
     let cellSpacingHeight: CGFloat = 1
     
+    var mapView: MTMapView!
     
+    
+    //데이터 받아오는 변수
     var receiveItem = ""
 
     
@@ -26,6 +30,10 @@ class DetailCafeViewController: UIViewController, UITableViewDelegate, UITableVi
         cafeDetailTableView.dataSource = self
         
         cafeDetailTableView.backgroundColor = UIColor.clear.withAlphaComponent(0)
+        
+        
+        
+        
     }
     
     // Section 당 Row 수
@@ -64,6 +72,14 @@ class DetailCafeViewController: UIViewController, UITableViewDelegate, UITableVi
         } else {
             let cell = cafeDetailTableView.dequeueReusableCell(withIdentifier: "detailLocalCell", for: indexPath) as! CafeDetailLocalTableViewCell
             
+            mapView = MTMapView(frame: cell.mapView.frame)
+            mapView.delegate = self
+            mapView.baseMapType = .standard
+            mapView.setMapCenter(MTMapPoint(geoCoord: MTMapPointGeo(latitude:  37.4044, longitude: 126.8918)), zoomLevel: 4, animated: true)
+            
+            cell.mapView.addSubview(mapView)
+            
+            
             cell.backgroundColor = UIColor.clear.withAlphaComponent(0)
             
             return cell
@@ -99,5 +115,10 @@ class DetailCafeViewController: UIViewController, UITableViewDelegate, UITableVi
         
         let nibDetailLocal = UINib(nibName: "CafeDetailLocalTableViewCell", bundle: nil)
         cafeDetailTableView.register(nibDetailLocal, forCellReuseIdentifier: "detailLocalCell")
+    }
+    
+    //맵뷰
+    func mapView(_ mapView: MTMapView?, updateDeviceHeading headingAngle: MTMapRotationAngle) {
+        print("MTMapView updateDeviceHeading (\(headingAngle)) degrees")
     }
 }

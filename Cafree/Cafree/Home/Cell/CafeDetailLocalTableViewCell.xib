@@ -22,17 +22,19 @@
                         <rect key="frame" x="15" y="17" width="363" height="400"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="위치정보" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VsV-Ir-fZw">
-                                <rect key="frame" x="8" y="17" width="77" height="27"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="94b-N3-xyk">
-                                <rect key="frame" x="0.0" y="57" width="363" height="264"/>
+                                <rect key="frame" x="0.0" y="27" width="363" height="264"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="위치 정보" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sds-Gd-6LG">
+                                        <rect key="frame" x="14" y="-10" width="82" height="27"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hot-Hd-wwu">
                                 <rect key="frame" x="-3" y="345" width="104" height="16"/>
@@ -42,8 +44,8 @@
                                     <attributedString key="attributedTitle">
                                         <fragment content="매장주소">
                                             <attributes>
-                                                <font key="NSFont" size="11" name=".AppleSDGothicNeoI-Regular"/>
-                                                <font key="NSOriginalFont" metaFont="system" size="11"/>
+                                                <font key="NSFont" metaFont="smallSystem"/>
+                                                <font key="NSOriginalFont" metaFont="smallSystem"/>
                                                 <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                             </attributes>
                                         </fragment>
@@ -55,8 +57,8 @@
                                         </fragment>
                                         <fragment content="복사하기">
                                             <attributes>
-                                                <font key="NSFont" size="11" name=".AppleSDGothicNeoI-Regular"/>
-                                                <font key="NSOriginalFont" metaFont="system" size="11"/>
+                                                <font key="NSFont" metaFont="smallSystem"/>
+                                                <font key="NSOriginalFont" metaFont="smallSystem"/>
                                                 <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                             </attributes>
                                         </fragment>
@@ -92,9 +94,6 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemBlueColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
