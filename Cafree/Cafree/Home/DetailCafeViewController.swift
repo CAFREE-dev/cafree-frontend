@@ -14,7 +14,8 @@ class DetailCafeViewController: UIViewController, UITableViewDelegate, UITableVi
     let cellSpacingHeight: CGFloat = 1
     
     var mapView: MTMapView!
-    
+
+    var images = [#imageLiteral(resourceName: "sampleCafeDetailImg"), #imageLiteral(resourceName: "sampleCafeDetailImg"), #imageLiteral(resourceName: "sampleCafeDetailImg")]
     
     //데이터 받아오는 변수
     var receiveItem = ""
@@ -43,7 +44,7 @@ class DetailCafeViewController: UIViewController, UITableViewDelegate, UITableVi
     
     // Section의 수
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        return 3
     }
     
     // 각 Section 사이의 간격 설정
@@ -53,7 +54,10 @@ class DetailCafeViewController: UIViewController, UITableViewDelegate, UITableVi
     
     // Section의 높이
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if indexPath.section == 1 {
+        if indexPath.section == 0 {
+            return 500
+        }
+        else if indexPath.section == 2 {
             return 420
         }
         return 110
@@ -62,6 +66,28 @@ class DetailCafeViewController: UIViewController, UITableViewDelegate, UITableVi
     // 셀 넣는 함수
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.section == 0 {
+            let cell = cafeDetailTableView.dequeueReusableCell(withIdentifier: "detailPhotoCell", for: indexPath) as! CafeDetailPhotoTableViewCell
+         
+            ////scrollview에 각 이미지들 이미지뷰를 addSubview하기
+            //for i in 0..<images.count {
+            //    let imageView = UIImageView()
+            //    let xPos = cell.cafeDetailScrollView.frame.width * CGFloat(i)
+            //    imageView.frame = CGRect(x: xPos, y: 0, width: cell.cafeDetailScrollView.bounds.width, height: //cell.cafeDetailScrollView.bounds.height)
+            //    imageView.image = images[i]
+            //    cell.cafeDetailScrollView.addSubview(imageView)
+            //    cell.cafeDetailScrollView.contentSize.width = imageView.frame.width * CGFloat(i + 1)
+            //}
+            ////페이지컨트롤 세팅
+            //cell.cafeDetailPageCon.numberOfPages = images.count
+            
+            
+            //let value = cell.cafeDetailScrollView.contentOffset.x/cell.cafeDetailScrollView.frame.size.width
+            //cell.cafeDetailPageCon.currentPage = Int(round(value))
+            
+            return cell
+                                                     
+        }
+        else if indexPath.section == 1 {
             let cell = cafeDetailTableView.dequeueReusableCell(withIdentifier: "detailInfoCell", for: indexPath) as! CafeDetailInfoTableViewCell
             cell.cafeName.text = receiveItem
             cell.cafeInfo.text = "카페 상세 정보, 설명 라벨입니다. 2줄을 테스트 하기 위해 길게 씁니다."
@@ -115,10 +141,14 @@ class DetailCafeViewController: UIViewController, UITableViewDelegate, UITableVi
         
         let nibDetailLocal = UINib(nibName: "CafeDetailLocalTableViewCell", bundle: nil)
         cafeDetailTableView.register(nibDetailLocal, forCellReuseIdentifier: "detailLocalCell")
+        
+        let nibDetailPhoto = UINib(nibName: "CafeDetailPhotoTableViewCell", bundle: nil)
+        cafeDetailTableView.register(nibDetailPhoto, forCellReuseIdentifier: "detailPhotoCell")
     }
     
     //맵뷰
     func mapView(_ mapView: MTMapView?, updateDeviceHeading headingAngle: MTMapRotationAngle) {
         print("MTMapView updateDeviceHeading (\(headingAngle)) degrees")
     }
+    
 }
