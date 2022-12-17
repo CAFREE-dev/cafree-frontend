@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CafeDetailPhotoTableViewCell: UITableViewCell {
+class CafeDetailPhotoTableViewCell: UITableViewCell, UIScrollViewDelegate {
 
     @IBOutlet var cafeDetailScrollView: UIScrollView!
     @IBOutlet var cafeDetailPageCon: UIPageControl!
@@ -15,6 +15,7 @@ class CafeDetailPhotoTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        cafeDetailScrollView.delegate = self
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -24,15 +25,15 @@ class CafeDetailPhotoTableViewCell: UITableViewCell {
     }
     
     
-    //
-    ////페이지 컨트롤 현재 페이지 설정
-    //private func setPageControlSelectedPage(currentPage:Int) {
-    //        cafeDetailPageCon.currentPage = currentPage
-    //}
-    ////위 함수에게 전달할 현재 스크롤 인덱스
-    //func scrollViewDidScroll(_ scrollView: UIScrollView) {
-    //        let value = scrollView.contentOffset.x/scrollView.frame.size.width
-    //        setPageControlSelectedPage(currentPage: Int(round(value)))
-    //}
+    
+    //페이지 컨트롤 현재 페이지 설정
+    private func setPageControlSelectedPage(currentPage:Int) {
+            cafeDetailPageCon.currentPage = currentPage
+    }
+    //위 함수에게 전달할 현재 스크롤 인덱스
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+            let value = scrollView.contentOffset.x/scrollView.frame.size.width
+            setPageControlSelectedPage(currentPage: Int(round(value)))
+    }
     
 }

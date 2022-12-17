@@ -68,21 +68,17 @@ class DetailCafeViewController: UIViewController, UITableViewDelegate, UITableVi
         if indexPath.section == 0 {
             let cell = cafeDetailTableView.dequeueReusableCell(withIdentifier: "detailPhotoCell", for: indexPath) as! CafeDetailPhotoTableViewCell
          
-            ////scrollview에 각 이미지들 이미지뷰를 addSubview하기
-            //for i in 0..<images.count {
-            //    let imageView = UIImageView()
-            //    let xPos = cell.cafeDetailScrollView.frame.width * CGFloat(i)
-            //    imageView.frame = CGRect(x: xPos, y: 0, width: cell.cafeDetailScrollView.bounds.width, height: //cell.cafeDetailScrollView.bounds.height)
-            //    imageView.image = images[i]
-            //    cell.cafeDetailScrollView.addSubview(imageView)
-            //    cell.cafeDetailScrollView.contentSize.width = imageView.frame.width * CGFloat(i + 1)
-            //}
-            ////페이지컨트롤 세팅
-            //cell.cafeDetailPageCon.numberOfPages = images.count
-            
-            
-            //let value = cell.cafeDetailScrollView.contentOffset.x/cell.cafeDetailScrollView.frame.size.width
-            //cell.cafeDetailPageCon.currentPage = Int(round(value))
+            //scrollview에 각 이미지들 이미지뷰를 addSubview하기
+            for i in 0..<images.count {
+                let imageView = UIImageView()
+                let xPos = cell.cafeDetailScrollView.frame.width * CGFloat(i)
+                imageView.frame = CGRect(x: xPos, y: 0, width: cell.cafeDetailScrollView.bounds.width, height: cell.cafeDetailScrollView.bounds.height)
+                imageView.image = images[i]
+                cell.cafeDetailScrollView.addSubview(imageView)
+                cell.cafeDetailScrollView.contentSize.width = imageView.frame.width * CGFloat(i + 1)
+            }
+            //페이지컨트롤 세팅
+            cell.cafeDetailPageCon.numberOfPages = images.count
             
             return cell
                                                      
