@@ -16,7 +16,8 @@ class DetailCafeViewController: UIViewController, UITableViewDelegate, UITableVi
     var mapView: MTMapView!
 
     var images = [#imageLiteral(resourceName: "sampleCafeDetailImg"), #imageLiteral(resourceName: "sampleCafeDetailImg"), #imageLiteral(resourceName: "sampleCafeDetailImg")]
-    
+    var good = 0
+    var nice = 1
     //데이터 받아오는 변수
     var receiveItem = ""
 
@@ -55,10 +56,10 @@ class DetailCafeViewController: UIViewController, UITableViewDelegate, UITableVi
     // Section의 높이
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.section == 0 {
-            return 500
+            return 490
         }
         else if indexPath.section == 2 {
-            return 420
+            return 440
         }
         return 110
     }
@@ -79,6 +80,28 @@ class DetailCafeViewController: UIViewController, UITableViewDelegate, UITableVi
             }
             //페이지컨트롤 세팅
             cell.cafeDetailPageCon.numberOfPages = images.count
+            
+            cell.backgroundColor = UIColor.clear.withAlphaComponent(0)
+            
+            
+            cell.delegate = self
+            
+            // 좋아요 버튼 0 -> 빈칸, 1 -> 빨간하트
+            if good == 0{
+                cell.cafeGood.setImage(UIImage(named: "good1"), for: .normal)
+                cell.goodIndex = 0
+            }else{
+                cell.cafeGood.setImage(UIImage(named: "good2"), for: .normal)
+                cell.goodIndex = 1
+            }
+            // 찜 버튼 0 -> 빈칸, 1 -> 빨간색
+            if nice == 0{
+                cell.cafeNice.setImage(UIImage(named: "nice1"), for: .normal)
+                cell.niceIndex = 0
+            }else{
+                cell.cafeNice.setImage(UIImage(named: "nice2"), for: .normal)
+                cell.niceIndex = 1
+            }
             
             return cell
                                                      
@@ -147,4 +170,22 @@ class DetailCafeViewController: UIViewController, UITableViewDelegate, UITableVi
         print("MTMapView updateDeviceHeading (\(headingAngle)) degrees")
     }
     
+}
+extension DetailCafeViewController: ComponentProductCellDelegate{
+    
+    func selectedGoodBtn(goodIndex: Int) {
+        if goodIndex == 0{
+            self.good = 1
+        }else{
+            self.good = 0
+        }
+    }
+    
+    func selectedNiceBtn(niceIndex: Int) {
+        if niceIndex == 0{
+            self.nice = 1
+        }else{
+            self.nice = 0
+        }
+    }
 }

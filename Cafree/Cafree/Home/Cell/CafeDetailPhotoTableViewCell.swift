@@ -7,11 +7,27 @@
 
 import UIKit
 
+protocol ComponentProductCellDelegate {
+    func selectedGoodBtn(goodIndex: Int)
+    
+    func selectedNiceBtn(niceIndex: Int)
+}
+
 class CafeDetailPhotoTableViewCell: UITableViewCell, UIScrollViewDelegate {
 
     @IBOutlet var cafeDetailScrollView: UIScrollView!
     @IBOutlet var cafeDetailPageCon: UIPageControl!
     
+    @IBOutlet var cafeScore: UILabel!
+    
+    @IBOutlet var cafeNice: UIButton!
+    
+    @IBOutlet var cafeGood: UIButton!
+    
+    
+    var delegate: ComponentProductCellDelegate?
+    var goodIndex = 0
+    var niceIndex = 0
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -24,6 +40,30 @@ class CafeDetailPhotoTableViewCell: UITableViewCell, UIScrollViewDelegate {
         // Configure the view for the selected state
     }
     
+    //
+    @IBAction func selectedGoodBtn(_ sender: Any) {
+        self.delegate?.selectedGoodBtn(goodIndex: goodIndex)
+        
+        if goodIndex == 1{
+            self.cafeGood.setImage(UIImage(named: "good1"), for: .normal)
+            goodIndex = 0
+        }else{
+            self.cafeGood.setImage(UIImage(named: "good2"), for: .normal)
+            goodIndex = 1
+        }
+    }
+    
+    @IBAction func selectedNiceBtn(_ sender: Any) {
+        self.delegate?.selectedNiceBtn(niceIndex: niceIndex)
+        if niceIndex == 1{
+            self.cafeNice.setImage(UIImage(named: "nice1"), for: .normal)
+            niceIndex = 0
+        }else{
+            self.cafeNice.setImage(UIImage(named: "nice2"), for: .normal)
+            niceIndex = 1
+        }
+        
+    }
     
     
     //페이지 컨트롤 현재 페이지 설정
