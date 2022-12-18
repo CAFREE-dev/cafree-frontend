@@ -1,23 +1,22 @@
 //
-//  TitleTableViewCell.swift
+//  CafeDetailLocalTableViewCell.swift
 //  Cafree
 //
-//  Created by 박승찬 on 2022/12/08.
+//  Created by 박승찬 on 2022/12/16.
 //
 
 import UIKit
 
-class TitleTableViewCell: UITableViewCell {
+class CafeDetailLocalTableViewCell: UITableViewCell {
 
-    @IBOutlet var titleImg: UIImageView!
+    @IBOutlet var backGroundView: UIView!
     
-    @IBOutlet var titleName1: UILabel!
-    
-    @IBOutlet var titleName2: UILabel!
+    @IBOutlet var mapView: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        backGroundView.layer.cornerRadius = 10
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
