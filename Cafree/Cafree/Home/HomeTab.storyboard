@@ -9,6 +9,21 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Search View Controller-->
+        <scene sceneID="eWa-G8-JEb">
+            <objects>
+                <viewController storyboardIdentifier="SearchViewController" modalPresentationStyle="fullScreen" id="qaK-Go-B4J" customClass="SearchViewController" customModule="Cafree" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Pc5-g9-feb">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="D4c-K6-Z2f"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ePF-eu-ccS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1469" y="-28"/>
+        </scene>
         <!--cafree-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
@@ -25,6 +40,14 @@
                                 <items>
                                     <navigationItem id="TGv-Yn-w8s">
                                         <barButtonItem key="leftBarButtonItem" title="Item" image="Logo" id="OyX-Lx-8bZ"/>
+                                        <rightBarButtonItems>
+                                            <barButtonItem image="writeIcon" id="goh-Qu-jsf"/>
+                                            <barButtonItem image="searchIcon" id="Ifh-l5-831">
+                                                <connections>
+                                                    <action selector="searchBtnClicked:" destination="Y6W-OH-hqX" id="bVL-xM-BVA"/>
+                                                </connections>
+                                            </barButtonItem>
+                                        </rightBarButtonItems>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -93,6 +116,8 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="conseptCafeView" destination="6Oh-Xy-yA5" id="FLj-z0-4ya"/>
+                        <outlet property="navigationSearchBtn" destination="Ifh-l5-831" id="x1f-Js-02r"/>
+                        <outlet property="navigationWriteBtn" destination="goh-Qu-jsf" id="eOs-cw-oXX"/>
                         <outlet property="nearCafeView" destination="jJa-9a-CHQ" id="7ZZ-Hg-FrE"/>
                         <outlet property="newCafeView" destination="cJ0-al-l87" id="zIc-fO-M5l"/>
                         <outlet property="popCafeView" destination="HZr-4x-nqE" id="WCF-Bg-Cqu"/>
@@ -168,7 +193,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OZb-zK-zp0">
-                                <rect key="frame" x="-1" y="43" width="394" height="44"/>
+                                <rect key="frame" x="-2" y="43" width="394" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.078431372550000003" green="0.035294117649999998" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="barTintColor" red="0.078431372550000003" green="0.035294117649999998" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
@@ -299,6 +324,8 @@
         <image name="HomeTabImg" width="24" height="20"/>
         <image name="HomeTabImgDefault" width="24" height="20"/>
         <image name="Logo" width="85" height="20"/>
+        <image name="searchIcon" width="24" height="24"/>
+        <image name="writeIcon" width="24" height="24"/>
         <systemColor name="secondarySystemBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

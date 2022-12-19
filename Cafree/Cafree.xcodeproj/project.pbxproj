@@ -69,6 +69,7 @@
 		6F4F4F122941D319004D6852 /* TitleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F4F4F102941D319004D6852 /* TitleTableViewCell.xib */; };
 		6F941F13294DB70200C63AC1 /* CafeDetailPhotoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F941F11294DB70200C63AC1 /* CafeDetailPhotoTableViewCell.swift */; };
 		6F941F14294DB70200C63AC1 /* CafeDetailPhotoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F941F12294DB70200C63AC1 /* CafeDetailPhotoTableViewCell.xib */; };
+		6F9985F22950856B005418C7 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F9985F12950856B005418C7 /* SearchViewController.swift */; };
 		6F9D0DF2294B68B000D04562 /* CafeDetailInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F9D0DF0294B68B000D04562 /* CafeDetailInfoTableViewCell.swift */; };
 		6F9D0DF3294B68B000D04562 /* CafeDetailInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F9D0DF1294B68B000D04562 /* CafeDetailInfoTableViewCell.xib */; };
 		6FE7C108293F609000B61E13 /* CafeClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FE7C107293F609000B61E13 /* CafeClass.swift */; };
@@ -167,6 +168,7 @@
 		6F4F4F102941D319004D6852 /* TitleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TitleTableViewCell.xib; sourceTree = "<group>"; };
 		6F941F11294DB70200C63AC1 /* CafeDetailPhotoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeDetailPhotoTableViewCell.swift; sourceTree = "<group>"; };
 		6F941F12294DB70200C63AC1 /* CafeDetailPhotoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CafeDetailPhotoTableViewCell.xib; sourceTree = "<group>"; };
+		6F9985F12950856B005418C7 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		6F9D0DF0294B68B000D04562 /* CafeDetailInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeDetailInfoTableViewCell.swift; sourceTree = "<group>"; };
 		6F9D0DF1294B68B000D04562 /* CafeDetailInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CafeDetailInfoTableViewCell.xib; sourceTree = "<group>"; };
 		6FE7C107293F609000B61E13 /* CafeClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeClass.swift; sourceTree = "<group>"; };
@@ -273,6 +275,7 @@
 				6F015461293E24A200A588FE /* ConseptCafeViewController.swift */,
 				6FE7C107293F609000B61E13 /* CafeClass.swift */,
 				6F36FA362948594C0067D1CA /* DetailCafeViewController.swift */,
+				6F9985F12950856B005418C7 /* SearchViewController.swift */,
 				6F402F4B293F530B00E97D5C /* Cell */,
 			);
 			path = Home;
@@ -545,6 +548,7 @@
 				6F4F4F112941D319004D6852 /* TitleTableViewCell.swift in Sources */,
 				6FE7C108293F609000B61E13 /* CafeClass.swift in Sources */,
 				6F402F4E293F537900E97D5C /* CafeTableViewCell.swift in Sources */,
+				6F9985F22950856B005418C7 /* SearchViewController.swift in Sources */,
 				1373C2B729252BFA00FA2130 /* ViewController.swift in Sources */,
 				6F36FA372948594C0067D1CA /* DetailCafeViewController.swift in Sources */,
 				1373C2BD29252BFA00FA2130 /* Cafree.xcdatamodeld in Sources */,
