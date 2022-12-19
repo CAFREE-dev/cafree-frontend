@@ -9,10 +9,25 @@ import UIKit
 
 class SearchViewController: UIViewController {
 
+    @IBOutlet var searchField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        searchField.borderStyle = .none
+        let border = CALayer()
+        border.frame = CGRect(x: 0, y: searchField.frame.size.height-1, width: searchField.frame.width, height: 1)
+        border.backgroundColor = UIColor.black.cgColor
+        searchField.layer.addSublayer((border))
+        searchField.textColor = UIColor.black
+        
+        searchField.addLeftPadding()
+        searchField.addleftimage(image: UIImage(named: "searchIconGray")!)
+    }
+
+    override func viewDidLayoutSubviews() {
+        
     }
     
 
@@ -25,5 +40,24 @@ class SearchViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+
+}
+//텍스트 필드 커스텀
+extension UITextField {
+
+    //텍스트 필드 앞에 페딩 넣기
+    func addLeftPadding() {
+        let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: self.frame.height))
+        self.leftView = paddingView
+        self.leftViewMode = ViewMode.always
+    }
+    
+    //텍스트 필드 앞에 이미지 넣기
+    func addleftimage(image:UIImage) {
+        let leftimage = UIImageView(frame: CGRect(x: 0, y: 0, width: image.size.width, height: image.size.height))
+        leftimage.image = image
+        self.leftView = leftimage
+        self.leftViewMode = .always
+    }
 
 }

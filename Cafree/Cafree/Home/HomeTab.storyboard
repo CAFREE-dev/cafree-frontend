@@ -16,13 +16,39 @@
                     <view key="view" contentMode="scaleToFill" id="Pc5-g9-feb">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lW2-Ju-ZpQ">
+                                <rect key="frame" x="0.0" y="46" width="393" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="barTintColor" red="0.078431372549019607" green="0.035294117647058823" blue="0.24705882352941178" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <items>
+                                    <navigationItem id="DPS-uW-Thi">
+                                        <barButtonItem key="leftBarButtonItem" image="BackBtn" id="aKg-6V-I1k">
+                                            <color key="tintColor" systemColor="systemBackgroundColor"/>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="탐색하기" id="bPK-nl-Sn9">
+                                            <color key="tintColor" systemColor="systemBackgroundColor"/>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="검색어를 입력하세요." textAlignment="natural" minimumFontSize="20" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="9q6-Yx-tDi">
+                                <rect key="frame" x="16" y="120" width="361" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="D4c-K6-Z2f"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="searchField" destination="9q6-Yx-tDi" id="XkC-1v-wUR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ePF-eu-ccS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1469" y="-28"/>
+            <point key="canvasLocation" x="-1124.4274809160304" y="-17.605633802816904"/>
         </scene>
         <!--cafree-->
         <scene sceneID="s0d-6b-0kx">
@@ -320,6 +346,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="BackBtn" width="24" height="24"/>
         <image name="BackBtnHome" width="46" height="24"/>
         <image name="HomeTabImg" width="24" height="20"/>
         <image name="HomeTabImgDefault" width="24" height="20"/>
