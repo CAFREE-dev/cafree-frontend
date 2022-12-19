@@ -25,9 +25,15 @@
                                     <navigationItem id="DPS-uW-Thi">
                                         <barButtonItem key="leftBarButtonItem" image="BackBtn" id="aKg-6V-I1k">
                                             <color key="tintColor" systemColor="systemBackgroundColor"/>
+                                            <connections>
+                                                <action selector="backBtnClicked:" destination="qaK-Go-B4J" id="xFy-f6-bbf"/>
+                                            </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title="탐색하기" id="bPK-nl-Sn9">
                                             <color key="tintColor" systemColor="systemBackgroundColor"/>
+                                            <connections>
+                                                <action selector="searchBtnClicked:" destination="qaK-Go-B4J" id="zl9-yw-lf4"/>
+                                            </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
@@ -43,6 +49,8 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
+                        <outlet property="backBtn" destination="aKg-6V-I1k" id="ySr-Kh-m5K"/>
+                        <outlet property="searchBtn" destination="bPK-nl-Sn9" id="rho-E9-6Ug"/>
                         <outlet property="searchField" destination="9q6-Yx-tDi" id="XkC-1v-wUR"/>
                     </connections>
                 </viewController>

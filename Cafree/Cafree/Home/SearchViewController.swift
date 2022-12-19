@@ -11,6 +11,9 @@ class SearchViewController: UIViewController {
 
     @IBOutlet var searchField: UITextField!
     
+    @IBOutlet var backBtn: UIBarButtonItem!
+    @IBOutlet var searchBtn: UIBarButtonItem!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -24,8 +27,17 @@ class SearchViewController: UIViewController {
         
         searchField.addLeftPadding()
         searchField.addleftimage(image: UIImage(named: "searchIconGray")!)
+        
     }
 
+    @IBAction func backBtnClicked(_ sender: Any) {
+        self.dismiss(animated: true)
+        print("뒤로가기 버튼")
+    }
+    
+    @IBAction func searchBtnClicked(_ sender: Any) {
+        print(searchField.text!+" 검색하기")
+    }
     override func viewDidLayoutSubviews() {
         
     }
