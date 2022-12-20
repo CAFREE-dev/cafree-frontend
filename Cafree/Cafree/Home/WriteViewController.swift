@@ -7,15 +7,44 @@
 
 import UIKit
 
-class WriteViewController: UIViewController {
+class WriteViewController: UIViewController, UITextViewDelegate {
 
+    @IBOutlet var reviewTextView: UITextView!
     @IBOutlet var backBtn: UIBarButtonItem!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        reviewTextView.delegate = self
+        placeholderSetting()
         // Do any additional setup after loading the view.
     }
     
+    // TextView placeholder 세팅
+    func placeholderSetting() {
+        reviewTextView.delegate = self // reviewTextView가 유저가 선언한 outlet
+        reviewTextView.text = "글 작성하기"
+        reviewTextView.textColor = UIColor.lightGray
+            
+    }
+    // TextView Place Holder
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        if textView.textColor == UIColor.lightGray {
+            textView.text = nil
+            textView.textColor = UIColor.black
+        }
+            
+    }
+    // TextView Place Holder
+    func textViewDidEndEditing(_ textView: UITextView) {
+        if textView.text.isEmpty {
+            textView.text = "글 작성하기"
+            textView.textColor = UIColor.lightGray
+        }
+    }
+    //텍스트 뷰 작성 중 다른 곳 터치 했을 때 텍스트 뷰 작성 끝내기
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.reviewTextView.resignFirstResponder()
+    }
 
     @IBAction func backBtnClicked(_ sender: Any) {
         self.dismiss(animated: true)
