@@ -10,6 +10,10 @@ import CoreLocation
 
 class DetailCafeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, MTMapViewDelegate {
 
+    
+    @IBOutlet var searchBtn: UIBarButtonItem!
+    @IBOutlet var writeBtn: UIBarButtonItem!
+    
     @IBOutlet weak var cafeDetailTableView: UITableView!
     let cellSpacingHeight: CGFloat = 1
     
@@ -168,6 +172,14 @@ class DetailCafeViewController: UIViewController, UITableViewDelegate, UITableVi
     //맵뷰
     func mapView(_ mapView: MTMapView?, updateDeviceHeading headingAngle: MTMapRotationAngle) {
         print("MTMapView updateDeviceHeading (\(headingAngle)) degrees")
+    }
+    
+    
+    @IBAction func searchBtnClicked(_ sender: Any) {
+        guard let searchView = self.storyboard?.instantiateViewController(identifier: "SearchViewController") else {return}
+        self.present(searchView, animated: true)
+    }
+    @IBAction func writeBtnClicked(_ sender: Any) {
     }
     
 }
