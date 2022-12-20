@@ -120,6 +120,41 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <slider opaque="NO" alpha="0.10000000000000001" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="StarRatingUISlider" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="ctQ-IK-dHU" customClass="StarRatingUISlider" customModule="Cafree" customModuleProvider="target">
+                                <rect key="frame" x="60" y="451" width="273" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="starSliderSlided:" destination="Ne3-Z0-Umd" eventType="valueChanged" id="NJh-M5-Qe9"/>
+                                </connections>
+                            </slider>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="emptyStar" translatesAutoresizingMaskIntoConstraints="NO" id="2Zp-op-Z92">
+                                <rect key="frame" x="62" y="454" width="35" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="5" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="emptyStar" translatesAutoresizingMaskIntoConstraints="NO" id="ogG-a0-f3D">
+                                <rect key="frame" x="296" y="454" width="35" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="3" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="emptyStar" translatesAutoresizingMaskIntoConstraints="NO" id="cyQ-dj-sZ5">
+                                <rect key="frame" x="179" y="454" width="35" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="2" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="emptyStar" translatesAutoresizingMaskIntoConstraints="NO" id="AuQ-FZ-2Rx">
+                                <rect key="frame" x="122" y="454" width="35" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="4" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="emptyStar" translatesAutoresizingMaskIntoConstraints="NO" id="o8l-Y1-76L">
+                                <rect key="frame" x="239" y="454" width="35" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="별을 색칠 해 주세요!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EXZ-nj-4OI">
+                                <rect key="frame" x="94" y="497" width="205" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                <color key="textColor" red="0.078431372550000003" green="0.035294117649999998" blue="0.2470588235" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Soy-86-dah"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -127,6 +162,8 @@
                     <connections>
                         <outlet property="backBtn" destination="7pF-6w-NtE" id="Ymj-zT-ata"/>
                         <outlet property="reviewTextView" destination="Lga-xO-hid" id="DPI-vP-eQU"/>
+                        <outlet property="starLabel" destination="EXZ-nj-4OI" id="gDT-cd-LHy"/>
+                        <outlet property="starSlider" destination="ctQ-IK-dHU" id="vgF-iv-2mR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="whU-5E-pip" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -454,6 +491,7 @@
         <image name="HomeTabImg" width="24" height="20"/>
         <image name="HomeTabImgDefault" width="24" height="20"/>
         <image name="Logo" width="85" height="20"/>
+        <image name="emptyStar" width="33" height="31"/>
         <image name="searchIcon" width="24" height="24"/>
         <image name="writeIcon" width="24" height="24"/>
         <systemColor name="labelColor">

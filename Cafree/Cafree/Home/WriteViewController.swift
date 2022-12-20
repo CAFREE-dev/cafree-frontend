@@ -12,6 +12,12 @@ class WriteViewController: UIViewController, UITextViewDelegate {
     @IBOutlet var reviewTextView: UITextView!
     @IBOutlet var backBtn: UIBarButtonItem!
     
+    
+    @IBOutlet var starSlider: UISlider!
+    @IBOutlet var starLabel: UILabel!
+    var starImageViews = [UIImageView]()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         reviewTextView.delegate = self
@@ -45,11 +51,46 @@ class WriteViewController: UIViewController, UITextViewDelegate {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.reviewTextView.resignFirstResponder()
     }
-
+    
+    
+    @IBAction func starSliderSlided(_ sender: UISlider) {
+        let floatValue = floor(sender.value * 10) / 10 + 0.5
+                
+        for index in 1...5 {
+            if let starImage = view.viewWithTag(index) as? UIImageView {
+                if Float(index) <= floatValue {
+                    starImage.image = UIImage(named: "fullStar")
+                } else {
+                    starImage.image = UIImage(named: "emptyStar")
+                }
+            }
+        }
+        
+        let intValue = Int(floatValue)
+        var strScore = "()"
+        switch intValue{
+        case 0...1 :
+            strScore = "(나빠요)"
+        case 2 :
+            strScore = "(별로예요)"
+        case 3 :
+            strScore = "(그냥 그래요)"
+        case 4 :
+            strScore = "(좋아요)"
+        case 5 :
+            strScore = "(최고예요)"
+        default :
+            strScore = "()"
+        }
+        starLabel.text = String(intValue) + "점 " + strScore
+                
+    }
+    
     @IBAction func backBtnClicked(_ sender: Any) {
         self.dismiss(animated: true)
         print("뒤로가기 버튼")
     }
+    
     /*
     // MARK: - Navigation
 
