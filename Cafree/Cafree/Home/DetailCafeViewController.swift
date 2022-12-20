@@ -180,6 +180,8 @@ class DetailCafeViewController: UIViewController, UITableViewDelegate, UITableVi
         self.present(searchView, animated: true)
     }
     @IBAction func writeBtnClicked(_ sender: Any) {
+        guard let writeView = self.storyboard?.instantiateViewController(identifier: "WriteViewController") else {return}
+        self.present(writeView, animated: true)
     }
     
 }
