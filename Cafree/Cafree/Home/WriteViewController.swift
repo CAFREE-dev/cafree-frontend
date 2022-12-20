@@ -20,7 +20,6 @@ class WriteViewController: UIViewController, UITextViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        reviewTextView.delegate = self
         placeholderSetting()
         // Do any additional setup after loading the view.
     }
@@ -30,6 +29,10 @@ class WriteViewController: UIViewController, UITextViewDelegate {
         reviewTextView.delegate = self // reviewTextView가 유저가 선언한 outlet
         reviewTextView.text = "글 작성하기"
         reviewTextView.textColor = UIColor.lightGray
+        reviewTextView.layer.borderColor = UIColor.lightGray.cgColor
+        reviewTextView.layer.borderWidth = 0.5
+        reviewTextView.layer.cornerRadius = 8
+        
             
     }
     // TextView Place Holder
