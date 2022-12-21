@@ -1,14 +1,14 @@
 //
-//  FeedViewController.swift
+//  FeedTabViewController.swift
 //  Cafree
 //
-//  Created by 한수빈 on 2022/11/24.
+//  Created by 한수빈 on 2022/12/20.
 //
 
 import UIKit
 
-class FeedViewController: ViewController {
-
+class FeedTabViewController: UIViewController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
