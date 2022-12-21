@@ -6,12 +6,16 @@
 //
 
 import UIKit
+import CoreLocation
 
-class PopCafeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
+class PopCafeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, CLLocationManagerDelegate{
     
     @IBOutlet var btnLocation : UIButton!
     
     @IBOutlet weak var cafeTableView: UITableView!
+    
+    //위치 매니져
+    var locationManager: CLLocationManager!
     
     var cafes = ["garbage","sample1","sample2"]
     let cellSpacingHeight: CGFloat = 1
@@ -28,6 +32,34 @@ class PopCafeViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         cafeTableView.delegate = self
         cafeTableView.dataSource = self
+        
+        locationManager = CLLocationManager()
+        locationManager.delegate = self
+        
+        locationManager.requestWhenInUseAuthorization()
+        
+    }
+    
+    //위치 권한
+    func getLocationUsagePermission() {
+        self.locationManager.requestWhenInUseAuthorization()
+    }
+    //위치 권한
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations:[CLLocation], didChangeAuthorization status: CLAuthorizationStatus) {
+        
+        //위치권한 alert
+        switch status {
+        case .authorizedAlways, .authorizedWhenInUse:
+            print("GPS 권한 설정됨")
+        case .restricted, .notDetermined:
+            print("GPS 권한 설정되지 않음")
+            getLocationUsagePermission()
+        case .denied:
+            print("GPS 권한 요청 거무됨")
+            getLocationUsagePermission()
+        default:
+            print("GPS: Default")
+        }
     }
     
     // Section 당 Row의 수
