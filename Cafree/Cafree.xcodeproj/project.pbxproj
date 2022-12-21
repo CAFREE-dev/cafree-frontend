@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		130A1CC32951BCA600446DF4 /* FeedTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 130A1CC22951BCA600446DF4 /* FeedTabViewController.swift */; };
+		130A1CC52951BCC200446DF4 /* FeedTabViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 130A1CC42951BCC200446DF4 /* FeedTabViewController.storyboard */; };
 		1373C2B329252BFA00FA2130 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1373C2B229252BFA00FA2130 /* AppDelegate.swift */; };
 		1373C2B529252BFA00FA2130 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1373C2B429252BFA00FA2130 /* SceneDelegate.swift */; };
 		1373C2B729252BFA00FA2130 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1373C2B629252BFA00FA2130 /* ViewController.swift */; };
@@ -17,7 +19,6 @@
 		1373C2CD29252BFC00FA2130 /* CafreeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1373C2CC29252BFC00FA2130 /* CafreeTests.swift */; };
 		1373C2D729252BFC00FA2130 /* CafreeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1373C2D629252BFC00FA2130 /* CafreeUITests.swift */; };
 		1373C2D929252BFC00FA2130 /* CafreeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1373C2D829252BFC00FA2130 /* CafreeUITestsLaunchTests.swift */; };
-		13DB1826292EFA6500B9CA90 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13DB1825292EFA6500B9CA90 /* FeedViewController.swift */; };
 		6F01545C293E242C00A588FE /* PopCafeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F01545B293E242C00A588FE /* PopCafeViewController.swift */; };
 		6F01545E293E246900A588FE /* NewCafeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F01545D293E246900A588FE /* NewCafeViewController.swift */; };
 		6F015460293E247E00A588FE /* NearCafeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F01545F293E247E00A588FE /* NearCafeViewController.swift */; };
@@ -95,6 +96,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		130A1CC22951BCA600446DF4 /* FeedTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTabViewController.swift; sourceTree = "<group>"; };
+		130A1CC42951BCC200446DF4 /* FeedTabViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FeedTabViewController.storyboard; sourceTree = "<group>"; };
 		1373C2AF29252BFA00FA2130 /* Cafree.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cafree.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1373C2B229252BFA00FA2130 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1373C2B429252BFA00FA2130 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -109,7 +112,6 @@
 		1373C2D229252BFC00FA2130 /* CafreeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CafreeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1373C2D629252BFC00FA2130 /* CafreeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafreeUITests.swift; sourceTree = "<group>"; };
 		1373C2D829252BFC00FA2130 /* CafreeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafreeUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		13DB1825292EFA6500B9CA90 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		6F01545B293E242C00A588FE /* PopCafeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopCafeViewController.swift; sourceTree = "<group>"; };
 		6F01545D293E246900A588FE /* NewCafeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCafeViewController.swift; sourceTree = "<group>"; };
 		6F01545F293E247E00A588FE /* NearCafeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearCafeViewController.swift; sourceTree = "<group>"; };
@@ -289,7 +291,8 @@
 		13DB1822292EFA3800B9CA90 /* Feed */ = {
 			isa = PBXGroup;
 			children = (
-				13DB1825292EFA6500B9CA90 /* FeedViewController.swift */,
+				130A1CC22951BCA600446DF4 /* FeedTabViewController.swift */,
+				130A1CC42951BCC200446DF4 /* FeedTabViewController.storyboard */,
 			);
 			path = Feed;
 			sourceTree = "<group>";
@@ -516,6 +519,7 @@
 				6F02925E293BB87C003D9FF1 /* th_line.png in Resources */,
 				6F02926D293BB87C003D9FF1 /* map_present_background_update.png in Resources */,
 				6F029264293BB87C003D9FF1 /* info_box.png in Resources */,
+				130A1CC52951BCC200446DF4 /* FeedTabViewController.storyboard in Resources */,
 				6F029266293BB87C003D9FF1 /* map_pinup_custom.png in Resources */,
 				6F02926C293BB87C003D9FF1 /* noimage.png in Resources */,
 				6F0291D6293B990D003D9FF1 /* HomeTab.storyboard in Resources */,
@@ -558,6 +562,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				130A1CC32951BCA600446DF4 /* FeedTabViewController.swift in Sources */,
 				6F3315E7294C72A700B0B2DC /* CafeDetailLocalTableViewCell.swift in Sources */,
 				6F4F4F112941D319004D6852 /* TitleTableViewCell.swift in Sources */,
 				6FE7C108293F609000B61E13 /* CafeClass.swift in Sources */,
@@ -573,7 +578,6 @@
 				6F015462293E24A200A588FE /* ConseptCafeViewController.swift in Sources */,
 				1373C2B329252BFA00FA2130 /* AppDelegate.swift in Sources */,
 				6F01545E293E246900A588FE /* NewCafeViewController.swift in Sources */,
-				13DB1826292EFA6500B9CA90 /* FeedViewController.swift in Sources */,
 				6F941F13294DB70200C63AC1 /* CafeDetailPhotoTableViewCell.swift in Sources */,
 				6F015460293E247E00A588FE /* NearCafeViewController.swift in Sources */,
 				1373C2B529252BFA00FA2130 /* SceneDelegate.swift in Sources */,
