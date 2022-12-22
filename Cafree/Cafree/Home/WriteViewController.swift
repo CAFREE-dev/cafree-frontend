@@ -6,12 +6,14 @@
 //
 
 import UIKit
+import BSImagePicker
 
 class WriteViewController: UIViewController, UITextViewDelegate {
 
     @IBOutlet var reviewTextView: UITextView!
     @IBOutlet var backBtn: UIBarButtonItem!
     
+    //let imagePicker = ImagePickerController()
     
     @IBOutlet var starSlider: UISlider!
     @IBOutlet var starLabel: UILabel!
