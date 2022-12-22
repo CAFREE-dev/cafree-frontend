@@ -8,22 +8,46 @@
 import UIKit
 
 class GridViewController: UIViewController {
-
+    
+    
+    @IBOutlet weak var gridViewController: UICollectionView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        gridViewController.delegate = self
+        gridViewController.dataSource = self
+        
+        gridViewController.reloadData()
+    }
+}
 
-        // Do any additional setup after loading the view.
+extension GridViewController : UICollectionViewDelegateFlowLayout, UICollectionViewDelegate, UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let width: CGFloat = collectionView.frame.width / 3.5
+        let height: CGFloat = collectionView.frame.width / 3.5
+
+        return CGSize(width: width, height: height)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 100
     }
-    */
 
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
+            cell.backgroundColor = .purple
+            return cell
+    }
+    
+    // CollectionView Cell의 위아래 간격
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 1.0
+    }
+
+    // CollectionView Cell의 옆 간격
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 1.0
+    }
+    
 }
+
