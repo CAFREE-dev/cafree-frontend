@@ -1,29 +1,41 @@
-//
-//  FeedTabViewController.swift
-//  Cafree
-//
-//  Created by 한수빈 on 2022/12/20.
-//
-
 import UIKit
 
 class FeedTabViewController: UIViewController {
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
+    @IBOutlet weak var sortBtn: UIButton!
+    var isClicked = false
+    
+    @IBOutlet var listView: UIView!
+    @IBOutlet var gridView: UIView!
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
     }
-    */
-
+    
+    
+    // false :
+    @IBAction func sortBtnClicked(_ sender: UIButton) {
+        isClicked = !isClicked
+        
+        if !isClicked {
+            //sender.setImage(UImage(named:"square.grid.2x2.fill"), for: .normal)
+            showGridView()
+        }else if isClicked {
+            showListView()
+        }
+    }
+    
+    func showListView() {
+        listView.alpha = 1.0
+        gridView.alpha = 0.0
+    }
+    
+    func showGridView() {
+        listView.alpha = 0.0
+        gridView.alpha = 1.0
+    }
 }
