@@ -39,6 +39,7 @@ class WriteViewController: UIViewController, UITextViewDelegate{
         // Do any additional setup after loading the view.
         photoCollectionView.delegate = self
         photoCollectionView.dataSource = self
+        photoCollectionView.reloadData()
         registerCell()
     
     }
@@ -66,11 +67,11 @@ class WriteViewController: UIViewController, UITextViewDelegate{
             
             for i in 0..<assets.count {
                 self.selectedAssets.append(assets[i])
-             }
-             self.convertAssetToImages()
-            
-            self.imageView.image = self.selectImages[0]
+            }
+            self.convertAssetToImages()
+            self.photoCollectionView.reloadData()
         })
+        
         
     }
     //PH이미지 UIImage로 바꾸기
@@ -101,8 +102,8 @@ class WriteViewController: UIViewController, UITextViewDelegate{
     }
     
     private func registerCell() {
-        let nib = UINib(nibName: "PhotoBtnCollectionViewCell", bundle: nil)
-        photoCollectionView.register(nib, forCellWithReuseIdentifier: "photoBtnCell")
+        let nib = UINib(nibName: "SelectedImageCollectionViewCell", bundle: nil)
+        photoCollectionView.register(nib, forCellWithReuseIdentifier: "photoCell")
     }
     
     // TextView placeholder 세팅
@@ -196,14 +197,16 @@ extension WriteViewController: UICollectionViewDelegate, UICollectionViewDataSou
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1
+        return selectImages.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "photoBtnCell", for: indexPath) as? PhotoBtnCollectionViewCell else {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "photoCell", for: indexPath) as? SelectedImageCollectionViewCell else {
             print("cell 문제")
             return UICollectionViewCell()
         }
+        
+        cell.photoView.image = selectImages[indexPath.row]
         
         return cell
         
