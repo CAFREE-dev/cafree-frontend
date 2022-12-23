@@ -28,6 +28,9 @@
                         <buttonConfiguration key="configuration" style="plain" image="trash.circle" catalog="system" title=" ">
                             <color key="baseForegroundColor" red="0.078431372550000003" green="0.035294117649999998" blue="0.2470588235" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                         </buttonConfiguration>
+                        <connections>
+                            <action selector="btnExitClicked:" destination="gTV-IL-0wX" eventType="touchUpInside" id="9gZ-Zc-wse"/>
+                        </connections>
                     </button>
                 </subviews>
             </view>

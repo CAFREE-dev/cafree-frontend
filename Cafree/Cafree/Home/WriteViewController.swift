@@ -205,12 +205,19 @@ extension WriteViewController: UICollectionViewDelegate, UICollectionViewDataSou
             print("cell 문제")
             return UICollectionViewCell()
         }
-        
+        cell.delegate = self
+        cell.indexPathRow = indexPath.row
         cell.photoView.image = selectImages[indexPath.row]
         
         return cell
-        
     }
     
+}
+
+extension WriteViewController: SelectedImageCollectionViewCellDelegate{
+    func didDeselectButtonClicked(at index: Int) {
+        selectImages.remove(at: index)
+        photoCollectionView.reloadData()
+    }
     
 }
