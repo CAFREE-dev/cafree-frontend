@@ -123,7 +123,7 @@
                     <tabBarItem key="tabBarItem" title="피드" id="08e-aQ-jaA"/>
                     <navigationItem key="navigationItem" id="5G3-mZ-Ou9">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="BB3-ac-DjS">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="bQT-NN-y8W">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="bQT-NN-y8W">
                                 <rect key="frame" x="302" y="5" width="92" height="34.5"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
@@ -135,6 +135,11 @@
                     <connections>
                         <outlet property="gridView" destination="DSH-1d-bTx" id="OWA-Vu-CI7"/>
                         <outlet property="listView" destination="psJ-1d-P8l" id="DgO-y3-F18"/>
+                        <outletCollection property="tagBtn" destination="VNV-5T-aHv" collectionClass="NSMutableArray" id="iKe-De-D3n"/>
+                        <outletCollection property="tagBtn" destination="JgG-N0-AhC" collectionClass="NSMutableArray" id="YRR-ae-8u2"/>
+                        <outletCollection property="tagBtn" destination="UwK-bW-cYQ" collectionClass="NSMutableArray" id="nLb-Xr-A7d"/>
+                        <outletCollection property="tagBtn" destination="LSh-hn-ZGo" collectionClass="NSMutableArray" id="zJx-C6-cTG"/>
+                        <outletCollection property="tagBtn" destination="00C-0F-Gsa" collectionClass="NSMutableArray" id="0ik-bI-4Tb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

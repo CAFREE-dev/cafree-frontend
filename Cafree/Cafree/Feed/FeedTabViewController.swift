@@ -8,12 +8,28 @@ class FeedTabViewController: UIViewController {
     @IBOutlet var listView: UIView!
     @IBOutlet var gridView: UIView!
     
-
+    
+    @IBOutlet var tagBtn : [UIButton]!
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        initTagBtn()
+    }
+    
+    func initTagBtn(){
+        let tagBtnTitleText = ["카페이름", "위치", "분위기", "좋아요", "평가"]
+        var tagBtnIndex = 0
+        for i in tagBtn {
+            i.setTitle(tagBtnTitleText[tagBtnIndex], for: .normal)
+            i.setTitleColor(.black, for: .normal)
+            i.tintColor = UIColor.clear
+            i.layer.cornerRadius = 15
+            i.layer.borderWidth = 1
+           
+            tagBtnIndex += 1
+        }
     }
     
     
