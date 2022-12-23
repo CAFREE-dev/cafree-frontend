@@ -15,6 +15,7 @@ class WriteViewController: UIViewController, UITextViewDelegate{
     @IBOutlet var reviewTextView: UITextView!
     @IBOutlet var backBtn: UIBarButtonItem!
     
+    @IBOutlet var photoSelectBtn: UIButton!
     @IBOutlet var photoCollectionView: UICollectionView!
     var selectImages : [Any] = []
     //let imagePicker = ImagePickerController()
@@ -28,12 +29,24 @@ class WriteViewController: UIViewController, UITextViewDelegate{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        initPhotoBtn()
+        
         placeholderSetting()
         // Do any additional setup after loading the view.
         photoCollectionView.delegate = self
         photoCollectionView.dataSource = self
         registerCell()
     
+    }
+    private func initPhotoBtn(){
+        photoSelectBtn.layer.borderWidth = 0.8
+        photoSelectBtn.layer.borderColor = UIColor.lightGray.cgColor
+        photoSelectBtn.layer.cornerRadius = 8
+    }
+    
+    @IBAction func photoBtnClicked(_ sender: UIButton) {
+        
     }
     
     private func registerCell() {
@@ -120,7 +133,7 @@ class WriteViewController: UIViewController, UITextViewDelegate{
         // Pass the selected object to the new view controller.
     }
     */
-
+    
 }
 extension WriteViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func numberOfSections(in collectionView: UICollectionView) -> Int {

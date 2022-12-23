@@ -4,12 +4,17 @@
 //
 //  Created by 박승찬 on 2022/12/23.
 //
-
+import Foundation
 import UIKit
+import BSImagePicker
+import Photos
 
 class PhotoBtnCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet var photoBtn: UIButton!
+    var selectedAssets : [PHAsset] = []
+    var userSelectedImages : [UIImage] = []
+  
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -19,6 +24,11 @@ class PhotoBtnCollectionViewCell: UICollectionViewCell {
         photoBtn.layer.cornerRadius = 8
     }
 
+    
+    
     @IBAction func photoBtnClicked(_ sender: UIButton) {
+        
     }
+    
+    
 }
