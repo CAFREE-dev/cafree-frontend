@@ -7,17 +7,20 @@
 
 import UIKit
 import BSImagePicker
+import Photos
 
 class WriteViewController: UIViewController, UITextViewDelegate{
     
     
-
+    @IBOutlet var imageView: UIImageView!
+    
     @IBOutlet var reviewTextView: UITextView!
     @IBOutlet var backBtn: UIBarButtonItem!
     
     @IBOutlet var photoSelectBtn: UIButton!
     @IBOutlet var photoCollectionView: UICollectionView!
-    var selectImages : [Any] = []
+    var selectedAssets : [PHAsset] = []
+    var selectImages : [UIImage] = []
     //let imagePicker = ImagePickerController()
     
     @IBOutlet var starSlider: UISlider!
@@ -46,7 +49,55 @@ class WriteViewController: UIViewController, UITextViewDelegate{
     }
     
     @IBAction func photoBtnClicked(_ sender: UIButton) {
+        selectedAssets.removeAll()
+        selectImages.removeAll()
         
+        let imagePicker = ImagePickerController()
+        imagePicker.settings.selection.max = 4
+        imagePicker.settings.fetch.assets.supportedMediaTypes = [.image]
+        
+        self.presentImagePicker(imagePicker, select: { (asset) in
+            // User selected an asset. Do something with it. Perhaps begin processing/upload?
+        }, deselect: { (asset) in
+            // User deselected an asset. Cancel whatever you did when asset was selected.
+        }, cancel: { (assets) in
+            // User canceled selection.
+        }, finish: { (assets) in
+            
+            for i in 0..<assets.count {
+                self.selectedAssets.append(assets[i])
+             }
+             self.convertAssetToImages()
+            
+            self.imageView.image = self.selectImages[0]
+        })
+        
+    }
+    //PH이미지 UIImage로 바꾸기
+    func convertAssetToImages() {
+            
+        if selectedAssets.count != 0 {
+                
+            for i in 0..<selectedAssets.count {
+                    
+                let imageManager = PHImageManager.default()
+                let option = PHImageRequestOptions()
+                option.isSynchronous = true
+                var thumbnail = UIImage()
+                    
+                imageManager.requestImage(for: selectedAssets[i],
+                                              targetSize: CGSize(width: 200, height: 200),
+                                              contentMode: .aspectFit,
+                                              options: option) { (result, info) in
+                        thumbnail = result!
+                }
+                    
+                let data = thumbnail.jpegData(compressionQuality: 0.7)
+                let newImage = UIImage(data: data!)
+                    
+                self.selectImages.append(newImage! as UIImage)
+            }
+        }
     }
     
     private func registerCell() {
