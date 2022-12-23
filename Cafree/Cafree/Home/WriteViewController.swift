@@ -47,6 +47,9 @@ class WriteViewController: UIViewController, UITextViewDelegate{
         photoSelectBtn.layer.borderWidth = 0.8
         photoSelectBtn.layer.borderColor = UIColor.lightGray.cgColor
         photoSelectBtn.layer.cornerRadius = 8
+        
+        photoSelectBtn.setTitle(String(self.selectImages.count)+"/4", for: .normal)
+        
     }
     
     @IBAction func photoBtnClicked(_ sender: UIButton) {
@@ -70,6 +73,7 @@ class WriteViewController: UIViewController, UITextViewDelegate{
             }
             self.convertAssetToImages()
             self.photoCollectionView.reloadData()
+            
         })
         
         
@@ -97,6 +101,8 @@ class WriteViewController: UIViewController, UITextViewDelegate{
                 let newImage = UIImage(data: data!)
                     
                 self.selectImages.append(newImage! as UIImage)
+                
+                self.photoSelectBtn.setTitle(String(self.selectImages.count)+"/4", for: .normal)
             }
         }
     }
@@ -218,6 +224,7 @@ extension WriteViewController: SelectedImageCollectionViewCellDelegate{
     func didDeselectButtonClicked(at index: Int) {
         selectImages.remove(at: index)
         photoCollectionView.reloadData()
+        self.photoSelectBtn.setTitle(String(self.selectImages.count)+"/4", for: .normal)
     }
     
 }
