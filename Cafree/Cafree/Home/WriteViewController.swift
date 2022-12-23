@@ -8,15 +8,21 @@
 import UIKit
 import BSImagePicker
 
-class WriteViewController: UIViewController, UITextViewDelegate {
+class WriteViewController: UIViewController, UITextViewDelegate{
+    
+    
 
     @IBOutlet var reviewTextView: UITextView!
     @IBOutlet var backBtn: UIBarButtonItem!
     
+    @IBOutlet var photoCollectionView: UICollectionView!
+    var selectImages : [Any] = []
     //let imagePicker = ImagePickerController()
     
     @IBOutlet var starSlider: UISlider!
     @IBOutlet var starLabel: UILabel!
+    
+    
     var starImageViews = [UIImageView]()
     
     
@@ -24,6 +30,15 @@ class WriteViewController: UIViewController, UITextViewDelegate {
         super.viewDidLoad()
         placeholderSetting()
         // Do any additional setup after loading the view.
+        photoCollectionView.delegate = self
+        photoCollectionView.dataSource = self
+        registerCell()
+    
+    }
+    
+    private func registerCell() {
+        let nib = UINib(nibName: "PhotoBtnCollectionViewCell", bundle: nil)
+        photoCollectionView.register(nib, forCellWithReuseIdentifier: "photoBtnCell")
     }
     
     // TextView placeholder 세팅
@@ -32,7 +47,7 @@ class WriteViewController: UIViewController, UITextViewDelegate {
         reviewTextView.text = "글 작성하기"
         reviewTextView.textColor = UIColor.lightGray
         reviewTextView.layer.borderColor = UIColor.lightGray.cgColor
-        reviewTextView.layer.borderWidth = 0.5
+        reviewTextView.layer.borderWidth = 0.8
         reviewTextView.layer.cornerRadius = 8
         
             
@@ -106,4 +121,29 @@ class WriteViewController: UIViewController, UITextViewDelegate {
     }
     */
 
+}
+extension WriteViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+            return CGSize(width: 90, height: 90)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "photoBtnCell", for: indexPath) as? PhotoBtnCollectionViewCell else {
+            print("cell 문제")
+            return UICollectionViewCell()
+        }
+        
+        return cell
+        
+    }
+    
+    
 }
