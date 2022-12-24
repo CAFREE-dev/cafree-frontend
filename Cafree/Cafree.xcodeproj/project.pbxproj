@@ -12,6 +12,7 @@
 		130122542954C11200F486C5 /* ListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 130122532954C11200F486C5 /* ListCollectionViewCell.swift */; };
 		130122572954CD2400F486C5 /* GridCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 130122562954CD2400F486C5 /* GridCollectionViewCell.swift */; };
 		1301225A2957BB6A00F486C5 /* WishTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 130122592957BB6A00F486C5 /* WishTabViewController.swift */; };
+		1301225E2957BD1800F486C5 /* WishTabViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1301225D2957BD1800F486C5 /* WishTabViewController.storyboard */; };
 		130A1CC32951BCA600446DF4 /* FeedTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 130A1CC22951BCA600446DF4 /* FeedTabViewController.swift */; };
 		130A1CC52951BCC200446DF4 /* FeedTabViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 130A1CC42951BCC200446DF4 /* FeedTabViewController.storyboard */; };
 		1373C2B329252BFA00FA2130 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1373C2B229252BFA00FA2130 /* AppDelegate.swift */; };
@@ -111,6 +112,7 @@
 		130122532954C11200F486C5 /* ListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCollectionViewCell.swift; sourceTree = "<group>"; };
 		130122562954CD2400F486C5 /* GridCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridCollectionViewCell.swift; sourceTree = "<group>"; };
 		130122592957BB6A00F486C5 /* WishTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishTabViewController.swift; sourceTree = "<group>"; };
+		1301225D2957BD1800F486C5 /* WishTabViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WishTabViewController.storyboard; sourceTree = "<group>"; };
 		130A1CC22951BCA600446DF4 /* FeedTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTabViewController.swift; sourceTree = "<group>"; };
 		130A1CC42951BCC200446DF4 /* FeedTabViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FeedTabViewController.storyboard; sourceTree = "<group>"; };
 		1373C2AF29252BFA00FA2130 /* Cafree.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cafree.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -271,6 +273,7 @@
 			isa = PBXGroup;
 			children = (
 				130122592957BB6A00F486C5 /* WishTabViewController.swift */,
+				1301225D2957BD1800F486C5 /* WishTabViewController.storyboard */,
 			);
 			path = Wish;
 			sourceTree = "<group>";
@@ -584,6 +587,7 @@
 				6F3315E8294C72A700B0B2DC /* CafeDetailLocalTableViewCell.xib in Resources */,
 				6F02926F293BB87C003D9FF1 /* map_pin_shadow.png in Resources */,
 				6F029258293BB87C003D9FF1 /* map_pinup.png in Resources */,
+				1301225E2957BD1800F486C5 /* WishTabViewController.storyboard in Resources */,
 				6F02925F293BB87C003D9FF1 /* map_pin_red@3x.png in Resources */,
 				6F029260293BB87C003D9FF1 /* daum_copyright.png in Resources */,
 				6F029262293BB87C003D9FF1 /* map_present_tracking.png in Resources */,
