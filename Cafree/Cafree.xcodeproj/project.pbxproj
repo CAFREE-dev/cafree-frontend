@@ -11,6 +11,7 @@
 		130122512954B00900F486C5 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 130122502954B00900F486C5 /* ListViewController.swift */; };
 		130122542954C11200F486C5 /* ListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 130122532954C11200F486C5 /* ListCollectionViewCell.swift */; };
 		130122572954CD2400F486C5 /* GridCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 130122562954CD2400F486C5 /* GridCollectionViewCell.swift */; };
+		1301225A2957BB6A00F486C5 /* WishTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 130122592957BB6A00F486C5 /* WishTabViewController.swift */; };
 		130A1CC32951BCA600446DF4 /* FeedTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 130A1CC22951BCA600446DF4 /* FeedTabViewController.swift */; };
 		130A1CC52951BCC200446DF4 /* FeedTabViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 130A1CC42951BCC200446DF4 /* FeedTabViewController.storyboard */; };
 		1373C2B329252BFA00FA2130 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1373C2B229252BFA00FA2130 /* AppDelegate.swift */; };
@@ -109,6 +110,7 @@
 		130122502954B00900F486C5 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		130122532954C11200F486C5 /* ListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCollectionViewCell.swift; sourceTree = "<group>"; };
 		130122562954CD2400F486C5 /* GridCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridCollectionViewCell.swift; sourceTree = "<group>"; };
+		130122592957BB6A00F486C5 /* WishTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishTabViewController.swift; sourceTree = "<group>"; };
 		130A1CC22951BCA600446DF4 /* FeedTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTabViewController.swift; sourceTree = "<group>"; };
 		130A1CC42951BCC200446DF4 /* FeedTabViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FeedTabViewController.storyboard; sourceTree = "<group>"; };
 		1373C2AF29252BFA00FA2130 /* Cafree.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cafree.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -265,6 +267,14 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		130122582957BB3400F486C5 /* Wish */ = {
+			isa = PBXGroup;
+			children = (
+				130122592957BB6A00F486C5 /* WishTabViewController.swift */,
+			);
+			path = Wish;
+			sourceTree = "<group>";
+		};
 		1373C2A629252BFA00FA2130 = {
 			isa = PBXGroup;
 			children = (
@@ -293,6 +303,7 @@
 				6F02922D293BB850003D9FF1 /* KakaoMapBridgeHeader.h */,
 				13DB1821292EFA2F00B9CA90 /* Home */,
 				13DB1822292EFA3800B9CA90 /* Feed */,
+				130122582957BB3400F486C5 /* Wish */,
 				1373C2B229252BFA00FA2130 /* AppDelegate.swift */,
 				1373C2B429252BFA00FA2130 /* SceneDelegate.swift */,
 				1373C2B629252BFA00FA2130 /* ViewController.swift */,
@@ -647,6 +658,7 @@
 				130122512954B00900F486C5 /* ListViewController.swift in Sources */,
 				1373C2B329252BFA00FA2130 /* AppDelegate.swift in Sources */,
 				6F01545E293E246900A588FE /* NewCafeViewController.swift in Sources */,
+				1301225A2957BB6A00F486C5 /* WishTabViewController.swift in Sources */,
 				130122542954C11200F486C5 /* ListCollectionViewCell.swift in Sources */,
 				6F0B039C2955EC9E009662E2 /* SelectedImageCollectionViewCell.swift in Sources */,
 				130122572954CD2400F486C5 /* GridCollectionViewCell.swift in Sources */,
