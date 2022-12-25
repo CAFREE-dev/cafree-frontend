@@ -9,20 +9,66 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Title-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WishTabViewController" id="Y6W-OH-hqX" customClass="WishTabViewController" customModule="Cafree" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="p25-Pq-Qqj">
+                                <rect key="frame" x="0.0" y="156.5" width="414" height="656.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kbE-eF-wbu">
+                                <rect key="frame" x="15" y="107" width="75" height="34.5"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="kbE-eF-wbu" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="15" id="A0x-tk-zY2"/>
+                            <constraint firstItem="p25-Pq-Qqj" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="KeU-MV-2ZA"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="p25-Pq-Qqj" secondAttribute="bottom" id="Ulf-qa-GUi"/>
+                            <constraint firstItem="kbE-eF-wbu" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="15" id="VHq-5r-3X8"/>
+                            <constraint firstItem="p25-Pq-Qqj" firstAttribute="top" secondItem="kbE-eF-wbu" secondAttribute="bottom" constant="15" id="dWr-Rm-umx"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="p25-Pq-Qqj" secondAttribute="trailing" id="jAz-sZ-DTT"/>
+                        </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="1cI-pI-qi8"/>
+                    <navigationItem key="navigationItem" title="Title" id="1lc-iS-Ta5">
+                        <barButtonItem key="leftBarButtonItem" title="Item" style="plain" id="Qp8-mM-ZgW"/>
+                    </navigationItem>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="sortBtn" destination="kbE-eF-wbu" id="V7r-Sx-Uta"/>
+                        <outlet property="tableView" destination="p25-Pq-Qqj" id="Jeh-8R-5nA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="56" y="-2"/>
+            <point key="canvasLocation" x="965.21739130434787" y="-2.0089285714285712"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Vbf-n3-Beo">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qsW-BG-IXf" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ovy-Z9-Kf5">
+                        <rect key="frame" x="0.0" y="48" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="8EU-yX-mvT"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JW8-eG-rso" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="74" y="-2"/>
         </scene>
     </scenes>
     <resources>
