@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Title-->
+        <!--찜-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
                 <viewController storyboardIdentifier="WishTabViewController" id="Y6W-OH-hqX" customClass="WishTabViewController" customModule="Cafree" customModuleProvider="target" sceneMemberID="viewController">
@@ -55,9 +55,9 @@
                             <constraint firstItem="DAb-aU-hop" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="dgG-XB-0eT"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="1cI-pI-qi8"/>
-                    <navigationItem key="navigationItem" title="Title" id="1lc-iS-Ta5">
-                        <barButtonItem key="leftBarButtonItem" title="Item" style="plain" id="Qp8-mM-ZgW"/>
+                    <tabBarItem key="tabBarItem" title="찜" image="WishTabImgDefault" id="1cI-pI-qi8"/>
+                    <navigationItem key="navigationItem" id="1lc-iS-Ta5">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="BackBtnHome" style="plain" id="Qp8-mM-ZgW"/>
                     </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
@@ -88,7 +88,10 @@
             <point key="canvasLocation" x="74" y="-2"/>
         </scene>
     </scenes>
+    <color key="tintColor" systemColor="systemBackgroundColor"/>
     <resources>
+        <image name="BackBtnHome" width="46" height="24"/>
+        <image name="WishTabImgDefault" width="16" height="20"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
