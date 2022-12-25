@@ -6,6 +6,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -17,25 +18,41 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="p25-Pq-Qqj">
-                                <rect key="frame" x="0.0" y="156.5" width="414" height="656.5"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kbE-eF-wbu">
-                                <rect key="frame" x="15" y="107" width="75" height="34.5"/>
+                                <rect key="frame" x="16" y="104" width="75" height="34.5"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
                             </button>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="DAb-aU-hop">
+                                <rect key="frame" x="0.0" y="150.5" width="414" height="662.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="p1b-2v-ent">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="wishTableCell" id="8wk-52-j7k">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="MVn-5t-iWY">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="kbE-eF-wbu" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="15" id="A0x-tk-zY2"/>
-                            <constraint firstItem="p25-Pq-Qqj" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="KeU-MV-2ZA"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="p25-Pq-Qqj" secondAttribute="bottom" id="Ulf-qa-GUi"/>
-                            <constraint firstItem="kbE-eF-wbu" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="15" id="VHq-5r-3X8"/>
-                            <constraint firstItem="p25-Pq-Qqj" firstAttribute="top" secondItem="kbE-eF-wbu" secondAttribute="bottom" constant="15" id="dWr-Rm-umx"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="p25-Pq-Qqj" secondAttribute="trailing" id="jAz-sZ-DTT"/>
+                            <constraint firstItem="DAb-aU-hop" firstAttribute="top" secondItem="kbE-eF-wbu" secondAttribute="bottom" constant="12" id="8Bu-cF-csj"/>
+                            <constraint firstItem="kbE-eF-wbu" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="12" id="A0x-tk-zY2"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="DAb-aU-hop" secondAttribute="bottom" id="K4t-Xi-E88"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="DAb-aU-hop" secondAttribute="trailing" id="QN1-da-9dP"/>
+                            <constraint firstItem="kbE-eF-wbu" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="VHq-5r-3X8"/>
+                            <constraint firstItem="DAb-aU-hop" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="dgG-XB-0eT"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="1cI-pI-qi8"/>
@@ -45,7 +62,7 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="sortBtn" destination="kbE-eF-wbu" id="V7r-Sx-Uta"/>
-                        <outlet property="tableView" destination="p25-Pq-Qqj" id="Jeh-8R-5nA"/>
+                        <outlet property="wishTabView" destination="DAb-aU-hop" id="y0S-ji-wWv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -55,7 +72,7 @@
         <!--Navigation Controller-->
         <scene sceneID="Vbf-n3-Beo">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qsW-BG-IXf" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="WishTabViewControllerNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="qsW-BG-IXf" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ovy-Z9-Kf5">
                         <rect key="frame" x="0.0" y="48" width="414" height="44"/>

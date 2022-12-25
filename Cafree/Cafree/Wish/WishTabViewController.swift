@@ -7,33 +7,35 @@
 
 import UIKit
 
-class WishTabViewController: UIViewController {
-    
-    
-    @IBOutlet var tableView: UITableView!
+class WishTabViewController: UIViewController  {
+
+    @IBOutlet var wishTabView: UICollectionView!
     @IBOutlet var sortBtn: UIButton!
+    
+    
+    let cellSpacingHeight: CGFloat = 5
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.delegate = self
-        tableView.dataSource = self
+        wishTabView.delegate = self
+        wishTabView.dataSource = self
         
         // 테이블뷰 라인 없애기
-        tableView.separatorStyle = .none
+        
 
         initNib()
         initSortBtn()
     }
     
     func initNib() {
-        let cellNib = UINib(nibName: "WishTableViewCell", bundle: nil)
-        tableView.register(cellNib, forCellReuseIdentifier: "wishTableCell")
+        let cellNib = UINib(nibName: "WishCollectionViewCell", bundle: nil)
+        wishTabView.register(cellNib, forCellWithReuseIdentifier: "WishCollectionViewCell")
     }
     
     func initSortBtn() {
         sortBtn.setTitle("최신순", for: .normal)
-        sortBtn.layer.cornerRadius = 15
+        sortBtn.layer.cornerRadius = 4
         sortBtn.layer.borderColor = UIColor.lightGray.cgColor
         sortBtn.layer.borderWidth = 1
        
@@ -45,51 +47,40 @@ class WishTabViewController: UIViewController {
 
 }
 
-extension WishTabViewController : UITableViewDelegate, UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "wishTableCell", for: indexPath) as! WishTableViewCell
-        
-        cell.cafeImg.sizeToFit()
-        
-        cell.layer.borderColor = UIColor.lightGray.cgColor
-        cell.layer.borderWidth = 1
-        cell.layer.cornerRadius = 15
-        
-       
-        return cell
-    }
-    
-    // 셀 사이즈
+
+extension WishTabViewController : UICollectionViewDelegateFlowLayout, UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-            
-            let height: CGFloat = tableView.frame.height / 10
-        let width : CGFloat = tableView.frame.width - 10
-            
-            return CGSize(width: width, height: height)
-        }
-
-    
-    
-     //Section의 수
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 3
+        return CGSize(width: self.view.bounds.width, height: self.view.bounds.height)
     }
     
-    
-    // 각 Section 사이의 간격 설정
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 20
-    }
-    
-    
-    // Section의 높이
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return tableView.frame.height / 10
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 10
     }
 
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        let cell = wishTabView.dequeueReusableCell(withReuseIdentifier: "WishCollectionViewCell", for: indexPath) as! WishCollectionViewCell
+        
+              //  cell.cafeImg.sizeToFit()
+        
+                cell.layer.borderColor = UIColor.lightGray.cgColor
+                cell.layer.borderWidth = 1
+                cell.layer.cornerRadius = 15
+
+        
+                return cell
+        
+    }
+    
+    // CollectionView Cell의 위아래 간격
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+//        return 8.0
+//    }
+
+     //CollectionView Cell의 옆 간격
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+//        return 16.0
+//    }
+    
 }
 
