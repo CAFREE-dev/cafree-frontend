@@ -27,7 +27,8 @@ class FeedTabViewController: UIViewController {
             i.tintColor = UIColor.clear
             i.layer.cornerRadius = 15
             i.layer.borderWidth = 1
-           
+            i.layer.borderColor = UIColor.lightGray.cgColor
+
             tagBtnIndex += 1
         }
     }
