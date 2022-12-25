@@ -11,69 +11,54 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--피드-->
+        <!--Title-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
                 <viewController storyboardIdentifier="FeedTabViewController" id="Y6W-OH-hqX" customClass="FeedTabViewController" customModule="Cafree" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="5EZ-qb-Rvc">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <containerView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DSH-1d-bTx">
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DSH-1d-bTx">
                                 <rect key="frame" x="0.0" y="162" width="414" height="651"/>
                                 <connections>
                                     <segue destination="P8p-aG-UkX" kind="embed" id="c9V-e1-C5t"/>
                                 </connections>
                             </containerView>
-                            <containerView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="psJ-1d-P8l">
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="psJ-1d-P8l">
                                 <rect key="frame" x="0.0" y="162" width="414" height="651"/>
                                 <connections>
                                     <segue destination="ltP-yf-ybZ" kind="embed" id="Hvi-WK-kLl"/>
                                 </connections>
                             </containerView>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mlb-QL-772">
-                                <rect key="frame" x="60" y="92" width="354" height="60"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mlb-QL-772">
+                                <rect key="frame" x="39" y="92" width="375" height="60"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ldE-7P-QFj">
-                                        <rect key="frame" x="60" y="0.0" width="500" height="60"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VNV-5T-aHv">
-                                                <rect key="frame" x="0.0" y="0.0" width="100" height="60"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="100" id="s2B-zt-VXH"/>
-                                                </constraints>
+                                                <rect key="frame" x="0.0" y="0.0" width="75" height="60"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JgG-N0-AhC">
-                                                <rect key="frame" x="100" y="0.0" width="100" height="60"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="100" id="gbQ-iR-gmX"/>
-                                                </constraints>
+                                                <rect key="frame" x="75" y="0.0" width="75" height="60"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UwK-bW-cYQ">
-                                                <rect key="frame" x="200" y="0.0" width="100" height="60"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="100" id="l6I-Fh-cxe"/>
-                                                </constraints>
+                                                <rect key="frame" x="150" y="0.0" width="75" height="60"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LSh-hn-ZGo">
-                                                <rect key="frame" x="300" y="0.0" width="100" height="60"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="100" id="RIF-SP-Gzo"/>
-                                                </constraints>
+                                                <rect key="frame" x="225" y="0.0" width="75" height="60"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="00C-0F-Gsa">
-                                                <rect key="frame" x="400" y="0.0" width="100" height="60"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="100" id="F7n-7s-aVV"/>
-                                                </constraints>
+                                                <rect key="frame" x="300" y="0.0" width="75" height="60"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                             </button>
@@ -83,7 +68,7 @@
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="ldE-7P-QFj" secondAttribute="bottom" id="323-sJ-hgr"/>
                                     <constraint firstItem="ldE-7P-QFj" firstAttribute="top" secondItem="Mlb-QL-772" secondAttribute="top" id="98g-7c-ssx"/>
-                                    <constraint firstItem="ldE-7P-QFj" firstAttribute="leading" secondItem="Mlb-QL-772" secondAttribute="leading" constant="60" id="Foc-17-GsW"/>
+                                    <constraint firstItem="ldE-7P-QFj" firstAttribute="leading" secondItem="Mlb-QL-772" secondAttribute="leading" id="Foc-17-GsW"/>
                                     <constraint firstAttribute="trailing" secondItem="ldE-7P-QFj" secondAttribute="trailing" id="QFG-EG-v05"/>
                                     <constraint firstItem="ldE-7P-QFj" firstAttribute="centerX" secondItem="Mlb-QL-772" secondAttribute="centerX" placeholder="YES" id="RC1-Ji-Ejf"/>
                                     <constraint firstAttribute="height" constant="60" id="eT1-NY-XeN"/>
@@ -93,7 +78,7 @@
                                 <viewLayoutGuide key="frameLayoutGuide" id="Tgz-GG-sEx"/>
                             </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nKV-WF-nPe">
-                                <rect key="frame" x="5" y="105" width="50" height="35"/>
+                                <rect key="frame" x="10" y="105" width="19" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Btn"/>
                                 <connections>
@@ -108,11 +93,11 @@
                             <constraint firstItem="Mlb-QL-772" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="3Zy-qm-6Lu"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="psJ-1d-P8l" secondAttribute="trailing" id="6MO-zB-hMP"/>
                             <constraint firstItem="Mlb-QL-772" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="7f7-cj-u42"/>
-                            <constraint firstItem="Mlb-QL-772" firstAttribute="leading" secondItem="nKV-WF-nPe" secondAttribute="trailing" constant="5" id="Aqh-vc-OF1"/>
+                            <constraint firstItem="Mlb-QL-772" firstAttribute="leading" secondItem="nKV-WF-nPe" secondAttribute="trailing" constant="10" id="Aqh-vc-OF1"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="psJ-1d-P8l" secondAttribute="bottom" id="Cvd-z6-YIG"/>
                             <constraint firstItem="psJ-1d-P8l" firstAttribute="top" secondItem="Mlb-QL-772" secondAttribute="bottom" constant="10" id="JbU-su-7ME"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="DSH-1d-bTx" secondAttribute="trailing" id="RZT-mN-9e7"/>
-                            <constraint firstItem="nKV-WF-nPe" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="5" id="a4a-kW-HdY"/>
+                            <constraint firstItem="nKV-WF-nPe" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="10" id="a4a-kW-HdY"/>
                             <constraint firstItem="psJ-1d-P8l" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="fbM-6C-N5Q"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="DSH-1d-bTx" secondAttribute="bottom" id="ijN-RG-akh"/>
                             <constraint firstItem="DSH-1d-bTx" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="slS-r3-SiV"/>
@@ -120,10 +105,9 @@
                             <constraint firstItem="DSH-1d-bTx" firstAttribute="top" secondItem="nKV-WF-nPe" secondAttribute="bottom" constant="22" id="yxF-fp-0Rg"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="피드" id="08e-aQ-jaA"/>
-                    <navigationItem key="navigationItem" id="5G3-mZ-Ou9">
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="BB3-ac-DjS">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="bQT-NN-y8W">
+                    <navigationItem key="navigationItem" title="Title" id="tDe-Id-aN7">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="IkS-J6-tQW">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="XnF-jc-UTC">
                                 <rect key="frame" x="302" y="5" width="92" height="34.5"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
@@ -144,25 +128,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="968.11594202898561" y="-2.0089285714285712"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="YbT-u8-avN">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kjs-Or-xUd" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9Yk-9k-U2D">
-                        <rect key="frame" x="0.0" y="48" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="Hi7-qu-YqK"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="I08-W9-OxV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="57.971014492753625" y="-2.0089285714285712"/>
+            <point key="canvasLocation" x="1878.2608695652175" y="-2.0089285714285712"/>
         </scene>
         <!--Grid View Controller-->
         <scene sceneID="dt2-2Y-33u">
@@ -271,6 +237,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S7O-LZ-Qkd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="619" y="669"/>
+        </scene>
+        <!--피드-->
+        <scene sceneID="9Au-fc-ndK">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yMd-XY-8k1" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="피드" id="08e-aQ-jaA"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="grC-EX-Bh0">
+                        <rect key="frame" x="0.0" y="48" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="Nku-kF-E53"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j4y-E2-EEJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="968.11594202898561" y="-2.0089285714285712"/>
         </scene>
     </scenes>
     <resources>
