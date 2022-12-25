@@ -37,25 +37,25 @@
             </objects>
             <point key="canvasLocation" x="923" y="-84"/>
         </scene>
-        <!--FeedTabViewController-->
+        <!--FeedTabViewControllerNavigationController-->
         <scene sceneID="GHu-AO-Ynv">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="FeedTabViewController" storyboardName="FeedTabViewController" referencedIdentifier="FeedTabViewController" id="f3a-Cc-W5C" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="FeedTabViewController" referencedIdentifier="FeedTabViewControllerNavigationController" id="f3a-Cc-W5C" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="WC8-Xy-kRj"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yVF-UZ-zng" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="912" y="118"/>
+            <point key="canvasLocation" x="922" y="40"/>
         </scene>
-        <!--WishTabViewController-->
+        <!--WishTabViewControllerNavigationController-->
         <scene sceneID="BYd-ju-pgv">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="WishTabViewController" storyboardName="WishTabViewController" referencedIdentifier="WishTabViewController" id="oBh-44-h9S" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="WishTabViewController" referencedIdentifier="WishTabViewControllerNavigationController" id="oBh-44-h9S" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="dVV-gp-Q0F"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aKw-Gz-Fkb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="905" y="245"/>
+            <point key="canvasLocation" x="918" y="136"/>
         </scene>
     </scenes>
 </document>
