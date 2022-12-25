@@ -11,7 +11,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Title-->
+        <!--피드-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
                 <viewController storyboardIdentifier="FeedTabViewController" id="Y6W-OH-hqX" customClass="FeedTabViewController" customModule="Cafree" customModuleProvider="target" sceneMemberID="viewController">
@@ -130,15 +130,13 @@
                             <constraint firstItem="DSH-1d-bTx" firstAttribute="top" secondItem="nKV-WF-nPe" secondAttribute="bottom" constant="22" id="yxF-fp-0Rg"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="tDe-Id-aN7">
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="IkS-J6-tQW">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="XnF-jc-UTC">
-                                <rect key="frame" x="302" y="4.5" width="92" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
-                            </button>
-                        </barButtonItem>
+                    <tabBarItem key="tabBarItem" title="피드" image="FeedTabImgDefault" id="Zpn-nc-er5"/>
+                    <navigationItem key="navigationItem" id="tDe-Id-aN7">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="Logo" style="plain" id="yEP-Ex-fVe"/>
+                        <rightBarButtonItems>
+                            <barButtonItem title="Item" image="writeIcon" style="plain" id="IkS-J6-tQW"/>
+                            <barButtonItem title="Item" image="searchIcon" style="plain" id="O9W-0Y-vKR"/>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
@@ -164,7 +162,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="xYQ-0O-Msi">
-                                <rect key="frame" x="0.0" y="48" width="414" height="577.5"/>
+                                <rect key="frame" x="16" y="48" width="382" height="577.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="27E-pg-VQm">
                                     <size key="itemSize" width="128" height="128"/>
@@ -200,11 +198,10 @@
                             </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="4zN-UX-cWO"/>
-                        <color key="backgroundColor" systemColor="systemPinkColor"/>
                         <constraints>
                             <constraint firstItem="4zN-UX-cWO" firstAttribute="bottom" secondItem="xYQ-0O-Msi" secondAttribute="bottom" id="5a9-BK-Z8w"/>
-                            <constraint firstItem="xYQ-0O-Msi" firstAttribute="leading" secondItem="4zN-UX-cWO" secondAttribute="leading" id="B3y-ZK-w09"/>
-                            <constraint firstItem="4zN-UX-cWO" firstAttribute="trailing" secondItem="xYQ-0O-Msi" secondAttribute="trailing" id="Bvr-1u-BSq"/>
+                            <constraint firstItem="xYQ-0O-Msi" firstAttribute="leading" secondItem="4zN-UX-cWO" secondAttribute="leading" constant="16" id="B3y-ZK-w09"/>
+                            <constraint firstItem="4zN-UX-cWO" firstAttribute="trailing" secondItem="xYQ-0O-Msi" secondAttribute="trailing" constant="16" id="Bvr-1u-BSq"/>
                             <constraint firstItem="xYQ-0O-Msi" firstAttribute="top" secondItem="4zN-UX-cWO" secondAttribute="top" id="ejf-dr-XvH"/>
                         </constraints>
                     </view>
@@ -284,6 +281,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="FeedTabImgDefault" width="21" height="20.5"/>
+        <image name="Logo" width="85" height="20"/>
+        <image name="searchIcon" width="24" height="24"/>
+        <image name="writeIcon" width="24" height="24"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
@@ -292,9 +293,6 @@
         </systemColor>
         <systemColor name="systemOrangeColor">
             <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemPinkColor">
-            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
