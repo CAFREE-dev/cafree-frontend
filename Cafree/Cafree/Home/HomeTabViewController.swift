@@ -15,11 +15,27 @@ class HomeTabViewController: UIViewController {
     @IBOutlet weak var conseptCafeView: UIView!
     @IBOutlet weak var newCafeView: UIView!
     
+    @IBOutlet var navigationSearchBtn: UIBarButtonItem!
+    
+    @IBOutlet var navigationWriteBtn: UIBarButtonItem!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
     
+    
+    // 검색 버튼 클릭시
+    @IBAction func searchBtnClicked(_ sender: Any) {
+        // 뷰 전환
+        guard let searchView = self.storyboard?.instantiateViewController(identifier: "SearchViewController") else {return}
+        self.present(searchView, animated: true)
+    }
+    
+    @IBAction func writeBtnClicked(_ sender: Any) {
+        guard let writeView = self.storyboard?.instantiateViewController(identifier: "WriteViewController") else {return}
+        self.present(writeView, animated: true)
+    }
     
     @IBAction func switchView(_ sender: UISegmentedControl) {
         if sender.selectedSegmentIndex == 0 {
