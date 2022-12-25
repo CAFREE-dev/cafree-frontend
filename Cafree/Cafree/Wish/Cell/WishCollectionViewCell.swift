@@ -7,7 +7,7 @@
 
 import UIKit
 
-class WishCollectionViewCell: UITableViewCell {
+class WishCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet var wishView: UIView!
     @IBOutlet var cafeImg: UIImageView!
@@ -22,17 +22,4 @@ class WishCollectionViewCell: UITableViewCell {
         super.awakeFromNib()
         
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-    
-    override func layoutSubviews() {
-        super.layoutSubviews()
-
-        wishView.frame = wishView.frame.inset(by: UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10))
-    }
-    
 }
