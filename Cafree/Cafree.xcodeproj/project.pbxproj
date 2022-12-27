@@ -14,6 +14,8 @@
 		1301225E2957BD1800F486C5 /* WishTabViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1301225D2957BD1800F486C5 /* WishTabViewController.storyboard */; };
 		130122642958031B00F486C5 /* WishCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 130122622958031B00F486C5 /* WishCollectionViewCell.swift */; };
 		130122652958031B00F486C5 /* WishCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 130122632958031B00F486C5 /* WishCollectionViewCell.xib */; };
+		130122682958340800F486C5 /* Cafe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 130122672958340800F486C5 /* Cafe.swift */; };
+		1301226A295862E700F486C5 /* ListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13012269295862E600F486C5 /* ListCollectionViewCell.swift */; };
 		130A1CC32951BCA600446DF4 /* FeedTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 130A1CC22951BCA600446DF4 /* FeedTabViewController.swift */; };
 		130A1CC52951BCC200446DF4 /* FeedTabViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 130A1CC42951BCC200446DF4 /* FeedTabViewController.storyboard */; };
 		1373C2B329252BFA00FA2130 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1373C2B229252BFA00FA2130 /* AppDelegate.swift */; };
@@ -115,6 +117,8 @@
 		1301225D2957BD1800F486C5 /* WishTabViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WishTabViewController.storyboard; sourceTree = "<group>"; };
 		130122622958031B00F486C5 /* WishCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishCollectionViewCell.swift; sourceTree = "<group>"; };
 		130122632958031B00F486C5 /* WishCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WishCollectionViewCell.xib; sourceTree = "<group>"; };
+		130122672958340800F486C5 /* Cafe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cafe.swift; sourceTree = "<group>"; };
+		13012269295862E600F486C5 /* ListCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ListCollectionViewCell.swift; path = ../../../../../../../.Trash/ListCollectionViewCell.swift; sourceTree = "<group>"; };
 		130A1CC22951BCA600446DF4 /* FeedTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTabViewController.swift; sourceTree = "<group>"; };
 		130A1CC42951BCC200446DF4 /* FeedTabViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FeedTabViewController.storyboard; sourceTree = "<group>"; };
 		1373C2AF29252BFA00FA2130 /* Cafree.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cafree.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -258,6 +262,7 @@
 		130122522954C07300F486C5 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				13012269295862E600F486C5 /* ListCollectionViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -273,6 +278,7 @@
 		130122582957BB3400F486C5 /* Wish */ = {
 			isa = PBXGroup;
 			children = (
+				13012266295833F400F486C5 /* Model */,
 				1301225F2957C66600F486C5 /* Cell */,
 				130122592957BB6A00F486C5 /* WishTabViewController.swift */,
 				1301225D2957BD1800F486C5 /* WishTabViewController.storyboard */,
@@ -287,6 +293,14 @@
 				130122632958031B00F486C5 /* WishCollectionViewCell.xib */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		13012266295833F400F486C5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				130122672958340800F486C5 /* Cafe.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		1373C2A629252BFA00FA2130 = {
@@ -661,8 +675,10 @@
 				6F4F4F112941D319004D6852 /* TitleTableViewCell.swift in Sources */,
 				6FE7C108293F609000B61E13 /* CafeClass.swift in Sources */,
 				1301224F2954B00300F486C5 /* GridViewController.swift in Sources */,
+				1301226A295862E700F486C5 /* ListCollectionViewCell.swift in Sources */,
 				6F402F4E293F537900E97D5C /* CafeTableViewCell.swift in Sources */,
 				6F9985F22950856B005418C7 /* SearchViewController.swift in Sources */,
+				130122682958340800F486C5 /* Cafe.swift in Sources */,
 				6F4E3FF12951F6D700B8A84C /* StarRatingUISlider.swift in Sources */,
 				1373C2B729252BFA00FA2130 /* ViewController.swift in Sources */,
 				6F36FA372948594C0067D1CA /* DetailCafeViewController.swift in Sources */,
