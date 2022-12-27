@@ -21,11 +21,11 @@ class WishTabViewController: UIViewController  {
         wishTabView.delegate = self
         wishTabView.dataSource = self
         
-        // 테이블뷰 라인 없애기
         
 
         initNib()
         initSortBtn()
+        initNavigationBarColor()
     }
     
     func initNib() {
@@ -44,7 +44,13 @@ class WishTabViewController: UIViewController  {
         
     }
     
-
+    func initNavigationBarColor() {
+        // 네비게이션 바 색상 변경
+        let navigationBarAppearance = UINavigationBarAppearance() // navigationBar 를 설정해줘야 스크롤 했을 때 색상이 안 보임.
+        navigationBarAppearance.backgroundColor = .primary
+        self.navigationController?.navigationBar.standardAppearance = navigationBarAppearance
+        self.navigationController?.navigationBar.scrollEdgeAppearance = navigationBarAppearance
+    }
 }
 
 

@@ -23,14 +23,14 @@ class GridViewController: UIViewController {
 
 extension GridViewController : UICollectionViewDelegateFlowLayout, UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width: CGFloat = collectionView.frame.width / 3.5
-        let height: CGFloat = collectionView.frame.width / 3.5
+        let width: CGFloat = collectionView.frame.width / 3.1
+        let height: CGFloat = collectionView.frame.width / 3.1
 
         return CGSize(width: width, height: height)
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 100
+        return 10
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -41,12 +41,12 @@ extension GridViewController : UICollectionViewDelegateFlowLayout, UICollectionV
     
     // CollectionView Cell의 위아래 간격
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 1.0
+        return 4
     }
 
     // CollectionView Cell의 옆 간격
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 1.0
+        return 3.5
     }
     
 }
