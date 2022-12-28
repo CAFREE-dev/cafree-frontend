@@ -10,8 +10,6 @@ import CoreLocation
 
 class PopCafeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, CLLocationManagerDelegate{
     
-    @IBOutlet var btnLocation : UIButton!
-    
     @IBOutlet weak var cafeTableView: UITableView!
     
     //위치 매니져
@@ -136,13 +134,13 @@ class PopCafeViewController: UIViewController, UITableViewDelegate, UITableViewD
         
     }
     
-    //지역 버튼 클릭시
-    @IBAction func touchBtnLocation(_ sender: UIButton){
-        // 뷰 전환
-        guard let myLocaionView = self.storyboard?.instantiateViewController(identifier: "MyLocationViewController") else {return}
-        self.present(myLocaionView, animated: true)
-        
-    }
+    ////지역 버튼 클릭시
+    //@IBAction func touchBtnLocation(_ sender: UIButton){
+    //    // 뷰 전환
+    //    guard let myLocaionView = self.storyboard?.instantiateViewController(identifier: "MyLocationViewController") else {return}
+    //    self.present(myLocaionView, animated: true)
+    //
+    //}
     
     // 세그웨이를 이용하여 디테일 뷰로 전환하기
     // performSegue랑 연동
