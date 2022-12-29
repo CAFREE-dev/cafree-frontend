@@ -437,13 +437,24 @@
                     <view key="view" contentMode="scaleToFill" id="ERS-IH-w9y">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="640"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="94K-af-HZE">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="640"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="nP6-4v-jk8"/>
                         <color key="backgroundColor" systemColor="systemPinkColor"/>
                     </view>
+                    <connections>
+                        <outlet property="newTableView" destination="94K-af-HZE" id="H3h-0q-pt4"/>
+                        <segue destination="Sc9-xf-nJX" kind="show" identifier="showDetailCafe" id="Uxu-Bb-goS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BL0-11-umb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1050" y="654"/>
+            <point key="canvasLocation" x="1049.6183206106871" y="653.52112676056345"/>
         </scene>
         <!--Near Cafe View Controller-->
         <scene sceneID="2Me-44-KMu">
@@ -473,7 +484,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="m4F-hu-Vja"/>
+        <segue reference="Uxu-Bb-goS"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="BackBtn" width="24" height="24"/>
