@@ -30,12 +30,16 @@ class NearCafeViewController: UIViewController, UITableViewDelegate, UITableView
     
     // Section의 수
     func numberOfSections(in tableView: UITableView) -> Int {
-        return cafes.count
+        if cafes.count == 1 {
+            return 2
+        }else{
+            return cafes.count
+        }
     }
     
     // 셀 클릭 시 뷰 이동
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if indexPath.section != 0 {
+        if indexPath.section != 0 && cafes.count > 1 {
             performSegue(withIdentifier: "showDetailCafe", sender: nearTableView.cellForRow(at: indexPath))
         }
     }
@@ -58,16 +62,23 @@ class NearCafeViewController: UIViewController, UITableViewDelegate, UITableView
             
             return cell
         } else{
-            let cell = nearTableView.dequeueReusableCell(withIdentifier: "cafeCell", for: indexPath) as! CafeTableViewCell
-            let cafe = cafes[indexPath.section]
-        
-            cell.cafeName.text = cafe
-            cell.cafeImgView.image = UIImage(named: "sampleCafeImg"+String(indexPath.section))
-            cell.cafeLocal.text = "sample"
-            cell.cafeDist.text = "5.0km"
-            cell.cafeInfo.text = "sample"
+            if cafes.count == 1{
+                let cell = nearTableView.dequeueReusableCell(withIdentifier: "binCell", for: indexPath) as! BinTableViewCell
+                cell.binLabel.text = "카페가 없어요."
+                
+                return cell
+            }else{
+                let cell = nearTableView.dequeueReusableCell(withIdentifier: "cafeCell", for: indexPath) as! CafeTableViewCell
+                let cafe = cafes[indexPath.section]
             
-            return cell
+                cell.cafeName.text = cafe
+                cell.cafeImgView.image = UIImage(named: "sampleCafeImg"+String(indexPath.section))
+                cell.cafeLocal.text = "sample"
+                cell.cafeDist.text = "5.0km"
+                cell.cafeInfo.text = "sample"
+                
+                return cell
+            }
         }
         
     }
@@ -78,6 +89,9 @@ class NearCafeViewController: UIViewController, UITableViewDelegate, UITableView
         
         let nibNameAnother = UINib(nibName: "TitleTableViewCell", bundle: nil)
         nearTableView.register(nibNameAnother, forCellReuseIdentifier: "titleCell")
+        
+        let binNib = UINib(nibName: "BinTableViewCell", bundle: nil)
+        nearTableView.register(binNib, forCellReuseIdentifier: "binCell")
     }
     
     // 세그웨이를 이용하여 디테일 뷰로 전환하기
