@@ -77,6 +77,8 @@
 		6F0B039D2955EC9E009662E2 /* SelectedImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F0B039B2955EC9E009662E2 /* SelectedImageCollectionViewCell.xib */; };
 		6F13D359295D6A3400CA3B0A /* BinTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F13D357295D6A3400CA3B0A /* BinTableViewCell.swift */; };
 		6F13D35A295D6A3400CA3B0A /* BinTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F13D358295D6A3400CA3B0A /* BinTableViewCell.xib */; };
+		6F13D35D295D71D500CA3B0A /* ConseptTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F13D35B295D71D500CA3B0A /* ConseptTableViewCell.swift */; };
+		6F13D35E295D71D500CA3B0A /* ConseptTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F13D35C295D71D500CA3B0A /* ConseptTableViewCell.xib */; };
 		6F3315E7294C72A700B0B2DC /* CafeDetailLocalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F3315E5294C72A700B0B2DC /* CafeDetailLocalTableViewCell.swift */; };
 		6F3315E8294C72A700B0B2DC /* CafeDetailLocalTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F3315E6294C72A700B0B2DC /* CafeDetailLocalTableViewCell.xib */; };
 		6F36FA372948594C0067D1CA /* DetailCafeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F36FA362948594C0067D1CA /* DetailCafeViewController.swift */; };
@@ -196,6 +198,8 @@
 		6F0B039B2955EC9E009662E2 /* SelectedImageCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectedImageCollectionViewCell.xib; sourceTree = "<group>"; };
 		6F13D357295D6A3400CA3B0A /* BinTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinTableViewCell.swift; sourceTree = "<group>"; };
 		6F13D358295D6A3400CA3B0A /* BinTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BinTableViewCell.xib; sourceTree = "<group>"; };
+		6F13D35B295D71D500CA3B0A /* ConseptTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConseptTableViewCell.swift; sourceTree = "<group>"; };
+		6F13D35C295D71D500CA3B0A /* ConseptTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConseptTableViewCell.xib; sourceTree = "<group>"; };
 		6F3315E5294C72A700B0B2DC /* CafeDetailLocalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeDetailLocalTableViewCell.swift; sourceTree = "<group>"; };
 		6F3315E6294C72A700B0B2DC /* CafeDetailLocalTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CafeDetailLocalTableViewCell.xib; sourceTree = "<group>"; };
 		6F36FA362948594C0067D1CA /* DetailCafeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCafeViewController.swift; sourceTree = "<group>"; };
@@ -498,6 +502,8 @@
 				6F0B039B2955EC9E009662E2 /* SelectedImageCollectionViewCell.xib */,
 				6F13D357295D6A3400CA3B0A /* BinTableViewCell.swift */,
 				6F13D358295D6A3400CA3B0A /* BinTableViewCell.xib */,
+				6F13D35B295D71D500CA3B0A /* ConseptTableViewCell.swift */,
+				6F13D35C295D71D500CA3B0A /* ConseptTableViewCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -641,6 +647,7 @@
 				6F02925E293BB87C003D9FF1 /* th_line.png in Resources */,
 				6F02926D293BB87C003D9FF1 /* map_present_background_update.png in Resources */,
 				6F029264293BB87C003D9FF1 /* info_box.png in Resources */,
+				6F13D35E295D71D500CA3B0A /* ConseptTableViewCell.xib in Resources */,
 				130A1CC52951BCC200446DF4 /* FeedTabViewController.storyboard in Resources */,
 				6F029266293BB87C003D9FF1 /* map_pinup_custom.png in Resources */,
 				6F02926C293BB87C003D9FF1 /* noimage.png in Resources */,
@@ -708,6 +715,7 @@
 				130122512954B00900F486C5 /* ListViewController.swift in Sources */,
 				130122642958031B00F486C5 /* WishCollectionViewCell.swift in Sources */,
 				1352D79B2958A18F0054B3CD /* UIColor.swift in Sources */,
+				6F13D35D295D71D500CA3B0A /* ConseptTableViewCell.swift in Sources */,
 				1373C2B329252BFA00FA2130 /* AppDelegate.swift in Sources */,
 				6F01545E293E246900A588FE /* NewCafeViewController.swift in Sources */,
 				1301225A2957BB6A00F486C5 /* WishTabViewController.swift in Sources */,
