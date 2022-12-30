@@ -12,7 +12,7 @@ import Photos
 class WriteViewController: UIViewController, UITextViewDelegate{
     
     
-    @IBOutlet var imageView: UIImageView!
+    @IBOutlet var registerCafeBtn: UIButton!
     
     @IBOutlet var reviewTextView: UITextView!
     @IBOutlet var backBtn: UIBarButtonItem!
@@ -180,6 +180,13 @@ class WriteViewController: UIViewController, UITextViewDelegate{
     @IBAction func backBtnClicked(_ sender: Any) {
         self.dismiss(animated: true)
         print("뒤로가기 버튼")
+    }
+    
+    
+    @IBAction func registerBtnClicked(_ sender: Any) {
+        guard let viewController = self.storyboard?.instantiateViewController(withIdentifier: "RegisterCafeViewController") as? RegisterCafeViewController else {return}
+        print("카페등록 페이지 이동")
+        self.navigationController?.pushViewController(viewController, animated: true)
     }
     
     /*

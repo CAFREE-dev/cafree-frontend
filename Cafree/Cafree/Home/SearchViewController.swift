@@ -38,10 +38,6 @@ class SearchViewController: UIViewController {
     @IBAction func searchBtnClicked(_ sender: Any) {
         print(searchField.text!+" 검색하기")
     }
-    override func viewDidLayoutSubviews() {
-        
-    }
-    
 
     /*
     // MARK: - Navigation
