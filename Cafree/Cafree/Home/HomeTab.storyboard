@@ -234,6 +234,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="hZm-l0-g5t"/>
                     <connections>
+                        <outlet property="registerTableView" destination="iJg-BC-ofs" id="mtR-Bj-AvL"/>
                         <outlet property="searchCafeTextField" destination="XcJ-8a-QkV" id="qEo-z3-3mV"/>
                         <segue destination="wbT-uL-gJG" kind="show" id="MX6-uK-D01"/>
                     </connections>
