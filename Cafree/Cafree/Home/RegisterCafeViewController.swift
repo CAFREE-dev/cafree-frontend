@@ -56,10 +56,18 @@ class RegisterCafeViewController: UIViewController, UITableViewDelegate, UITable
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 44
     }
+    
+    //// 셀 클릭 시 뷰 이동
+    //func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    //    if indexPath.section == cafes.count {
+    //        performSegue(withIdentifier: "showNewCafe", sender: //registerTableView.cellForRow(at: indexPath))
+    //    }
+    //}
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.section == cafes.count{
             let cell = registerTableView.dequeueReusableCell(withIdentifier: "registerBtnCell", for: indexPath) as! RegisterBtnTableViewCell
-            
+            cell.delegate = self
             return cell
         }else {
             let cell = registerTableView.dequeueReusableCell(withIdentifier: "registerBtnCell", for: indexPath) as! RegisterBtnTableViewCell
@@ -89,4 +97,10 @@ class RegisterCafeViewController: UIViewController, UITableViewDelegate, UITable
 
 }
 
-
+extension RegisterCafeViewController: RegisterBtnClickedDelegate{
+    func registerBtnClicked() {
+        performSegue(withIdentifier: "showNewCafe", sender: nil)
+        print("새로운 카페등록 버튼 클릭")
+    }
+    
+}

@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lW2-Ju-ZpQ">
-                                <rect key="frame" x="-5" y="46" width="397" height="44"/>
+                                <rect key="frame" x="-6" y="46" width="397" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="barTintColor" name="Primary"/>
                                 <items>
@@ -68,7 +68,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QXg-BU-Mhh">
-                                <rect key="frame" x="-4" y="46" width="396" height="44"/>
+                                <rect key="frame" x="-6" y="46" width="397" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="barTintColor" name="Primary"/>
                                 <items>
@@ -236,7 +236,7 @@
                     <connections>
                         <outlet property="registerTableView" destination="iJg-BC-ofs" id="mtR-Bj-AvL"/>
                         <outlet property="searchCafeTextField" destination="XcJ-8a-QkV" id="qEo-z3-3mV"/>
-                        <segue destination="wbT-uL-gJG" kind="show" id="MX6-uK-D01"/>
+                        <segue destination="wbT-uL-gJG" kind="show" identifier="showNewCafe" id="0Fe-El-V7X"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="toq-5r-AwL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -246,9 +246,9 @@
         <!--View Controller-->
         <scene sceneID="Qrt-ej-cO4">
             <objects>
-                <viewController id="wbT-uL-gJG" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="wbT-uL-gJG" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VQe-s0-B8u">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="f1B-n6-uvS"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -423,7 +423,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OZb-zK-zp0">
-                                <rect key="frame" x="-7" y="43" width="399" height="44"/>
+                                <rect key="frame" x="-8" y="43" width="399" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.078431372550000003" green="0.035294117649999998" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="barTintColor" name="Primary"/>

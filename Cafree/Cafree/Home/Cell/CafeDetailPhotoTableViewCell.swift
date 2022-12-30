@@ -65,7 +65,7 @@ class CafeDetailPhotoTableViewCell: UITableViewCell, UIScrollViewDelegate {
         
     }
     
-    
+    //타이틀 이미지 페이지 컨트롤
     //페이지 컨트롤 현재 페이지 설정
     private func setPageControlSelectedPage(currentPage:Int) {
             cafeDetailPageCon.currentPage = currentPage

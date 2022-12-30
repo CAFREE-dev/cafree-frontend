@@ -11,6 +11,8 @@ class RegisterBtnTableViewCell: UITableViewCell {
 
     @IBOutlet var registerBtn: UIButton!
     
+    var delegate: RegisterBtnClickedDelegate?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -21,5 +23,11 @@ class RegisterBtnTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    @IBAction func registerBtnClicked(_ sender: Any) {
+        self.delegate?.registerBtnClicked()
+    }
     
+}
+protocol RegisterBtnClickedDelegate {
+    func registerBtnClicked ()
 }
