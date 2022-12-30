@@ -217,7 +217,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="검색어를 입력하세요." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XcJ-8a-QkV">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="카페 이름을 입력하세요." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XcJ-8a-QkV">
                                 <rect key="frame" x="16" y="94" width="361" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -243,21 +243,38 @@
             </objects>
             <point key="canvasLocation" x="1417.5572519083969" y="-676.05633802816908"/>
         </scene>
-        <!--View Controller-->
+        <!--Register New Cafe View Controller-->
         <scene sceneID="Qrt-ej-cO4">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="wbT-uL-gJG" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RegisterNewCafeViewController" modalPresentationStyle="fullScreen" id="wbT-uL-gJG" customClass="RegisterNewCafeViewController" customModule="Cafree" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VQe-s0-B8u">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="카페 이름을 입력하세요." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yEk-A2-wFJ">
+                                <rect key="frame" x="16" y="96" width="361" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bWp-lx-GIO">
+                                <rect key="frame" x="16" y="138" width="361" height="361"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" name="Point"/>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="f1B-n6-uvS"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="YYg-cV-pDz"/>
+                    <connections>
+                        <outlet property="newCafeMapView" destination="bWp-lx-GIO" id="Wr8-zv-RvE"/>
+                        <outlet property="registerNewCafeTextField" destination="yEk-A2-wFJ" id="fX7-BJ-XrP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lmW-bb-gfs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2098" y="-676"/>
+            <point key="canvasLocation" x="2096.9465648854962" y="-676.05633802816908"/>
         </scene>
         <!--cafree-->
         <scene sceneID="s0d-6b-0kx">
@@ -571,6 +588,9 @@
         <image name="emptyStar" width="33" height="31"/>
         <image name="searchIcon" width="24" height="24"/>
         <image name="writeIcon" width="24" height="24"/>
+        <namedColor name="Point">
+            <color red="0.40784313725490196" green="0.19215686274509805" blue="0.58039215686274515" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="Primary">
             <color red="0.078000001609325409" green="0.035000000149011612" blue="0.24699999392032623" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
