@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lW2-Ju-ZpQ">
-                                <rect key="frame" x="-6" y="46" width="397" height="44"/>
+                                <rect key="frame" x="-7" y="46" width="397" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="barTintColor" name="Primary"/>
                                 <items>
@@ -68,7 +68,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QXg-BU-Mhh">
-                                <rect key="frame" x="-6" y="46" width="397" height="44"/>
+                                <rect key="frame" x="-7" y="46" width="397" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="barTintColor" name="Primary"/>
                                 <items>
@@ -309,6 +309,7 @@
                             </navigationBar>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="eg1-RK-LKX">
                                 <rect key="frame" x="0.0" y="90" width="393" height="41"/>
+                                <color key="backgroundColor" name="Primary"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="cgZ-YQ-L0M"/>
                                 </constraints>
@@ -355,6 +356,11 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" name="Primary"/>
                             </view>
+                            <view alpha="0.10000000000000001" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VWw-lI-4Fl">
+                                <rect key="frame" x="0.0" y="90" width="393" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" name="Primary"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -372,6 +378,7 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="conseptCafeView" destination="6Oh-Xy-yA5" id="FLj-z0-4ya"/>
+                        <outlet property="homeSegCon" destination="eg1-RK-LKX" id="V21-XY-KR0"/>
                         <outlet property="navigationSearchBtn" destination="Ifh-l5-831" id="x1f-Js-02r"/>
                         <outlet property="navigationWriteBtn" destination="goh-Qu-jsf" id="eOs-cw-oXX"/>
                         <outlet property="nearCafeView" destination="jJa-9a-CHQ" id="7ZZ-Hg-FrE"/>
@@ -440,7 +447,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OZb-zK-zp0">
-                                <rect key="frame" x="-8" y="43" width="399" height="44"/>
+                                <rect key="frame" x="-9" y="43" width="399" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.078431372550000003" green="0.035294117649999998" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="barTintColor" name="Primary"/>

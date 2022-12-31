@@ -40,7 +40,7 @@ class RegisterNewCafeViewController: UIViewController, MTMapViewDelegate {
         mapView.setMapCenter(MTMapPoint(geoCoord: MTMapPointGeo(latitude:  37.4044, longitude: 126.8918)), zoomLevel: 4, animated: true)
         
         newCafeMapView.addSubview(mapView)
-        mapView.bounds = CGRect(x: newCafeMapView.frame.size.height, y: -50, width: newCafeMapView.frame.size.width, height: newCafeMapView.frame.size.height)
+        mapView.frame = CGRect(x: 0, y: 0, width: newCafeMapView.frame.size.width, height: newCafeMapView.frame.size.height)
         
     }
     
