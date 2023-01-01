@@ -20,6 +20,8 @@ class HomeTabViewController: UIViewController {
     
     @IBOutlet var navigationWriteBtn: UIBarButtonItem!
     
+    let border = CALayer()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -43,38 +45,18 @@ class HomeTabViewController: UIViewController {
     private func setSegCon() {
         // 선택시 글 색 바꾸기
         homeSegCon.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.gray], for: .normal)
-            homeSegCon.setTitleTextAttributes(
+        homeSegCon.setTitleTextAttributes(
               [
                 NSAttributedString.Key.foregroundColor: UIColor.white,
                 .font: UIFont.systemFont(ofSize: 13, weight: .semibold)
               ],
               for: .selected
             )
-            homeSegCon.selectedSegmentIndex = 0
+        homeSegCon.selectedSegmentIndex = 0
         
-        homeSegCon.layer.cornerRadius = 0
-        
-        lazy var underlineView: UIView = {
-            let width = homeSegCon.bounds.size.width / CGFloat(homeSegCon.numberOfSegments)
-            let height = 2.0
-            let xPosition = CGFloat(homeSegCon.selectedSegmentIndex * Int(width))
-            let yPosition = homeSegCon.bounds.size.height - 1.0
-            let frame = CGRect(x: xPosition, y: yPosition, width: width, height: height)
-            let view = UIView(frame: frame)
-            view.backgroundColor = UIColor.green
-            homeSegCon.addSubview(view)
-            return view
-        }()
-        
-        
-        let underlineFinalXPosition = (homeSegCon.bounds.width / CGFloat(homeSegCon.numberOfSegments)) * CGFloat(homeSegCon.selectedSegmentIndex)
-            UIView.animate(
-              withDuration: 0.1,
-              animations: {
-                  underlineView.frame.origin.x = underlineFinalXPosition
-              }
-        )
-        
+        border.frame = CGRect(x: CGFloat(homeSegCon.selectedSegmentIndex)*homeSegCon.frame.width/4, y: homeSegCon.frame.height-2, width: homeSegCon.frame.width/4, height: 2)
+        border.backgroundColor = UIColor.white.cgColor
+        homeSegCon.layer.addSublayer((border))
     }
     
     // 검색 버튼 클릭시
@@ -95,6 +77,7 @@ class HomeTabViewController: UIViewController {
             nearCafeView.alpha = 0
             conseptCafeView.alpha = 0
             newCafeView.alpha = 0
+
         }else if sender.selectedSegmentIndex == 1 {
             popCafeView.alpha = 0
             nearCafeView.alpha = 1
@@ -111,6 +94,7 @@ class HomeTabViewController: UIViewController {
             conseptCafeView.alpha = 0
             newCafeView.alpha = 1
         }
+        border.frame = CGRect(x: CGFloat(homeSegCon.selectedSegmentIndex)*homeSegCon.frame.width/4, y: homeSegCon.frame.height-2, width: homeSegCon.frame.width/4, height: 2)
     }
     
 }

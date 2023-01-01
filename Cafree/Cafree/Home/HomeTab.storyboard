@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lW2-Ju-ZpQ">
-                                <rect key="frame" x="-7" y="46" width="397" height="44"/>
+                                <rect key="frame" x="0.0" y="46" width="397" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="barTintColor" name="Primary"/>
                                 <items>
@@ -68,7 +68,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QXg-BU-Mhh">
-                                <rect key="frame" x="-7" y="46" width="397" height="44"/>
+                                <rect key="frame" x="0.0" y="46" width="397" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="barTintColor" name="Primary"/>
                                 <items>
@@ -284,8 +284,42 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dqx-ry-mRf">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vJh-ZL-6WC">
+                                <rect key="frame" x="0.0" y="-80" width="393" height="212"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" name="Primary"/>
+                            </view>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HZr-4x-nqE">
+                                <rect key="frame" x="0.0" y="129" width="392" height="639"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <connections>
+                                    <segue destination="QDi-JE-eas" kind="embed" id="2qq-9e-F86"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Oh-Xy-yA5">
+                                <rect key="frame" x="0.0" y="129" width="393" height="640"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <segue destination="TOa-l2-WcP" kind="embed" id="tDx-uH-xa0"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cJ0-al-l87">
+                                <rect key="frame" x="0.0" y="129" width="393" height="640"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <segue destination="e6j-d8-B6J" kind="embed" id="o4U-Js-4gT"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jJa-9a-CHQ">
+                                <rect key="frame" x="0.0" y="129" width="393" height="640"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <connections>
+                                    <segue destination="3Os-hT-KQQ" kind="embed" id="Szv-fp-TeK"/>
+                                </connections>
+                            </containerView>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dqx-ry-mRf">
                                 <rect key="frame" x="0.0" y="46" width="393" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.078431372549019607" green="0.035294117647058823" blue="0.24705882352941178" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" systemColor="systemBackgroundColor"/>
                                 <color key="barTintColor" name="Primary"/>
@@ -307,12 +341,10 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="eg1-RK-LKX">
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="eg1-RK-LKX">
                                 <rect key="frame" x="0.0" y="90" width="393" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" name="Primary"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="cgZ-YQ-L0M"/>
-                                </constraints>
                                 <segments>
                                     <segment title="많이찾는"/>
                                     <segment title="주변카페"/>
@@ -323,55 +355,9 @@
                                     <action selector="switchView:" destination="Y6W-OH-hqX" eventType="valueChanged" id="V1p-XW-TOd"/>
                                 </connections>
                             </segmentedControl>
-                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HZr-4x-nqE">
-                                <rect key="frame" x="0.0" y="129" width="393" height="640"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <segue destination="QDi-JE-eas" kind="embed" id="2qq-9e-F86"/>
-                                </connections>
-                            </containerView>
-                            <containerView opaque="NO" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Oh-Xy-yA5">
-                                <rect key="frame" x="0.0" y="129" width="393" height="640"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <segue destination="TOa-l2-WcP" kind="embed" id="tDx-uH-xa0"/>
-                                </connections>
-                            </containerView>
-                            <containerView opaque="NO" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cJ0-al-l87">
-                                <rect key="frame" x="0.0" y="129" width="393" height="640"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <segue destination="e6j-d8-B6J" kind="embed" id="o4U-Js-4gT"/>
-                                </connections>
-                            </containerView>
-                            <containerView opaque="NO" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jJa-9a-CHQ">
-                                <rect key="frame" x="0.0" y="129" width="393" height="640"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <segue destination="3Os-hT-KQQ" kind="embed" id="Szv-fp-TeK"/>
-                                </connections>
-                            </containerView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vJh-ZL-6WC">
-                                <rect key="frame" x="0.0" y="-82" width="393" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" name="Primary"/>
-                            </view>
-                            <view alpha="0.10000000000000001" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VWw-lI-4Fl">
-                                <rect key="frame" x="0.0" y="90" width="393" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" name="Primary"/>
-                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="eg1-RK-LKX" firstAttribute="top" secondItem="dqx-ry-mRf" secondAttribute="bottom" id="9Uj-BQ-Cn9"/>
-                            <constraint firstItem="dqx-ry-mRf" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" constant="46" id="NEG-wH-NUg"/>
-                            <constraint firstItem="eg1-RK-LKX" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="PjF-jA-Pcb"/>
-                            <constraint firstItem="dqx-ry-mRf" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="crG-6s-Kep"/>
-                            <constraint firstItem="dqx-ry-mRf" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="mug-zu-DBm"/>
-                            <constraint firstItem="eg1-RK-LKX" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="nUa-UV-tV9"/>
-                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="홈" image="HomeTabImgDefault" selectedImage="HomeTabImg" id="bQq-Mw-BLl"/>
                     <navigationItem key="navigationItem" title="cafree" id="L5f-MY-f6c"/>
@@ -409,8 +395,8 @@
         <scene sceneID="I2y-4s-2Fx">
             <objects>
                 <viewController storyboardIdentifier="PopCafeViewController" id="QDi-JE-eas" customClass="PopCafeViewController" customModule="Cafree" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="zau-4i-40x">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="640"/>
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="zau-4i-40x">
+                        <rect key="frame" x="0.0" y="0.0" width="392" height="639"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="Unl-bu-HNH">
@@ -443,11 +429,11 @@
             <objects>
                 <viewController storyboardIdentifier="DetailCafeViewController" modalPresentationStyle="fullScreen" id="Sc9-xf-nJX" customClass="DetailCafeViewController" customModule="Cafree" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tvH-kT-t1N">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="640"/>
+                        <rect key="frame" x="0.0" y="0.0" width="392" height="639"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OZb-zK-zp0">
-                                <rect key="frame" x="-9" y="43" width="399" height="44"/>
+                                <rect key="frame" x="0.0" y="43" width="398" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.078431372550000003" green="0.035294117649999998" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="barTintColor" name="Primary"/>
@@ -582,7 +568,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Nxf-xY-GZT"/>
+        <segue reference="Nss-dw-hC0"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="BackBtn" width="24" height="24"/>
