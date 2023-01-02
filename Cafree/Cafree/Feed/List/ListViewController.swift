@@ -9,23 +9,23 @@ import UIKit
 
 class ListViewController: UIViewController {
 
-    @IBOutlet var listViewController: UICollectionView!
+    @IBOutlet var listView: UICollectionView!
     
  
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        listViewController.delegate = self
-        listViewController.dataSource = self
+        listView.delegate = self
+        listView.dataSource = self
         
-        listViewController.reloadData()
+        listView.reloadData()
         
         initNib()
     }
     
     func initNib() {
         let cellNib = UINib(nibName: "ListCollectionViewCell", bundle: nil)
-        listViewController.register(cellNib, forCellWithReuseIdentifier: "ListCollectionViewCell")
+        listView.register(cellNib, forCellWithReuseIdentifier: "ListCollectionViewCell")
     }
 }
 
@@ -47,7 +47,7 @@ extension ListViewController: UICollectionViewDelegateFlowLayout, UICollectionVi
 
     // cell id : listCollectioncell
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = listViewController.dequeueReusableCell(withReuseIdentifier: "ListCollectionViewCell", for: indexPath) as! ListCollectionViewCell
+        let cell = listView.dequeueReusableCell(withReuseIdentifier: "ListCollectionViewCell", for: indexPath) as! ListCollectionViewCell
         
               //  cell.cafeImg.sizeToFit()
         

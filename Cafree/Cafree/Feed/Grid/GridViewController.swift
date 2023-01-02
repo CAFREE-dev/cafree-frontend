@@ -10,14 +10,14 @@ import UIKit
 class GridViewController: UIViewController {
     
     
-    @IBOutlet weak var gridViewController: UICollectionView!
+    @IBOutlet weak var gridView: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        gridViewController.delegate = self
-        gridViewController.dataSource = self
+        gridView.delegate = self
+        gridView.dataSource = self
         
-        gridViewController.reloadData()
+        gridView.reloadData()
     }
 }
 
