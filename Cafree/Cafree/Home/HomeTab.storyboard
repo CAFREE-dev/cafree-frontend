@@ -396,30 +396,81 @@
             <objects>
                 <viewController storyboardIdentifier="ConseptChangeViewController" id="sX4-RT-eHO" customClass="ConseptChangeViewController" customModule="Cafree" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KXz-Va-bed">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="573"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="210"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dfh-W0-Ucw">
-                                <rect key="frame" x="0.0" y="74" width="393" height="35"/>
+                                <rect key="frame" x="0.0" y="30" width="393" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="모던한"/>
+                                <buttonConfiguration key="configuration" style="plain" title="모던한">
+                                    <color key="baseForegroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="clickedMo:" destination="sX4-RT-eHO" eventType="touchUpInside" id="1eK-UD-qLg"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L3u-eN-3dd">
-                                <rect key="frame" x="0.0" y="106" width="393" height="35"/>
+                                <rect key="frame" x="0.0" y="65" width="393" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="자연과 함께">
+                                    <color key="baseForegroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="clickedNature:" destination="sX4-RT-eHO" eventType="touchUpInside" id="c5B-jy-0bK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qSH-3k-pg5">
+                                <rect key="frame" x="0.0" y="100" width="393" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="한옥">
+                                    <color key="baseForegroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="clickedNation:" destination="sX4-RT-eHO" eventType="touchUpInside" id="lcL-uN-Zck"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sN2-Z7-Aqb">
+                                <rect key="frame" x="0.0" y="135" width="393" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="레트로">
+                                    <color key="baseForegroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="clickedRetro:" destination="sX4-RT-eHO" eventType="touchUpInside" id="pNW-JS-mTf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="syg-k8-zLk">
+                                <rect key="frame" x="0.0" y="170" width="393" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="이색적">
+                                    <color key="baseForegroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="clickedDiff:" destination="sX4-RT-eHO" eventType="touchUpInside" id="0bK-3K-rNC"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Bz3-os-g9I"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="VRq-IH-KlB"/>
+                    <size key="freeformSize" width="393" height="210"/>
+                    <connections>
+                        <outlet property="btnDiff" destination="syg-k8-zLk" id="Awo-xJ-IcJ"/>
+                        <outlet property="btnMo" destination="dfh-W0-Ucw" id="luI-0w-Zwz"/>
+                        <outlet property="btnNation" destination="qSH-3k-pg5" id="tTX-BU-O8B"/>
+                        <outlet property="btnNature" destination="L3u-eN-3dd" id="42Z-9w-dEa"/>
+                        <outlet property="btnRetro" destination="sN2-Z7-Aqb" id="TOb-hh-I6Y"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gG0-W2-jic" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1417.5572519083969" y="-28.169014084507044"/>
+            <point key="canvasLocation" x="407" y="1096"/>
         </scene>
         <!--Pop Cafe View Controller-->
         <scene sceneID="I2y-4s-2Fx">
@@ -514,7 +565,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Ap-Bv-AYl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="162.59541984732823" y="1338.7323943661972"/>
+            <point key="canvasLocation" x="195" y="1521"/>
         </scene>
         <!--Consept Cafe View Controller-->
         <scene sceneID="H5c-ir-RU5">

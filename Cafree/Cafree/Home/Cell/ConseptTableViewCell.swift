@@ -13,7 +13,6 @@ class ConseptTableViewCell: UITableViewCell {
     @IBOutlet var conseptLabel: UILabel!
     
     var delegate : ConseptChangeDelegate?
-    var consept = "모던한"
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
