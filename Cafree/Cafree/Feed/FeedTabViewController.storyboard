@@ -206,7 +206,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="gridViewController" destination="xYQ-0O-Msi" id="wHb-bd-vZ9"/>
+                        <outlet property="gridView" destination="xYQ-0O-Msi" id="wHb-bd-vZ9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CWf-CX-hu0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -253,7 +253,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="listViewController" destination="3Dn-Dz-Yiq" id="uRe-5r-gZj"/>
+                        <outlet property="listView" destination="3Dn-Dz-Yiq" id="uRe-5r-gZj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S7O-LZ-Qkd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

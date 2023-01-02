@@ -150,6 +150,7 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="editBtn" destination="jG3-XK-QZv" id="MPU-Pb-Ogq"/>
+                        <outlet property="gridCollectionView" destination="PCN-F6-qAx" id="0uD-31-MFE"/>
                         <outlet property="likeCount" destination="MnF-eu-fmq" id="tmd-YI-gcY"/>
                         <outlet property="likeLabel" destination="8UB-Ss-8eV" id="3wl-OD-9da"/>
                         <outlet property="nameLabel" destination="eFP-fx-Pkg" id="A6U-IX-Qfg"/>

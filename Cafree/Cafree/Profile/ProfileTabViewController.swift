@@ -29,6 +29,10 @@ class ProfileTabViewController: UIViewController {
     // 게시물-좋아요 분류 세그먼트
     @IBOutlet var sortSegment: UISegmentedControl!
     
+    // 게시물-좋아요 grid 뷰
+    @IBOutlet var gridView: UIView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -46,8 +50,8 @@ class ProfileTabViewController: UIViewController {
         postLabel.text = "게시글"
         likeLabel.text = "좋아요"
         
-        postCount.text = "10"
-        likeCount.text = "10"
+        postCount.text = "20"
+        likeCount.text = "20"
     }
     
     func initEditBtn() {
@@ -58,8 +62,9 @@ class ProfileTabViewController: UIViewController {
     }
     
 
+    // 내비게이션 바 초기화
     func initNavigationBarColor() {
-        // 네비게이션 바 색상 변경
+        // 내비게이션 바 색상 변경
         let navigationBarAppearance = UINavigationBarAppearance() // navigationBar 를 설정해줘야 스크롤 했을 때 색상이 안 보임.
         navigationBarAppearance.backgroundColor = .primary
         self.navigationController?.navigationBar.standardAppearance = navigationBarAppearance
