@@ -78,6 +78,7 @@
 		6F0B03992955B8CB009662E2 /* PhotoBtnCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F0B03972955B8CB009662E2 /* PhotoBtnCollectionViewCell.xib */; };
 		6F0B039C2955EC9E009662E2 /* SelectedImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F0B039A2955EC9E009662E2 /* SelectedImageCollectionViewCell.swift */; };
 		6F0B039D2955EC9E009662E2 /* SelectedImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F0B039B2955EC9E009662E2 /* SelectedImageCollectionViewCell.xib */; };
+		6F0E729F296327E00076E752 /* ConseptChangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F0E729E296327E00076E752 /* ConseptChangeViewController.swift */; };
 		6F13D359295D6A3400CA3B0A /* BinTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F13D357295D6A3400CA3B0A /* BinTableViewCell.swift */; };
 		6F13D35A295D6A3400CA3B0A /* BinTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F13D358295D6A3400CA3B0A /* BinTableViewCell.xib */; };
 		6F13D35D295D71D500CA3B0A /* ConseptTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F13D35B295D71D500CA3B0A /* ConseptTableViewCell.swift */; };
@@ -206,6 +207,7 @@
 		6F0B03972955B8CB009662E2 /* PhotoBtnCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoBtnCollectionViewCell.xib; sourceTree = "<group>"; };
 		6F0B039A2955EC9E009662E2 /* SelectedImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		6F0B039B2955EC9E009662E2 /* SelectedImageCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectedImageCollectionViewCell.xib; sourceTree = "<group>"; };
+		6F0E729E296327E00076E752 /* ConseptChangeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConseptChangeViewController.swift; sourceTree = "<group>"; };
 		6F13D357295D6A3400CA3B0A /* BinTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinTableViewCell.swift; sourceTree = "<group>"; };
 		6F13D358295D6A3400CA3B0A /* BinTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BinTableViewCell.xib; sourceTree = "<group>"; };
 		6F13D35B295D71D500CA3B0A /* ConseptTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConseptTableViewCell.swift; sourceTree = "<group>"; };
@@ -420,6 +422,7 @@
 				6F4E3FED2951D88E00B8A84C /* WriteViewController.swift */,
 				6FB2746B295EDB5A00C89DB2 /* RegisterCafeViewController.swift */,
 				6F50E5A0295EEE2100D4283E /* RegisterNewCafeViewController.swift */,
+				6F0E729E296327E00076E752 /* ConseptChangeViewController.swift */,
 				6F402F4B293F530B00E97D5C /* Cell */,
 			);
 			path = Home;
@@ -729,6 +732,7 @@
 				6F0B03982955B8CB009662E2 /* PhotoBtnCollectionViewCell.swift in Sources */,
 				130A1CC32951BCA600446DF4 /* FeedTabViewController.swift in Sources */,
 				6F3315E7294C72A700B0B2DC /* CafeDetailLocalTableViewCell.swift in Sources */,
+				6F0E729F296327E00076E752 /* ConseptChangeViewController.swift in Sources */,
 				6F4F4F112941D319004D6852 /* TitleTableViewCell.swift in Sources */,
 				6FE7C108293F609000B61E13 /* CafeClass.swift in Sources */,
 				1301224F2954B00300F486C5 /* GridViewController.swift in Sources */,
