@@ -55,7 +55,7 @@ class ConseptCafeViewController: UIViewController, UITableViewDelegate, UITableV
             return 200
         }
         else if indexPath.section == 1 {
-            return 44
+            return 40
         }
         else{
             return 210
@@ -73,6 +73,7 @@ class ConseptCafeViewController: UIViewController, UITableViewDelegate, UITableV
             
         } else if indexPath.section == 1{
             let cell = conseptTableView.dequeueReusableCell(withIdentifier: "conseptCell", for: indexPath) as! ConseptTableViewCell
+            cell.delegate = self
             
             return cell
             
@@ -126,4 +127,11 @@ class ConseptCafeViewController: UIViewController, UITableViewDelegate, UITableV
             detailCafeView.receiveItem(cafes[((indexPath as NSIndexPath?)?.section)!-num])
         }
     }
+}
+extension ConseptCafeViewController: ConseptChangeDelegate{
+    func conseptChange() {
+        performSegue(withIdentifier: "changeConsept", sender: nil)
+    }
+    
+    
 }
