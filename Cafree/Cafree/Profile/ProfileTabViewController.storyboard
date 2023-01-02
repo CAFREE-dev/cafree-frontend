@@ -115,32 +115,43 @@
                                     <segment title="좋아요"/>
                                 </segments>
                             </segmentedControl>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tEv-G7-4Zt">
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ydE-Bt-lY6">
                                 <rect key="frame" x="0.0" y="313" width="393" height="456"/>
                                 <connections>
-                                    <segue destination="M0N-RR-w1C" kind="embed" id="TNl-09-8m7"/>
+                                    <segue destination="rBb-z2-wUt" kind="embed" id="3fx-B3-7Xr"/>
                                 </connections>
                             </containerView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="ydE-Bt-lY6" secondAttribute="trailing" id="KOo-Ts-mbM"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="98X-GT-eaF" secondAttribute="trailing" constant="16" id="LKo-jE-jr3"/>
                             <constraint firstItem="FJr-WM-7Du" firstAttribute="top" secondItem="98X-GT-eaF" secondAttribute="bottom" constant="20" id="NNz-Jp-4IL"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="FJr-WM-7Du" secondAttribute="trailing" constant="20" id="Pys-uF-tt8"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="ydE-Bt-lY6" secondAttribute="bottom" id="Q3l-2E-mAQ"/>
                             <constraint firstItem="98X-GT-eaF" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="12" id="XQy-zf-tcY"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="tEv-G7-4Zt" secondAttribute="bottom" id="XrV-iU-G2O"/>
-                            <constraint firstItem="tEv-G7-4Zt" firstAttribute="top" secondItem="FJr-WM-7Du" secondAttribute="bottom" id="fii-WK-TzE"/>
                             <constraint firstItem="98X-GT-eaF" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="12" id="jbg-nS-Cyb"/>
-                            <constraint firstItem="tEv-G7-4Zt" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="oVU-Dr-v6N"/>
                             <constraint firstItem="98X-GT-eaF" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="rmK-HZ-YEz"/>
+                            <constraint firstItem="ydE-Bt-lY6" firstAttribute="top" secondItem="FJr-WM-7Du" secondAttribute="bottom" id="tZA-DO-F7E"/>
                             <constraint firstItem="FJr-WM-7Du" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="uOg-MQ-hA7"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="tEv-G7-4Zt" secondAttribute="trailing" id="wcK-RB-i0F"/>
+                            <constraint firstItem="ydE-Bt-lY6" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="ybh-Jz-R0b"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="프로필" image="ProfileTabImgDefault" id="DP3-Ln-brg"/>
                     <navigationItem key="navigationItem" id="7n7-Ih-Kep"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="editBtn" destination="jG3-XK-QZv" id="MPU-Pb-Ogq"/>
+                        <outlet property="gridView" destination="ydE-Bt-lY6" id="Oq9-Fu-1Tc"/>
+                        <outlet property="likeCount" destination="MnF-eu-fmq" id="tmd-YI-gcY"/>
+                        <outlet property="likeLabel" destination="8UB-Ss-8eV" id="3wl-OD-9da"/>
+                        <outlet property="nameLabel" destination="eFP-fx-Pkg" id="A6U-IX-Qfg"/>
+                        <outlet property="postCount" destination="B3e-f9-O0S" id="U48-64-78s"/>
+                        <outlet property="postLabel" destination="EWO-5Y-33b" id="anv-8c-G4k"/>
+                        <outlet property="profileImg" destination="Lez-GO-0Mp" id="9QQ-By-kik"/>
+                        <outlet property="sortSegment" destination="FJr-WM-7Du" id="WB2-cz-YpC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -164,28 +175,28 @@
             </objects>
             <point key="canvasLocation" x="55.725190839694655" y="-2.1126760563380285"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="g9l-uJ-GgL">
+        <!--Profile Grid View Controller-->
+        <scene sceneID="zO2-RM-fTp">
             <objects>
-                <viewController id="M0N-RR-w1C" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8Ac-Ug-5Z6">
+                <viewController storyboardIdentifier="ProfileGridViewController" id="rBb-z2-wUt" customClass="ProfileGridViewController" customModule="Cafree" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IV5-Gz-xea">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="456"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="PKi-4t-ZY6">
-                                <rect key="frame" x="16" y="59" width="361" height="397"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="fSe-Hm-gyx">
+                                <rect key="frame" x="16" y="0.0" width="361" height="456"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="POC-8g-Y02">
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="YV8-vj-Xc2">
                                     <size key="itemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="P9D-l8-GLh">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ProfileGridCollectionCell" id="1n2-c6-RnJ">
                                         <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Izo-a6-fjt">
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="dgo-uM-xZ0">
                                             <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </collectionViewCellContentView>
@@ -195,16 +206,19 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="PKi-4t-ZY6" secondAttribute="trailing" id="3R1-BB-M0T"/>
-                            <constraint firstItem="PKi-4t-ZY6" firstAttribute="leading" secondItem="8Ac-Ug-5Z6" secondAttribute="leadingMargin" id="Pzx-zb-6YB"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="PKi-4t-ZY6" secondAttribute="bottom" id="Q7P-2k-EVF"/>
-                            <constraint firstItem="PKi-4t-ZY6" firstAttribute="top" secondItem="8Ac-Ug-5Z6" secondAttribute="topMargin" id="wCG-lE-Fl7"/>
+                            <constraint firstItem="fSe-Hm-gyx" firstAttribute="leading" secondItem="IV5-Gz-xea" secondAttribute="leading" constant="16" id="G4y-c5-iFK"/>
+                            <constraint firstAttribute="trailing" secondItem="fSe-Hm-gyx" secondAttribute="trailing" constant="16" id="hGc-IK-uGZ"/>
+                            <constraint firstAttribute="bottom" secondItem="fSe-Hm-gyx" secondAttribute="bottom" id="jsN-9S-gmu"/>
+                            <constraint firstItem="fSe-Hm-gyx" firstAttribute="top" secondItem="IV5-Gz-xea" secondAttribute="top" id="uzM-t8-WkI"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="gridView" destination="fSe-Hm-gyx" id="UUS-pN-8Rj"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="uqL-eJ-jxX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pii-Xc-Hje" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="715.26717557251902" y="580.98591549295782"/>
+            <point key="canvasLocation" x="944" y="581"/>
         </scene>
     </scenes>
     <resources>

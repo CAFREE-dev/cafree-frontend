@@ -206,7 +206,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="gridViewController" destination="xYQ-0O-Msi" id="wHb-bd-vZ9"/>
+                        <outlet property="gridView" destination="xYQ-0O-Msi" id="wHb-bd-vZ9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CWf-CX-hu0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -231,7 +231,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="w10-Nj-spU" customClass="ListCollectionViewCell" customModule="Cafree" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ListCollectionViewCell" id="w10-Nj-spU" customClass="ListCollectionViewCell" customModule="Cafree" customModuleProvider="target">
                                         <rect key="frame" x="25" y="0.0" width="364" height="539"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="jzl-RL-69d">
@@ -253,7 +253,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="listViewController" destination="3Dn-Dz-Yiq" id="uRe-5r-gZj"/>
+                        <outlet property="listView" destination="3Dn-Dz-Yiq" id="uRe-5r-gZj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S7O-LZ-Qkd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -1,27 +1,22 @@
-//
-//  GridViewController.swift
-//  Cafree
-//
-//  Created by 한수빈 on 2022/12/23.
-//
+// 프로필 - 게시글/좋아요 그리드 뷰
+
 
 import UIKit
 
-class GridViewController: UIViewController {
-    
-    
-    @IBOutlet weak var gridView: UICollectionView!
-    
+class ProfileGridViewController: UIViewController {
+
+    @IBOutlet var gridView: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         gridView.delegate = self
         gridView.dataSource = self
         
-        gridView.reloadData()
     }
+
 }
 
-extension GridViewController : UICollectionViewDelegateFlowLayout, UICollectionViewDelegate, UICollectionViewDataSource {
+extension ProfileGridViewController : UICollectionViewDelegateFlowLayout, UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width: CGFloat = collectionView.frame.width / 3.1
         let height: CGFloat = collectionView.frame.width / 3.1
@@ -30,11 +25,11 @@ extension GridViewController : UICollectionViewDelegateFlowLayout, UICollectionV
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return 20
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ProfileGridCollectionCell", for: indexPath)
             cell.backgroundColor = .purple
             return cell
     }
@@ -50,4 +45,3 @@ extension GridViewController : UICollectionViewDelegateFlowLayout, UICollectionV
     }
     
 }
-
