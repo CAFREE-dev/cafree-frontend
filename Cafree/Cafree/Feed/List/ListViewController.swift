@@ -19,6 +19,13 @@ class ListViewController: UIViewController {
         listViewController.dataSource = self
         
         listViewController.reloadData()
+        
+        initNib()
+    }
+    
+    func initNib() {
+        let cellNib = UINib(nibName: "ListCollectionViewCell", bundle: nil)
+        listViewController.register(cellNib, forCellWithReuseIdentifier: "ListCollectionViewCell")
     }
 }
 
@@ -38,10 +45,23 @@ extension ListViewController: UICollectionViewDelegateFlowLayout, UICollectionVi
         return 10
     }
 
+    // cell id : listCollectioncell
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
-            cell.backgroundColor = .red
-            return cell
+        let cell = listViewController.dequeueReusableCell(withReuseIdentifier: "ListCollectionViewCell", for: indexPath) as! ListCollectionViewCell
+        
+              //  cell.cafeImg.sizeToFit()
+        
+                cell.layer.borderColor = UIColor.lightGray.cgColor
+                cell.layer.borderWidth = 1
+                cell.layer.cornerRadius = 4
+      
+
+        
+                return cell
+        
+        
+        
+        
     }
 
 
