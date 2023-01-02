@@ -16,6 +16,7 @@
 		130122652958031B00F486C5 /* WishCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 130122632958031B00F486C5 /* WishCollectionViewCell.xib */; };
 		130A1CC32951BCA600446DF4 /* FeedTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 130A1CC22951BCA600446DF4 /* FeedTabViewController.swift */; };
 		130A1CC52951BCC200446DF4 /* FeedTabViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 130A1CC42951BCC200446DF4 /* FeedTabViewController.storyboard */; };
+		134E12C229630F8700AE8AA2 /* ProfileGridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134E12C129630F8700AE8AA2 /* ProfileGridViewController.swift */; };
 		1352D79B2958A18F0054B3CD /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1352D79A2958A18F0054B3CD /* UIColor.swift */; };
 		1352D79E2958BAC40054B3CD /* ProfileTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1352D79D2958BAC40054B3CD /* ProfileTabViewController.swift */; };
 		1352D7A02958BAD40054B3CD /* ProfileTabViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1352D79F2958BAD40054B3CD /* ProfileTabViewController.storyboard */; };
@@ -130,6 +131,7 @@
 		130122632958031B00F486C5 /* WishCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WishCollectionViewCell.xib; sourceTree = "<group>"; };
 		130A1CC22951BCA600446DF4 /* FeedTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTabViewController.swift; sourceTree = "<group>"; };
 		130A1CC42951BCC200446DF4 /* FeedTabViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FeedTabViewController.storyboard; sourceTree = "<group>"; };
+		134E12C129630F8700AE8AA2 /* ProfileGridViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileGridViewController.swift; sourceTree = "<group>"; };
 		1352D79A2958A18F0054B3CD /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		1352D79D2958BAC40054B3CD /* ProfileTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTabViewController.swift; sourceTree = "<group>"; };
 		1352D79F2958BAD40054B3CD /* ProfileTabViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfileTabViewController.storyboard; sourceTree = "<group>"; };
@@ -329,6 +331,7 @@
 			children = (
 				1352D79D2958BAC40054B3CD /* ProfileTabViewController.swift */,
 				1352D79F2958BAD40054B3CD /* ProfileTabViewController.storyboard */,
+				134E12C129630F8700AE8AA2 /* ProfileGridViewController.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -750,6 +753,7 @@
 				6F13D35D295D71D500CA3B0A /* ConseptTableViewCell.swift in Sources */,
 				1373C2B329252BFA00FA2130 /* AppDelegate.swift in Sources */,
 				6F01545E293E246900A588FE /* NewCafeViewController.swift in Sources */,
+				134E12C229630F8700AE8AA2 /* ProfileGridViewController.swift in Sources */,
 				1301225A2957BB6A00F486C5 /* WishTabViewController.swift in Sources */,
 				6F0B039C2955EC9E009662E2 /* SelectedImageCollectionViewCell.swift in Sources */,
 				130122572954CD2400F486C5 /* GridCollectionViewCell.swift in Sources */,
