@@ -52,7 +52,11 @@ class NewCafeViewController: UIViewController,UITableViewDelegate, UITableViewDa
     
     // Section의 높이
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 210
+        if indexPath.section == 0 {
+            return 190
+        }else{
+            return 210
+        }
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.section == 0 {
