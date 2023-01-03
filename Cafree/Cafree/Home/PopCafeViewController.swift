@@ -15,7 +15,7 @@ class PopCafeViewController: UIViewController, UITableViewDelegate, UITableViewD
     //위치 매니져
     var locationManager: CLLocationManager!
     
-    var cafes = ["garbage","sample1","sample2"]
+    var cafes = ["garbage","어퍼스트로피","sample1","sample2","sample3"]
     let cellSpacingHeight: CGFloat = 1
     
     let cellName = "CafeTableViewCell"
@@ -114,7 +114,7 @@ class PopCafeViewController: UIViewController, UITableViewDelegate, UITableViewD
                 let cafe = cafes[indexPath.section]
             
                 cell.cafeName.text = cafe
-                cell.cafeImgView.image = UIImage(named: "sampleCafeImg"+String(indexPath.section))
+                cell.cafeImgView.image = UIImage(named: "sampleCafeImg2")
                 cell.cafeLocal.text = "sample"
                 cell.cafeDist.text = "5.0km"
                 cell.cafeInfo.text = "sample"
