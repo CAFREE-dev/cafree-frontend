@@ -54,7 +54,13 @@ class ConseptCafeViewController: UIViewController, UITableViewDelegate, UITableV
     // Section의 높이
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.section == 0 {
-            return 190
+            let bounds = UIScreen.main.bounds
+            let height = bounds.size.height
+            if height == 812.0 {
+                return 180
+            }else{
+                return 190
+            }
         }
         else if indexPath.section == 1 {
             return 40
