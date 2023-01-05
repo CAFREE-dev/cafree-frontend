@@ -16,6 +16,12 @@ class CafeTableViewCell: UITableViewCell {
     @IBOutlet var cafeDist: UILabel!
     @IBOutlet var cafeLocal: UILabel!
     
+    @IBOutlet var niceBtn: UIButton!
+    
+    var delegate: CafeTableViewCellDelegate?
+    
+    var niceIndex = 0
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -29,4 +35,19 @@ class CafeTableViewCell: UITableViewCell {
         
     }
     
+    @IBAction func clickedNiceBtn(_ sender: Any) {
+        self.delegate?.clickedNiceBtn(niceIndex: niceIndex)
+        if niceIndex == 1{
+            self.niceBtn.setImage(UIImage(named: "nice1"), for: .normal)
+            niceIndex = 0
+        }else{
+            self.niceBtn.setImage(UIImage(named: "nice2"), for: .normal)
+            niceIndex = 1
+        }
+        
+    }
+    
+}
+protocol CafeTableViewCellDelegate {
+    func clickedNiceBtn(niceIndex: Int)
 }

@@ -39,7 +39,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tij-6t-Csc">
-                        <rect key="frame" x="240" y="182" width="131" height="21"/>
+                        <rect key="frame" x="312" y="182" width="59" height="21"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -49,6 +49,19 @@
                         <rect key="frame" x="21" y="7" width="351" height="140"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                     </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="THd-t9-Syd">
+                        <rect key="frame" x="328" y="111" width="45" height="36"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain" image="nice1" title=" "/>
+                        <connections>
+                            <action selector="clickedNiceBtn:" destination="vt0-OM-TGA" eventType="touchUpInside" id="Dai-2D-d6T"/>
+                        </connections>
+                    </button>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="distance" translatesAutoresizingMaskIntoConstraints="NO" id="sA2-fq-doY">
+                        <rect key="frame" x="294" y="180" width="36" height="22"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    </imageView>
                 </subviews>
             </tableViewCellContentView>
             <connections>
@@ -57,11 +70,14 @@
                 <outlet property="cafeInfo" destination="iJ6-wt-idw" id="5Fr-5j-Sml"/>
                 <outlet property="cafeLocal" destination="EsP-I4-HSR" id="gc0-ab-ubO"/>
                 <outlet property="cafeName" destination="bmJ-Zy-i74" id="nj3-Qv-9IA"/>
+                <outlet property="niceBtn" destination="THd-t9-Syd" id="djh-QG-Y16"/>
             </connections>
             <point key="canvasLocation" x="174.80916030534351" y="-25.704225352112676"/>
         </tableViewCell>
     </objects>
     <resources>
+        <image name="distance" width="15" height="16"/>
+        <image name="nice1" width="16" height="22"/>
         <namedColor name="Point">
             <color red="0.40784313725490196" green="0.19215686274509805" blue="0.58039215686274515" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
