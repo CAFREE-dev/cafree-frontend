@@ -88,6 +88,9 @@
                                 <rect key="frame" x="259" y="13" width="75" height="34.333333333333336"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="moreBtnClicked:" destination="gTV-IL-0wX" eventType="touchUpInside" id="tdD-6D-kxs"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -160,7 +163,7 @@
                 <outlet property="dateLabel" destination="ztE-aG-Yeu" id="ptA-gU-w4S"/>
                 <outlet property="likeBtn" destination="srb-Db-Q6b" id="Aki-hJ-sDo"/>
                 <outlet property="likeCount" destination="fe4-Ap-ihP" id="Yqh-4y-A27"/>
-                <outlet property="moreBtn" destination="TVi-Ms-sEh" id="61Q-iT-CSy"/>
+                <outlet property="moreBtn" destination="TVi-Ms-sEh" id="iLJ-Rn-C0b"/>
                 <outlet property="nameLabel" destination="Zhs-Je-WYU" id="COZ-h6-8oX"/>
                 <outlet property="profileImg" destination="itF-xm-bKG" id="RE3-dr-nHN"/>
                 <outlet property="tag1Label" destination="Uzf-fi-8cD" id="y6G-Pj-m3U"/>

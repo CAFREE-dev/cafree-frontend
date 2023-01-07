@@ -218,7 +218,7 @@
             <objects>
                 <viewController id="ltP-yf-ybZ" customClass="ListViewController" customModule="Cafree" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Jtu-rB-UU1">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="625.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="625"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="3Dn-Dz-Yiq">

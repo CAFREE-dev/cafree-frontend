@@ -3,6 +3,8 @@
 import UIKit
 
 class ListCollectionViewCell: UICollectionViewCell {
+    
+    var cellDelegate: ListCollectionViewCellDelegate?
 
     // 프로필 이미지
     @IBOutlet var profileImg: UIImageView!
@@ -41,4 +43,14 @@ class ListCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
     }
 
+    
+ 
+    @IBAction func moreBtnClicked(_ sender: UIButton) {
+        self.cellDelegate?.moreBtnClicked()
+    }
+    
+}
+
+protocol ListCollectionViewCellDelegate : AnyObject {
+    func moreBtnClicked() 
 }
