@@ -12,6 +12,7 @@ class ConseptCafeViewController: UIViewController, UITableViewDelegate, UITableV
     @IBOutlet var conseptTableView: UITableView!
     
     var cafes = ["garbage", "sample1"]
+    var consept = "모던한"
     let cellSpacingHeight: CGFloat = 1
     
     override func viewDidLoad() {
@@ -20,6 +21,7 @@ class ConseptCafeViewController: UIViewController, UITableViewDelegate, UITableV
         conseptTableView.delegate = self
         conseptTableView.dataSource = self
         registerXib()
+        
         
     }
  
@@ -52,10 +54,16 @@ class ConseptCafeViewController: UIViewController, UITableViewDelegate, UITableV
     // Section의 높이
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.section == 0 {
-            return 200
+            let bounds = UIScreen.main.bounds
+            let height = bounds.size.height
+            if height == 812.0 {
+                return 180
+            }else{
+                return 190
+            }
         }
         else if indexPath.section == 1 {
-            return 44
+            return 40
         }
         else{
             return 210
@@ -73,6 +81,9 @@ class ConseptCafeViewController: UIViewController, UITableViewDelegate, UITableV
             
         } else if indexPath.section == 1{
             let cell = conseptTableView.dequeueReusableCell(withIdentifier: "conseptCell", for: indexPath) as! ConseptTableViewCell
+            
+            cell.delegate = self
+            cell.conseptLabel.text = self.consept + " 분위기의 카페입니다."
             
             return cell
             
@@ -125,5 +136,43 @@ class ConseptCafeViewController: UIViewController, UITableViewDelegate, UITableV
             let detailCafeView = segue.destination as! DetailCafeViewController
             detailCafeView.receiveItem(cafes[((indexPath as NSIndexPath?)?.section)!-num])
         }
+        if segue.identifier == "changeConsept" {
+            let destinationVC = segue.destination as! ConseptChangeViewController
+                
+            destinationVC.delegate = self
+        }
     }
+}
+extension ConseptCafeViewController: ConseptChangeDelegate,ConseptChoseDelegate{
+    func conseptChosedMo() {
+        self.consept = "모던한"
+        self.conseptTableView.reloadData()
+    }
+    
+    func conseptChosedNature() {
+        self.consept = "자연과 함께"
+        //print(self.consept)
+        self.conseptTableView.reloadData()
+    }
+    
+    func conseptChosedNation() {
+        self.consept = "한옥"
+        self.conseptTableView.reloadData()
+    }
+    
+    func conseptChosedRetro() {
+        self.consept = "레트로"
+        self.conseptTableView.reloadData()
+    }
+    
+    func conseptChosedDiff() {
+        self.consept = "이색적"
+        self.conseptTableView.reloadData()
+    }
+    
+    func conseptChange() {
+        performSegue(withIdentifier: "changeConsept", sender: nil)
+        
+    }
+    
 }

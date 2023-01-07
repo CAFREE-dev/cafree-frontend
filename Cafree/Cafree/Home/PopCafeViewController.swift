@@ -12,10 +12,11 @@ class PopCafeViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     @IBOutlet weak var cafeTableView: UITableView!
     
+    var nice = 0
     //위치 매니져
     var locationManager: CLLocationManager!
     
-    var cafes = ["garbage","sample1","sample2"]
+    var cafes = ["garbage","어퍼스트로피","sample1","sample2","sample3"]
     let cellSpacingHeight: CGFloat = 1
     
     let cellName = "CafeTableViewCell"
@@ -90,7 +91,17 @@ class PopCafeViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     // Section의 높이
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 210
+        if indexPath.section == 0 {
+            let bounds = UIScreen.main.bounds
+            let height = bounds.size.height
+            if height == 812.0 {
+                return 180
+            }else{
+                return 190
+            }
+        }else{
+            return 210
+        }
     }
     
     
@@ -112,12 +123,23 @@ class PopCafeViewController: UIViewController, UITableViewDelegate, UITableViewD
             }else{
                 let cell = cafeTableView.dequeueReusableCell(withIdentifier: "cafeCell", for: indexPath) as! CafeTableViewCell
                 let cafe = cafes[indexPath.section]
-            
+                
+                cell.delegate = self
+                
                 cell.cafeName.text = cafe
-                cell.cafeImgView.image = UIImage(named: "sampleCafeImg"+String(indexPath.section))
+                cell.cafeImgView.image = UIImage(named: "sampleCafeImg2")
                 cell.cafeLocal.text = "sample"
                 cell.cafeDist.text = "5.0km"
                 cell.cafeInfo.text = "sample"
+                
+                // 찜 버튼 0 -> 빈칸, 1 -> 빨간색
+                if nice == 0{
+                    cell.niceBtn.setImage(UIImage(named: "nice1"), for: .normal)
+                    cell.niceIndex = 0
+                }else{
+                    cell.niceBtn.setImage(UIImage(named: "nice2"), for: .normal)
+                    cell.niceIndex = 1
+                }
                 
                 return cell
             }
@@ -167,6 +189,17 @@ class PopCafeViewController: UIViewController, UITableViewDelegate, UITableViewD
             detailCafeView.receiveItem(cafes[((indexPath as NSIndexPath?)?.section)!])
         }
     }
+}
+extension PopCafeViewController: CafeTableViewCellDelegate{
+    func clickedNiceBtn(niceIndex: Int) {
+        if niceIndex == 0{
+            self.nice = 1
+        }else{
+            self.nice = 0
+        }
+    }
+    
+    
 }
 
 //extension PopCafeViewController: UITableViewDataSource {

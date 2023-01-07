@@ -9,16 +9,23 @@ import UIKit
 
 class ListViewController: UIViewController {
 
-    @IBOutlet var listViewController: UICollectionView!
+    @IBOutlet var listView: UICollectionView!
     
  
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        listViewController.delegate = self
-        listViewController.dataSource = self
+        listView.delegate = self
+        listView.dataSource = self
         
-        listViewController.reloadData()
+        listView.reloadData()
+        
+        initNib()
+    }
+    
+    func initNib() {
+        let cellNib = UINib(nibName: "ListCollectionViewCell", bundle: nil)
+        listView.register(cellNib, forCellWithReuseIdentifier: "ListCollectionViewCell")
     }
 }
 
@@ -38,10 +45,23 @@ extension ListViewController: UICollectionViewDelegateFlowLayout, UICollectionVi
         return 10
     }
 
+    // cell id : listCollectioncell
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
-            cell.backgroundColor = .red
-            return cell
+        let cell = listView.dequeueReusableCell(withReuseIdentifier: "ListCollectionViewCell", for: indexPath) as! ListCollectionViewCell
+        
+              //  cell.cafeImg.sizeToFit()
+        
+                cell.layer.borderColor = UIColor.lightGray.cgColor
+                cell.layer.borderWidth = 1
+                cell.layer.cornerRadius = 4
+      
+
+        
+                return cell
+        
+        
+        
+        
     }
 
 
