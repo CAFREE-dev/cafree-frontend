@@ -32,6 +32,7 @@
 		1373C2CD29252BFC00FA2130 /* CafreeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1373C2CC29252BFC00FA2130 /* CafreeTests.swift */; };
 		1373C2D729252BFC00FA2130 /* CafreeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1373C2D629252BFC00FA2130 /* CafreeUITests.swift */; };
 		1373C2D929252BFC00FA2130 /* CafreeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1373C2D829252BFC00FA2130 /* CafreeUITestsLaunchTests.swift */; };
+		13AB9753296AB6E80003501A /* ProfileEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13AB9752296AB6E80003501A /* ProfileEditViewController.swift */; };
 		13BB3EC22969DC07007D471C /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13BB3EC12969DC07007D471C /* MoreViewController.swift */; };
 		13FF20EA296540320043A8E3 /* ReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13FF20E9296540320043A8E3 /* ReportViewController.swift */; };
 		13FF20EC296540500043A8E3 /* ReportViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13FF20EB296540500043A8E3 /* ReportViewController.storyboard */; };
@@ -155,6 +156,7 @@
 		1373C2D229252BFC00FA2130 /* CafreeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CafreeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1373C2D629252BFC00FA2130 /* CafreeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafreeUITests.swift; sourceTree = "<group>"; };
 		1373C2D829252BFC00FA2130 /* CafreeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafreeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		13AB9752296AB6E80003501A /* ProfileEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEditViewController.swift; sourceTree = "<group>"; };
 		13BB3EC12969DC07007D471C /* MoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
 		13FF20E9296540320043A8E3 /* ReportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportViewController.swift; sourceTree = "<group>"; };
 		13FF20EB296540500043A8E3 /* ReportViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ReportViewController.storyboard; sourceTree = "<group>"; };
@@ -319,6 +321,13 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		1337B43D296ADFC8006F8B73 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
 		133D0FB629653E2F00DE1EDE /* Report */ = {
 			isa = PBXGroup;
 			children = (
@@ -331,6 +340,7 @@
 		1352D7982958A1000054B3CD /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				1337B43D296ADFC8006F8B73 /* Font */,
 				1352D7992958A1630054B3CD /* Extension */,
 			);
 			path = Resource;
@@ -350,6 +360,7 @@
 				1352D79D2958BAC40054B3CD /* ProfileTabViewController.swift */,
 				1352D79F2958BAD40054B3CD /* ProfileTabViewController.storyboard */,
 				134E12C129630F8700AE8AA2 /* ProfileGridViewController.swift */,
+				13AB9752296AB6E80003501A /* ProfileEditViewController.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -757,6 +768,7 @@
 				1301224F2954B00300F486C5 /* GridViewController.swift in Sources */,
 				6F402F4E293F537900E97D5C /* CafeTableViewCell.swift in Sources */,
 				6F9985F22950856B005418C7 /* SearchViewController.swift in Sources */,
+				13AB9753296AB6E80003501A /* ProfileEditViewController.swift in Sources */,
 				6F4E3FF12951F6D700B8A84C /* StarRatingUISlider.swift in Sources */,
 				1373C2B729252BFA00FA2130 /* ViewController.swift in Sources */,
 				6F36FA372948594C0067D1CA /* DetailCafeViewController.swift in Sources */,

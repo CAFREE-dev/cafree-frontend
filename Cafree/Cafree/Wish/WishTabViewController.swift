@@ -56,7 +56,7 @@ class WishTabViewController: UIViewController  {
 
 extension WishTabViewController : UICollectionViewDelegateFlowLayout, UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: self.view.bounds.width, height: self.view.bounds.height)
+        return CGSize(width: self.view.bounds.width - 32, height: self.view.bounds.height)
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -69,12 +69,13 @@ extension WishTabViewController : UICollectionViewDelegateFlowLayout, UICollecti
         
               //  cell.cafeImg.sizeToFit()
         
-                cell.layer.borderColor = UIColor.lightGray.cgColor
-                cell.layer.borderWidth = 1
-                cell.layer.cornerRadius = 15
-
+        cell.layer.borderColor = UIColor.lightGray.cgColor
+        cell.layer.borderWidth = 1
+        cell.layer.cornerRadius = 15
+                
         
-                return cell
+        
+        return cell
         
     }
     
