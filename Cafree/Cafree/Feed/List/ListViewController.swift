@@ -1,10 +1,3 @@
-//
-//  ListViewController.swift
-//  Cafree
-//
-//  Created by 한수빈 on 2022/12/23.
-//
-
 import UIKit
 
 class ListViewController: UIViewController {
@@ -27,6 +20,7 @@ class ListViewController: UIViewController {
         let cellNib = UINib(nibName: "ListCollectionViewCell", bundle: nil)
         listView.register(cellNib, forCellWithReuseIdentifier: "ListCollectionViewCell")
     }
+    
 }
 
 extension ListViewController: UICollectionViewDelegateFlowLayout, UICollectionViewDelegate, UICollectionViewDataSource{
@@ -48,21 +42,34 @@ extension ListViewController: UICollectionViewDelegateFlowLayout, UICollectionVi
     // cell id : listCollectioncell
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = listView.dequeueReusableCell(withReuseIdentifier: "ListCollectionViewCell", for: indexPath) as! ListCollectionViewCell
+        cell.cellDelegate = self
         
               //  cell.cafeImg.sizeToFit()
         
-                cell.layer.borderColor = UIColor.lightGray.cgColor
-                cell.layer.borderWidth = 1
-                cell.layer.cornerRadius = 4
-      
-
+        cell.layer.borderColor = UIColor.lightGray.cgColor
+        cell.layer.borderWidth = 1
+        cell.layer.cornerRadius = 4
+                
+                
+        cell.moreBtn.setImage(UIImage(named: "more"), for: .normal)
         
-                return cell
-        
-        
-        
-        
+        return cell
+       
     }
+}
 
-
+extension ListViewController : ListCollectionViewCellDelegate {
+    func moreBtnClicked() {
+        print("moreBtnClicked!")
+        
+//        let moreViewController = MoreViewController()
+//        self.present(moreViewController, animated: true)
+        
+        // 일단 더보기 버튼에 신고하기 페이지 바로 연결 
+        //Storyboard ID에 이름 설정 후("ReportViewController")
+        let storyboard = UIStoryboard(name: "ReportViewController", bundle: nil)
+        let reportVC: ReportViewController = storyboard.instantiateViewController(withIdentifier: "reportViewController") as! ReportViewController
+        reportVC.modalPresentationStyle = .fullScreen//전체화면(기본은 팝업형태)
+        self.navigationController?.pushViewController(reportVC, animated: true)
+    }
 }
