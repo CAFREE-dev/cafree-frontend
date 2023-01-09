@@ -12,11 +12,28 @@ class FeedTabViewController: UIViewController {
     @IBOutlet var tagBtn : [UIButton]!
     
     
+    // Cafree 로고
+    @IBOutlet var cafreeLogo: UIBarButtonItem!
+    
+    // 검색 버튼 클릭
+    @IBAction func searchBtnClicked(_ sender: UIBarButtonItem) {
+        guard let searchView = self.storyboard?.instantiateViewController(identifier: "SearchViewController") else {return}
+        self.present(searchView, animated: true)
+    }
+    
+    // 글쓰기 버튼 클릭
+    @IBAction func writeBtnClicked(_ sender: UIBarButtonItem) {
+        guard let writeView = self.storyboard?.instantiateViewController(identifier: "WriteViewController") else {return}
+        self.present(writeView, animated: true)
+    }
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         initTagBtn()
         initNavigationBarColor()
+        getFontName()
     }
     
     func initTagBtn(){
@@ -25,9 +42,13 @@ class FeedTabViewController: UIViewController {
         for i in tagBtn {
             i.setTitle(tagBtnTitleText[tagBtnIndex], for: .normal)
             i.setTitleColor(.black, for: .normal)
-            i.tintColor = UIColor.clear
-            i.layer.cornerRadius = 15
-            i.layer.borderWidth = 1
+            
+            i.titleLabel?.font = UIFont(name: "SUITVariable-Regular", size: 12)
+            
+            
+            i.layer.backgroundColor = UIColor.white.cgColor
+            i.layer.cornerRadius = 12
+            i.layer.borderWidth = 0.6
             i.layer.borderColor = UIColor.lightGray.cgColor
 
             tagBtnIndex += 1
@@ -41,6 +62,19 @@ class FeedTabViewController: UIViewController {
         self.navigationController?.navigationBar.standardAppearance = navigationBarAppearance
         self.navigationController?.navigationBar.scrollEdgeAppearance = navigationBarAppearance
     }
+    
+    // 폰트 이름 확인
+    func getFontName() {
+            for family in UIFont.familyNames {
+
+                let sName: String = family as String
+                print("family: \(sName)")
+                        
+                for name in UIFont.fontNames(forFamilyName: sName) {
+                    print("name: \(name as String)")
+                }
+            }
+        }
     
     
     // false :

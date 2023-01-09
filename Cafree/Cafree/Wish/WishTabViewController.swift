@@ -35,9 +35,11 @@ class WishTabViewController: UIViewController  {
     
     func initSortBtn() {
         sortBtn.setTitle("최신순", for: .normal)
-        sortBtn.layer.cornerRadius = 4
-        sortBtn.layer.borderColor = UIColor.lightGray.cgColor
-        sortBtn.layer.borderWidth = 1
+        sortBtn.titleLabel?.font = UIFont(name: "SUITVariable-Regular", size: 12)
+        
+        sortBtn.layer.cornerRadius = 16
+         sortBtn.layer.borderColor = UIColor.lightGray.cgColor
+        sortBtn.layer.borderWidth = 0.6
        
         
         sortBtn.setTitleColor(.black, for: .normal)
@@ -67,11 +69,23 @@ extension WishTabViewController : UICollectionViewDelegateFlowLayout, UICollecti
         
         let cell = wishTabView.dequeueReusableCell(withReuseIdentifier: "WishCollectionViewCell", for: indexPath) as! WishCollectionViewCell
         
+        cell.wishCellDelegate = self
               //  cell.cafeImg.sizeToFit()
+        cell.cafeName.text = "스타벅스 안양운동장사거리DT점"
+        cell.cafeLocal.text = "경기 안양시 동안구 관악대로 234"
+        
+        cell.cafeName.textColor = .secondary
+        cell.cafeLocal.textColor = .gray
+        
+        cell.cafeName.font = UIFont(name: "SUITVariable-Bold", size: 12)
+        cell.cafeLocal.font = UIFont(name: "SUITVariable-Medium", size: 10)
+        
+        
+        cell.wishBtn.setImage(UIImage(named: "nice2"), for: .normal)
         
         cell.layer.borderColor = UIColor.lightGray.cgColor
         cell.layer.borderWidth = 1
-        cell.layer.cornerRadius = 15
+        cell.layer.cornerRadius = 4
                 
         
         
@@ -89,5 +103,18 @@ extension WishTabViewController : UICollectionViewDelegateFlowLayout, UICollecti
 //        return 16.0
 //    }
     
+}
+
+extension WishTabViewController : WishCollectionViewCellDelegate {
+    func wishBtnClicked(_ sender: UIButton) {
+        print("wishBtnClicked")
+        if sender.isSelected {
+            sender.setImage(UIImage(named: "nice2"), for: .normal)
+        }else {
+            sender.setImage(UIImage(named: "nice1"), for: .normal)
+        }
+       
+    }
+
 }
 

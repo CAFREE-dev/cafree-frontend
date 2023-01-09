@@ -34,6 +34,7 @@
 		1373C2D929252BFC00FA2130 /* CafreeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1373C2D829252BFC00FA2130 /* CafreeUITestsLaunchTests.swift */; };
 		13AB9753296AB6E80003501A /* ProfileEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13AB9752296AB6E80003501A /* ProfileEditViewController.swift */; };
 		13BB3EC22969DC07007D471C /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13BB3EC12969DC07007D471C /* MoreViewController.swift */; };
+		13C111CC296BF2A600031991 /* SUIT-Variable.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 13C111CB296BF2A600031991 /* SUIT-Variable.ttf */; };
 		13FF20EA296540320043A8E3 /* ReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13FF20E9296540320043A8E3 /* ReportViewController.swift */; };
 		13FF20EC296540500043A8E3 /* ReportViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13FF20EB296540500043A8E3 /* ReportViewController.storyboard */; };
 		6F01545C293E242C00A588FE /* PopCafeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F01545B293E242C00A588FE /* PopCafeViewController.swift */; };
@@ -158,6 +159,7 @@
 		1373C2D829252BFC00FA2130 /* CafreeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafreeUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		13AB9752296AB6E80003501A /* ProfileEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEditViewController.swift; sourceTree = "<group>"; };
 		13BB3EC12969DC07007D471C /* MoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
+		13C111CB296BF2A600031991 /* SUIT-Variable.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SUIT-Variable.ttf"; sourceTree = "<group>"; };
 		13FF20E9296540320043A8E3 /* ReportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportViewController.swift; sourceTree = "<group>"; };
 		13FF20EB296540500043A8E3 /* ReportViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ReportViewController.storyboard; sourceTree = "<group>"; };
 		6F01545B293E242C00A588FE /* PopCafeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopCafeViewController.swift; sourceTree = "<group>"; };
@@ -324,6 +326,7 @@
 		1337B43D296ADFC8006F8B73 /* Font */ = {
 			isa = PBXGroup;
 			children = (
+				13C111CB296BF2A600031991 /* SUIT-Variable.ttf */,
 			);
 			path = Font;
 			sourceTree = "<group>";
@@ -692,6 +695,7 @@
 				6F13D35A295D6A3400CA3B0A /* BinTableViewCell.xib in Resources */,
 				6F02925D293BB87C003D9FF1 /* copyright.png in Resources */,
 				6F02926B293BB87C003D9FF1 /* map_present.png in Resources */,
+				13C111CC296BF2A600031991 /* SUIT-Variable.ttf in Resources */,
 				6F029263293BB87C003D9FF1 /* map_pin_red.png in Resources */,
 				6F3315E8294C72A700B0B2DC /* CafeDetailLocalTableViewCell.xib in Resources */,
 				6F02926F293BB87C003D9FF1 /* map_pin_shadow.png in Resources */,
@@ -987,6 +991,10 @@
 				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Cafree/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "위치에 대한 권한 획득";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "위치에 대한 권한 획득";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "위치에 대한 권한 획득";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "사진에 대한 권한 획득";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -1026,6 +1034,10 @@
 				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Cafree/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "위치에 대한 권한 획득";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "위치에 대한 권한 획득";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "위치에 대한 권한 획득";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "사진에 대한 권한 획득";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
