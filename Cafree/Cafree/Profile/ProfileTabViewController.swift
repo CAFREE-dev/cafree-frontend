@@ -56,6 +56,8 @@ class ProfileTabViewController: UIViewController {
     
     func initEditBtn() {
         editBtn.setTitle("프로필 수정", for: .normal)
+        editBtn.setTitleColor(.white, for: .normal)
+        
         editBtn.layer.borderWidth = 0.5
         editBtn.layer.borderColor = UIColor.secondary?.cgColor
         editBtn.layer.cornerRadius = 4
@@ -70,5 +72,14 @@ class ProfileTabViewController: UIViewController {
         self.navigationController?.navigationBar.standardAppearance = navigationBarAppearance
         self.navigationController?.navigationBar.scrollEdgeAppearance = navigationBarAppearance
     }
+    
+//    @IBAction func touchEditBtn(_ sender: Any) {
+//        let storyboard = UIStoryboard(name: "ProfileEditViewController", bundle: nil)
+//        let profileEditVC: ProfileEditViewController = storyboard.instantiateViewController(withIdentifier: "ProfileEditViewController") as! ProfileEditViewController
+//        profileEditVC.modalPresentationStyle = .fullScreen//전체화면(기본은 팝업형태)
+//        self.navigationController?.pushViewController(profileEditVC, animated: true)
+//        
+//    }
+//    
 
 }
