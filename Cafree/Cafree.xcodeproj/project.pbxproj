@@ -106,6 +106,7 @@
 		6FB2746F295EE32500C89DB2 /* RegisterBtnTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FB2746D295EE32500C89DB2 /* RegisterBtnTableViewCell.swift */; };
 		6FB27470295EE32500C89DB2 /* RegisterBtnTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6FB2746E295EE32500C89DB2 /* RegisterBtnTableViewCell.xib */; };
 		6FC0FCFF2954ACF8009448C6 /* BSImagePicker in Frameworks */ = {isa = PBXBuildFile; productRef = 6FC0FCFE2954ACF8009448C6 /* BSImagePicker */; };
+		6FDBE18D296C460C003611F6 /* exampleApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FDBE18C296C460C003611F6 /* exampleApi.swift */; };
 		6FE7C108293F609000B61E13 /* CafeClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FE7C107293F609000B61E13 /* CafeClass.swift */; };
 /* End PBXBuildFile section */
 
@@ -238,6 +239,7 @@
 		6FB2746B295EDB5A00C89DB2 /* RegisterCafeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCafeViewController.swift; sourceTree = "<group>"; };
 		6FB2746D295EE32500C89DB2 /* RegisterBtnTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterBtnTableViewCell.swift; sourceTree = "<group>"; };
 		6FB2746E295EE32500C89DB2 /* RegisterBtnTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterBtnTableViewCell.xib; sourceTree = "<group>"; };
+		6FDBE18C296C460C003611F6 /* exampleApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = exampleApi.swift; sourceTree = "<group>"; };
 		6FE7C107293F609000B61E13 /* CafeClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeClass.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -573,6 +575,7 @@
 			children = (
 				6FE7C107293F609000B61E13 /* CafeClass.swift */,
 				6F4E3FF02951F6D700B8A84C /* StarRatingUISlider.swift */,
+				6FDBE18C296C460C003611F6 /* exampleApi.swift */,
 			);
 			path = Class;
 			sourceTree = "<group>";
@@ -759,6 +762,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6F0B03982955B8CB009662E2 /* PhotoBtnCollectionViewCell.swift in Sources */,
+				6FDBE18D296C460C003611F6 /* exampleApi.swift in Sources */,
 				130A1CC32951BCA600446DF4 /* FeedTabViewController.swift in Sources */,
 				6F3315E7294C72A700B0B2DC /* CafeDetailLocalTableViewCell.swift in Sources */,
 				6F0E729F296327E00076E752 /* ConseptChangeViewController.swift in Sources */,
