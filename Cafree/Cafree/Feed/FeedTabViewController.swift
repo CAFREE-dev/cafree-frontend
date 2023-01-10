@@ -3,7 +3,6 @@ import UIKit
 class FeedTabViewController: UIViewController {
     
     @IBOutlet weak var sortBtn: UIButton!
-    var isClicked = false
     
     @IBOutlet var listView: UIView!
     @IBOutlet var gridView: UIView!
@@ -14,6 +13,9 @@ class FeedTabViewController: UIViewController {
     
     // Cafree 로고
     @IBOutlet var cafreeLogo: UIBarButtonItem!
+
+    // 필터 - 스크롤 뷰 (스크롤바 숨기기)
+    @IBOutlet var filterScollerView: UIScrollView!
     
     // 검색 버튼 클릭
     @IBAction func searchBtnClicked(_ sender: UIBarButtonItem) {
@@ -34,9 +36,13 @@ class FeedTabViewController: UIViewController {
         initTagBtn()
         initNavigationBarColor()
         getFontName()
+        initFilterScollView()
     }
     
     func initTagBtn(){
+        sortBtn.setImage(UIImage(named: "list"), for: .normal)
+        sortBtn.setImage(UIImage(named: "grid"), for: .selected)
+        
         let tagBtnTitleText = ["카페이름", "위치", "분위기", "좋아요", "평가"]
         var tagBtnIndex = 0
         for i in tagBtn {
@@ -63,6 +69,12 @@ class FeedTabViewController: UIViewController {
         self.navigationController?.navigationBar.scrollEdgeAppearance = navigationBarAppearance
     }
     
+    // 필터 스크롤뷰의 수직/수평 스크롤바 숨기기
+    func initFilterScollView() {
+        filterScollerView.showsVerticalScrollIndicator = false
+        filterScollerView.showsHorizontalScrollIndicator = false
+    }
+    
     // 폰트 이름 확인
     func getFontName() {
             for family in UIFont.familyNames {
@@ -79,12 +91,11 @@ class FeedTabViewController: UIViewController {
     
     // false :
     @IBAction func sortBtnClicked(_ sender: UIButton) {
-        isClicked = !isClicked
-        
-        if !isClicked {
-            //sender.setImage(UImage(named:"square.grid.2x2.fill"), for: .normal)
+        if !sender.isSelected {
             showGridView()
-        }else if isClicked {
+            sender.isSelected = true
+        } else {
+            sender.isSelected = false
             showListView()
         }
     }

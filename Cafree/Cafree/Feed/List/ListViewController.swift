@@ -56,6 +56,7 @@ extension ListViewController: UICollectionViewDelegateFlowLayout, UICollectionVi
         
         
         cell.likeBtn.setImage(UIImage(named: "good1"), for: .normal)
+        cell.likeBtn.setImage(UIImage(named: "good2"), for: .selected)
         cell.likeBtn.setTitle("", for: .normal)
         
         
@@ -98,9 +99,9 @@ extension ListViewController : ListCollectionViewCellDelegate {
     
     func likeBtnClicked(_ sender: UIButton) {
         if sender.isSelected {
-            sender.setImage(UIImage(named: "nice2"), for: .selected)
-        } else if !sender.isSelected {
-            sender.setImage(UIImage(named: "nice1"), for: .normal)
+            sender.isSelected = false
+        } else {
+            sender.isSelected = true
         }
     }
 }

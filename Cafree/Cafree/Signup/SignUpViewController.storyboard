@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Sign Up View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" customClass="SignUpViewController" customModule="Cafree" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="title" translatesAutoresizingMaskIntoConstraints="NO" id="Ovj-Kj-dEA">
+                                <rect key="frame" x="16" y="139" width="282" height="56.666666666666657"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo2" translatesAutoresizingMaskIntoConstraints="NO" id="Prr-0F-vgr">
+                                <rect key="frame" x="16" y="219.66666666666666" width="168" height="37.999999999999972"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="dam-3Y-rX3">
+                                <rect key="frame" x="16" y="529" width="361" height="209"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yMJ-wg-5Xr">
+                                        <rect key="frame" x="0.0" y="0.0" width="361" height="62"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="Login-K" title=""/>
+                                        <connections>
+                                            <segue destination="Zcl-HH-b24" kind="presentation" id="CE8-Hn-n17"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sUJ-iF-awg">
+                                        <rect key="frame" x="0.0" y="62" width="361" height="62"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="Login-N" title=""/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hcp-eR-KNK">
+                                        <rect key="frame" x="0.0" y="124" width="361" height="70"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="Login-G" title=""/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hOh-W3-t1H">
+                                        <rect key="frame" x="0.0" y="194" width="121" height="15"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="15" id="JL3-AJ-8w8"/>
+                                            <constraint firstAttribute="width" constant="121" id="KtN-sN-7BC"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="Login-Default2" title=""/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Prr-0F-vgr" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="6pW-NR-Did"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="dam-3Y-rX3" secondAttribute="trailing" constant="16" id="7yF-Bi-8th"/>
+                            <constraint firstItem="Prr-0F-vgr" firstAttribute="top" secondItem="Ovj-Kj-dEA" secondAttribute="bottom" constant="24" id="Nq4-Yu-4P7"/>
+                            <constraint firstItem="Ovj-Kj-dEA" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="Ot9-zb-6mJ"/>
+                            <constraint firstItem="dam-3Y-rX3" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="Ulg-Ke-V7f"/>
+                            <constraint firstItem="dam-3Y-rX3" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="470" id="Wb2-FY-B3e"/>
+                            <constraint firstItem="Ovj-Kj-dEA" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="80" id="pCM-wE-EVb"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="11.450381679389313" y="-34.507042253521128"/>
+        </scene>
+        <!--MainTabBarViewController-->
+        <scene sceneID="YtC-Zh-55a">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="MainTabBarViewController" id="Zcl-HH-b24" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="RdZ-kJ-G71"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0i3-ti-pjZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="618" y="-88"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Login-Default2" width="121" height="15"/>
+        <image name="Login-G" width="351" height="56"/>
+        <image name="Login-K" width="343" height="48"/>
+        <image name="Login-N" width="343" height="48"/>
+        <image name="Logo2" width="168" height="38"/>
+        <image name="title" width="282" height="56.5"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

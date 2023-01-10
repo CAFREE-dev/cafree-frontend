@@ -81,7 +81,9 @@ extension WishTabViewController : UICollectionViewDelegateFlowLayout, UICollecti
         cell.cafeLocal.font = UIFont(name: "SUITVariable-Medium", size: 10)
         
         
-        cell.wishBtn.setImage(UIImage(named: "nice2"), for: .normal)
+        cell.wishBtn.setImage(UIImage(named: "nice1"), for: .normal)
+        cell.wishBtn.setImage(UIImage(named: "nice2"), for: .selected)
+        cell.wishBtn.isSelected = true
         
         cell.layer.borderColor = UIColor.lightGray.cgColor
         cell.layer.borderWidth = 1
@@ -109,12 +111,10 @@ extension WishTabViewController : WishCollectionViewCellDelegate {
     func wishBtnClicked(_ sender: UIButton) {
         print("wishBtnClicked")
         if sender.isSelected {
-            sender.setImage(UIImage(named: "nice2"), for: .normal)
+            sender.isSelected = false
         }else {
-            sender.setImage(UIImage(named: "nice1"), for: .normal)
+            sender.isSelected = true
         }
-       
     }
-
 }
 

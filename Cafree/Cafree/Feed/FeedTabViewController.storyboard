@@ -36,8 +36,8 @@
                                     <segue destination="ltP-yf-ybZ" kind="embed" id="Hvi-WK-kLl"/>
                                 </connections>
                             </containerView>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mlb-QL-772">
-                                <rect key="frame" x="70" y="92" width="344" height="61"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mlb-QL-772">
+                                <rect key="frame" x="50" y="92" width="364" height="61"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2wZ-9c-R9l">
                                         <rect key="frame" x="0.0" y="0.0" width="355" height="61"/>
@@ -108,10 +108,10 @@
                                 <viewLayoutGuide key="contentLayoutGuide" id="J3o-E4-sok"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="Tgz-GG-sEx"/>
                             </scrollView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nKV-WF-nPe">
-                                <rect key="frame" x="10" y="105" width="50" height="36"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Btn"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nKV-WF-nPe">
+                                <rect key="frame" x="10" y="105" width="30" height="36"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Btn"/>
                                 <connections>
                                     <action selector="sortBtnClicked:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="XBJ-LW-bw4"/>
                                 </connections>
@@ -159,8 +159,10 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="cafreeLogo" destination="yEP-Ex-fVe" id="whO-r7-6qY"/>
+                        <outlet property="filterScollerView" destination="Mlb-QL-772" id="WUw-ev-WPI"/>
                         <outlet property="gridView" destination="DSH-1d-bTx" id="OWA-Vu-CI7"/>
                         <outlet property="listView" destination="psJ-1d-P8l" id="DgO-y3-F18"/>
+                        <outlet property="sortBtn" destination="nKV-WF-nPe" id="VYz-3c-twd"/>
                         <outletCollection property="tagBtn" destination="swn-nQ-2PY" collectionClass="NSMutableArray" id="rZ3-wx-ojT"/>
                         <outletCollection property="tagBtn" destination="zEx-Db-XfJ" collectionClass="NSMutableArray" id="CIw-Vg-zb6"/>
                         <outletCollection property="tagBtn" destination="834-2Q-Fkm" collectionClass="NSMutableArray" id="V7X-iy-NMf"/>
