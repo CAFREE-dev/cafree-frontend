@@ -31,7 +31,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="Login-K" title=""/>
                                         <connections>
-                                            <segue destination="Zcl-HH-b24" kind="presentation" id="CE8-Hn-n17"/>
+                                            <action selector="loginK:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="4Pi-wW-zSn"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sUJ-iF-awg">
@@ -54,6 +54,9 @@
                                         <buttonConfiguration key="configuration" style="plain" image="Login-Default2" title=""/>
                                     </button>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="hOh-W3-t1H" firstAttribute="centerX" secondItem="dam-3Y-rX3" secondAttribute="centerX" id="jnP-8f-5k8"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
@@ -72,16 +75,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="11.450381679389313" y="-34.507042253521128"/>
-        </scene>
-        <!--MainTabBarViewController-->
-        <scene sceneID="YtC-Zh-55a">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="MainTabBarViewController" id="Zcl-HH-b24" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="RdZ-kJ-G71"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="0i3-ti-pjZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="618" y="-88"/>
         </scene>
     </scenes>
     <resources>
