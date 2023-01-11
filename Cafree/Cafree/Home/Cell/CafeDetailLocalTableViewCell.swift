@@ -13,12 +13,19 @@ class CafeDetailLocalTableViewCell: UITableViewCell {
     
     @IBOutlet var mapView: UIView!
     
+    @IBOutlet var cafeAdressLabel: UILabel!
+    
+    @IBOutlet var copyAdressBtn: UIButton!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
         backGroundView.layer.cornerRadius = 10
     }
 
+    @IBAction func clickedCopyAdressBtn(_ sender: Any) {
+        UIPasteboard.general.string = cafeAdressLabel.text
+    }
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 

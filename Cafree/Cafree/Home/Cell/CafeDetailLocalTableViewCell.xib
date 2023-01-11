@@ -65,6 +65,9 @@
                                         </fragment>
                                     </attributedString>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="clickedCopyAdressBtn:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="7kV-aE-jaR"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="주소나오는 곳" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QDn-db-THY">
                                 <rect key="frame" x="8" y="329" width="175" height="16"/>
@@ -87,6 +90,8 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="backGroundView" destination="mGr-ky-yTZ" id="P35-zm-zgv"/>
+                <outlet property="cafeAdressLabel" destination="QDn-db-THY" id="B81-Ha-qqE"/>
+                <outlet property="copyAdressBtn" destination="hot-Hd-wwu" id="Mdg-xJ-KPf"/>
                 <outlet property="mapView" destination="94b-N3-xyk" id="l5K-qQ-5k9"/>
             </connections>
             <point key="canvasLocation" x="138.1679389312977" y="19.718309859154932"/>

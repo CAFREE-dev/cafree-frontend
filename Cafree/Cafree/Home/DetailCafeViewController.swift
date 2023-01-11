@@ -126,6 +126,15 @@ class DetailCafeViewController: UIViewController, UITableViewDelegate, UITableVi
             mapView.baseMapType = .standard
             mapView.setMapCenter(MTMapPoint(geoCoord: MTMapPointGeo(latitude:  37.4044, longitude: 126.8918)), zoomLevel: 4, animated: true)
             
+            let markerItem = MTMapPOIItem()
+            markerItem.itemName = receiveItem
+            markerItem.mapPoint = MTMapPoint(geoCoord: MTMapPointGeo(latitude:  37.4044, longitude: 126.8918))
+            markerItem.markerType = .customImage
+            markerItem.customImageName = "samplePin"
+            markerItem.customImageAnchorPointOffset = MTMapImageOffset(offsetX: 30, offsetY: 0)
+            
+            mapView.addPOIItems([markerItem])
+            
             cell.mapView.addSubview(mapView)
             
             
