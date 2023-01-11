@@ -52,5 +52,6 @@ class ListCollectionViewCell: UICollectionViewCell {
 }
 
 protocol ListCollectionViewCellDelegate : AnyObject {
-    func moreBtnClicked() 
+    func moreBtnClicked()
+    func likeBtnClicked(_ sender : UIButton)
 }

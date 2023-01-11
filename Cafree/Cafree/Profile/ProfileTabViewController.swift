@@ -52,11 +52,14 @@ class ProfileTabViewController: UIViewController {
         
         postCount.text = "20"
         likeCount.text = "20"
+        
+        
     }
     
     func initEditBtn() {
         editBtn.setTitle("프로필 수정", for: .normal)
-        editBtn.setTitleColor(.white, for: .normal)
+        editBtn.setTitleColor(.secondary, for: .normal)
+        editBtn.titleLabel?.font = UIFont(name: "SUITVariable-Regular", size: 12)
         
         editBtn.layer.borderWidth = 0.5
         editBtn.layer.borderColor = UIColor.secondary?.cgColor
