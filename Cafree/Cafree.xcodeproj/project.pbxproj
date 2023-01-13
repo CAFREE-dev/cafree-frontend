@@ -93,6 +93,7 @@
 		6F3315E7294C72A700B0B2DC /* CafeDetailLocalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F3315E5294C72A700B0B2DC /* CafeDetailLocalTableViewCell.swift */; };
 		6F3315E8294C72A700B0B2DC /* CafeDetailLocalTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F3315E6294C72A700B0B2DC /* CafeDetailLocalTableViewCell.xib */; };
 		6F36FA372948594C0067D1CA /* DetailCafeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F36FA362948594C0067D1CA /* DetailCafeViewController.swift */; };
+		6F36FBAE2971A1E700F9322B /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 6F36FBAD2971A1E700F9322B /* Alamofire */; };
 		6F402F4E293F537900E97D5C /* CafeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F402F4C293F537900E97D5C /* CafeTableViewCell.swift */; };
 		6F402F4F293F537900E97D5C /* CafeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F402F4D293F537900E97D5C /* CafeTableViewCell.xib */; };
 		6F4E3FEE2951D88E00B8A84C /* WriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F4E3FED2951D88E00B8A84C /* WriteViewController.swift */; };
@@ -109,7 +110,6 @@
 		6FB2746F295EE32500C89DB2 /* RegisterBtnTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FB2746D295EE32500C89DB2 /* RegisterBtnTableViewCell.swift */; };
 		6FB27470295EE32500C89DB2 /* RegisterBtnTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6FB2746E295EE32500C89DB2 /* RegisterBtnTableViewCell.xib */; };
 		6FC0FCFF2954ACF8009448C6 /* BSImagePicker in Frameworks */ = {isa = PBXBuildFile; productRef = 6FC0FCFE2954ACF8009448C6 /* BSImagePicker */; };
-		6FDBE18D296C460C003611F6 /* exampleApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FDBE18C296C460C003611F6 /* exampleApi.swift */; };
 		6FE7C108293F609000B61E13 /* CafeClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FE7C107293F609000B61E13 /* CafeClass.swift */; };
 /* End PBXBuildFile section */
 
@@ -245,7 +245,6 @@
 		6FB2746B295EDB5A00C89DB2 /* RegisterCafeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCafeViewController.swift; sourceTree = "<group>"; };
 		6FB2746D295EE32500C89DB2 /* RegisterBtnTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterBtnTableViewCell.swift; sourceTree = "<group>"; };
 		6FB2746E295EE32500C89DB2 /* RegisterBtnTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterBtnTableViewCell.xib; sourceTree = "<group>"; };
-		6FDBE18C296C460C003611F6 /* exampleApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = exampleApi.swift; sourceTree = "<group>"; };
 		6FE7C107293F609000B61E13 /* CafeClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeClass.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -259,6 +258,7 @@
 				6F0291E7293BB624003D9FF1 /* libsqlite3.tbd in Frameworks */,
 				6F029270293BB87C003D9FF1 /* DaumMap.framework in Frameworks */,
 				6F0291E2293BB5A3003D9FF1 /* QuartzCore.framework in Frameworks */,
+				6F36FBAE2971A1E700F9322B /* Alamofire in Frameworks */,
 				6F0291E9293BB63D003D9FF1 /* libxml2.tbd in Frameworks */,
 				6F0291E0293BB58A003D9FF1 /* CoreLocation.framework in Frameworks */,
 				6F0291DE293BB57A003D9FF1 /* SystemConfiguration.framework in Frameworks */,
@@ -592,7 +592,6 @@
 			children = (
 				6FE7C107293F609000B61E13 /* CafeClass.swift */,
 				6F4E3FF02951F6D700B8A84C /* StarRatingUISlider.swift */,
-				6FDBE18C296C460C003611F6 /* exampleApi.swift */,
 			);
 			path = Class;
 			sourceTree = "<group>";
@@ -615,6 +614,7 @@
 			name = Cafree;
 			packageProductDependencies = (
 				6FC0FCFE2954ACF8009448C6 /* BSImagePicker */,
+				6F36FBAD2971A1E700F9322B /* Alamofire */,
 			);
 			productName = Cafree;
 			productReference = 1373C2AF29252BFA00FA2130 /* Cafree.app */;
@@ -690,6 +690,7 @@
 			mainGroup = 1373C2A629252BFA00FA2130;
 			packageReferences = (
 				6FC0FCFD2954ACF8009448C6 /* XCRemoteSwiftPackageReference "BSImagePicker" */,
+				6F36FBAC2971A1E600F9322B /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = 1373C2B029252BFA00FA2130 /* Products */;
 			projectDirPath = "";
@@ -781,7 +782,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				6F0B03982955B8CB009662E2 /* PhotoBtnCollectionViewCell.swift in Sources */,
-				6FDBE18D296C460C003611F6 /* exampleApi.swift in Sources */,
 				130A1CC32951BCA600446DF4 /* FeedTabViewController.swift in Sources */,
 				6F3315E7294C72A700B0B2DC /* CafeDetailLocalTableViewCell.swift in Sources */,
 				6F0E729F296327E00076E752 /* ConseptChangeViewController.swift in Sources */,
@@ -1199,6 +1199,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		6F36FBAC2971A1E600F9322B /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.6.1;
+			};
+		};
 		6FC0FCFD2954ACF8009448C6 /* XCRemoteSwiftPackageReference "BSImagePicker" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/mikaoj/BSImagePicker.git";
@@ -1210,6 +1218,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		6F36FBAD2971A1E700F9322B /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6F36FBAC2971A1E600F9322B /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
 		6FC0FCFE2954ACF8009448C6 /* BSImagePicker */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 6FC0FCFD2954ACF8009448C6 /* XCRemoteSwiftPackageReference "BSImagePicker" */;
