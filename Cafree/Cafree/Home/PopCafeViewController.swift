@@ -7,6 +7,7 @@
 
 import UIKit
 import CoreLocation
+import Alamofire
 
 class PopCafeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, CLLocationManagerDelegate{
     
@@ -36,6 +37,8 @@ class PopCafeViewController: UIViewController, UITableViewDelegate, UITableViewD
         locationManager.delegate = self
         
         locationManager.requestWhenInUseAuthorization()
+        
+        getTest()
         
     }
     
@@ -188,6 +191,22 @@ class PopCafeViewController: UIViewController, UITableViewDelegate, UITableViewD
             let detailCafeView = segue.destination as! DetailCafeViewController
             detailCafeView.receiveItem(cafes[((indexPath as NSIndexPath?)?.section)!])
         }
+    }
+    
+    func getTest() {
+            let url = "https://jsonplaceholder.typicode.com/todos/1"
+            AF.request(url,
+                       method: .get,
+                       parameters: nil,
+                       encoding: URLEncoding.default,
+                       headers: ["Content-Type":"application/json", "Accept":"application/json"])
+                .validate(statusCode: 200..<300)
+                .responseDecodable(of: Cafes.self) { (response) in
+                    //여기서 가져온 데이터를 자유롭게 활용하세요.
+                    guard let cafes = response.value else {return}
+                    print(cafes.title)
+                    print("성공?")
+            }
     }
 }
 extension PopCafeViewController: CafeTableViewCellDelegate{

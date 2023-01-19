@@ -6,56 +6,91 @@
 //  api 통신 테스트
 
 import Foundation
+import UIKit
 
-class exampleApi {
-    //let url = URL(string: "https://~~~~~~")
-//
-    ////Request 객체
-    //var request = URLRequest(url: url)
-    //request.httpMethod = "GET"
-    //
-    ////URLSessionConfiguration - shared(singleton)
-    ////URLSessionTask - DataTask
-    ////Completion Handler를 통한 Response 처리
-    //let dataTask = URLSession.shared.dataTask(with: request, completionHandler: {[weak self] data, response, error in
-    //    guard error == nil,
-    //    let response = response as? HTTPURLResponse,
-    //    let data = data,
-    //    //응답으로 받은 JSON Decoding
-    //    let movie = try? JSONDecoder().decode([movie].self, from: data) else{
-    //          print("ERROR : URLSesstion data task \(error?.localizedDescription ?? "")")
-    //          return
-    //     }
-//
-    //    //상태 확인
-    //    switch response.statusCode {
-      //     case (200...299): //성공
-      //        self.movieList += movie
-//
-      //        DispatchQueue.main.async {
-      //          self.tableView.reloadData()
-      //        }
-      //
-      //     case (400...499): //client error
-      //        print("""
-      //           ERROR: Client Error - \(response.statusCode)
-      //           Response: \(response)
-      //        """)
-      //
-      //     case(500...599): //server error
-      //        print("""
-      //           ERROR: Server Error - \(response.statusCode)
-      //           Response: \(response)
-      //        """)
-      //
-      //     default:
-      //        print("""
-  //               ERROR: \(response.statusCode)
-  //               Response: \(response)
-  //            """)
-  //     }
-  //  })
-//
-  //  //선언 후 꼭 resume(실행)을 해주어야 함
-  //  dataTask.resume()
+struct Response: Codable {
+    let success: Bool
+    let result: String
+    let message: String
+}
+
+func requestGet(url: String, completionHandler: @escaping (Bool, Any) -> Void) {
+    guard let url = URL(string: url) else {
+        print("Error: cannot create URL")
+        return
+    }
+    
+    var request = URLRequest(url: url)
+    request.httpMethod = "GET"
+    
+    URLSession.shared.dataTask(with: request) { data, response, error in
+        guard error == nil else {
+            print("Error: error calling GET")
+            print(error!)
+            return
+        }
+        guard let data = data else {
+            print("Error: Did not receive data")
+            return
+        }
+        guard let response = response as? HTTPURLResponse, (200 ..< 300) ~= response.statusCode else {
+            print("Error: HTTP request failed")
+            return
+        }
+        guard let output = try? JSONDecoder().decode(Response.self, from: data) else {
+            print("Error: JSON Data Parsing failed")
+            return
+        }
+        
+        completionHandler(true, output.result)
+    }.resume()
+}
+
+func requestPost(url: String, method: String, param: [String: Any], completionHandler: @escaping (Bool, Any) -> Void) {
+    let sendData = try! JSONSerialization.data(withJSONObject: param, options: [])
+    
+    guard let url = URL(string: url) else {
+        print("Error: cannot create URL")
+        return
+    }
+    
+    var request = URLRequest(url: url)
+    request.httpMethod = method
+    request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+    request.httpBody = sendData
+    
+    URLSession.shared.dataTask(with: request) { (data, response, error) in
+        guard error == nil else {
+            print("Error: error calling GET")
+            print(error!)
+            return
+        }
+        guard let data = data else {
+            print("Error: Did not receive data")
+            return
+        }
+        guard let response = response as? HTTPURLResponse, (200 ..< 300) ~= response.statusCode else {
+            print("Error: HTTP request failed")
+            return
+        }
+        guard let output = try? JSONDecoder().decode(Response.self, from: data) else {
+            print("Error: JSON Data Parsing failed")
+            return
+        }
+        
+        completionHandler(true, output.result)
+    }.resume()
+}
+
+func request(_ url: String, _ method: String, _ param: [String: Any]? = nil, completionHandler: @escaping (Bool, Any) -> Void) {
+    if method == "GET" {
+        requestGet(url: url) { (success, data) in
+            completionHandler(success, data)
+        }
+    }
+    else {
+        requestPost(url: url, method: method, param: param!) { (success, data) in
+            completionHandler(success, data)
+        }
+    }
 }

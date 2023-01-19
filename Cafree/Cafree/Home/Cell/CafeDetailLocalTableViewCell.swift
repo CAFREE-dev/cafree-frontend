@@ -17,6 +17,7 @@ class CafeDetailLocalTableViewCell: UITableViewCell {
     
     @IBOutlet var copyAdressBtn: UIButton!
     
+    var delegate: CafeDetailLocalTableViewCellDelegate?
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -25,6 +26,7 @@ class CafeDetailLocalTableViewCell: UITableViewCell {
 
     @IBAction func clickedCopyAdressBtn(_ sender: Any) {
         UIPasteboard.general.string = cafeAdressLabel.text
+        self.delegate?.copyAdress()
     }
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
@@ -32,4 +34,7 @@ class CafeDetailLocalTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+}
+protocol CafeDetailLocalTableViewCellDelegate: AnyObject {
+    func copyAdress()
 }
