@@ -8,22 +8,39 @@
 import UIKit
 
 struct Cafe: Decodable {
-  let id: Int
-  let title: String
-  let openingCrawl: String
-  let director: String
-  let producer: String
-  let releaseDate: String
-  let starships: [String]
+    let id: Int
+    let title: String
+    let mapUrl: String
+    let liceCount: String
+    let preview: String
+    let isMarked: String
+    let sido: String
+    let sigungu: String
+    let eupmyun: String
+    let dong: String
+    let buildNo: String
+    let branch: String
+    let latitude: Float
+    let longitude: Float
+    let distance: Float
   
   enum CodingKeys: String, CodingKey {
-    case id = "episode_id"
+    //case id = "episode_id"
+    case id
     case title
-    case openingCrawl = "opening_crawl"
-    case director
-    case producer
-    case releaseDate = "release_date"
-    case starships
+    case mapUrl
+    case liceCount
+    case preview
+    case isMarked
+    case sido
+    case sigungu
+    case eupmyun
+    case dong
+    case buildNo
+    case branch
+    case latitude
+    case longitude
+    case distance
   }
 }
 
