@@ -103,7 +103,7 @@ class PopCafeViewController: UIViewController, UITableViewDelegate, UITableViewD
                 return 190
             }
         }else{
-            return 210
+            return 220
         }
     }
     
@@ -208,6 +208,7 @@ class PopCafeViewController: UIViewController, UITableViewDelegate, UITableViewD
                 guard let cafesData = response.value else {return}
                 print(cafesData.title)
                 self.cafes = ["garbage"]
+                self.cafes.append(cafesData.title)
                 self.cafes.append(cafesData.title)
                 print("성공?")
                 self.cafeTableView.reloadData()
