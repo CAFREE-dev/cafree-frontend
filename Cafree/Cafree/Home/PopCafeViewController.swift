@@ -17,7 +17,7 @@ class PopCafeViewController: UIViewController, UITableViewDelegate, UITableViewD
     //위치 매니져
     var locationManager: CLLocationManager!
     
-    var cafes = ["garbage","어퍼스트로피","sample1","sample2","sample3"]
+    var cafes = ["garbage"]
     let cellSpacingHeight: CGFloat = 1
     
     let cellName = "CafeTableViewCell"
@@ -103,7 +103,7 @@ class PopCafeViewController: UIViewController, UITableViewDelegate, UITableViewD
                 return 190
             }
         }else{
-            return 210
+            return 220
         }
     }
     
@@ -193,20 +193,26 @@ class PopCafeViewController: UIViewController, UITableViewDelegate, UITableViewD
         }
     }
     
+    //get 테스트 함수
     func getTest() {
-            let url = "https://jsonplaceholder.typicode.com/todos/1"
-            AF.request(url,
-                       method: .get,
-                       parameters: nil,
-                       encoding: URLEncoding.default,
-                       headers: ["Content-Type":"application/json", "Accept":"application/json"])
-                .validate(statusCode: 200..<300)
-                .responseDecodable(of: Cafes.self) { (response) in
-                    //여기서 가져온 데이터를 자유롭게 활용하세요.
-                    guard let cafes = response.value else {return}
-                    print(cafes.title)
-                    print("성공?")
-            }
+        //https://cafree.net/get/api/v1/cafes
+        let url = "https://jsonplaceholder.typicode.com/todos/1"
+        AF.request(url,
+                   method: .get,
+                   parameters: nil,
+                   encoding: URLEncoding.default,
+                   headers: ["Content-Type":"application/json", "Accept":"application/json"])
+            .validate(statusCode: 200..<300)
+            .responseDecodable(of: Cafes.self) { (response) in
+                //여기서 가져온 데이터를 자유롭게 활용하세요.
+                guard let cafesData = response.value else {return}
+                print(cafesData.title)
+                self.cafes = ["garbage"]
+                self.cafes.append(cafesData.title)
+                self.cafes.append(cafesData.title)
+                print("성공?")
+                self.cafeTableView.reloadData()
+        }
     }
 }
 extension PopCafeViewController: CafeTableViewCellDelegate{

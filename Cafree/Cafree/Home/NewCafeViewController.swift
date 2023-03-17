@@ -61,7 +61,7 @@ class NewCafeViewController: UIViewController,UITableViewDelegate, UITableViewDa
                 return 190
             }
         }else{
-            return 210
+            return 220
         }
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
