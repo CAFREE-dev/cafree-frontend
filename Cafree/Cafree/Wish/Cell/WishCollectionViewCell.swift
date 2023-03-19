@@ -1,13 +1,10 @@
-//
-//  WishTableViewCell.swift
-//  Cafree
-//
-//  Created by 한수빈 on 2022/12/25.
-//
+// 찜 - 찜 목록 셀
 
 import UIKit
 
 class WishCollectionViewCell: UICollectionViewCell {
+    
+    weak var  wishCellDelegate : WishCollectionViewCellDelegate?
     
     @IBOutlet var wishView: UIView!
     @IBOutlet var cafeImg: UIImageView!
@@ -17,9 +14,18 @@ class WishCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet var wishBtn: UIButton!
     
+    @IBAction func wishBtnClicked(_ sender: UIButton) {
+        wishCellDelegate?.wishBtnClicked(sender)
+    }
+    
+    
 
     override func awakeFromNib() {
         super.awakeFromNib()
         
     }
+}
+
+protocol WishCollectionViewCellDelegate : AnyObject {
+    func wishBtnClicked(_ sender: UIButton)
 }

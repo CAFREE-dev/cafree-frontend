@@ -64,12 +64,16 @@
                                             </attributes>
                                         </fragment>
                                     </attributedString>
+                                    <color key="baseForegroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="clickedCopyAdressBtn:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="7kV-aE-jaR"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="주소나오는 곳" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QDn-db-THY">
                                 <rect key="frame" x="8" y="329" width="175" height="16"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -77,7 +81,9 @@
                                 <rect key="frame" x="0.0" y="369" width="363" height="35"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="피드에서 둘러보기">
+                                    <color key="baseBackgroundColor" name="Secondary"/>
+                                </buttonConfiguration>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -87,6 +93,8 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="backGroundView" destination="mGr-ky-yTZ" id="P35-zm-zgv"/>
+                <outlet property="cafeAdressLabel" destination="QDn-db-THY" id="B81-Ha-qqE"/>
+                <outlet property="copyAdressBtn" destination="hot-Hd-wwu" id="Mdg-xJ-KPf"/>
                 <outlet property="mapView" destination="94b-N3-xyk" id="l5K-qQ-5k9"/>
             </connections>
             <point key="canvasLocation" x="138.1679389312977" y="19.718309859154932"/>

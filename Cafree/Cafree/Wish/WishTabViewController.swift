@@ -35,9 +35,11 @@ class WishTabViewController: UIViewController  {
     
     func initSortBtn() {
         sortBtn.setTitle("최신순", for: .normal)
-        sortBtn.layer.cornerRadius = 4
-        sortBtn.layer.borderColor = UIColor.lightGray.cgColor
-        sortBtn.layer.borderWidth = 1
+        sortBtn.titleLabel?.font = UIFont(name: "SUITVariable-Regular", size: 12)
+        
+        sortBtn.layer.cornerRadius = 16
+         sortBtn.layer.borderColor = UIColor.lightGray.cgColor
+        sortBtn.layer.borderWidth = 0.6
        
         
         sortBtn.setTitleColor(.black, for: .normal)
@@ -56,7 +58,7 @@ class WishTabViewController: UIViewController  {
 
 extension WishTabViewController : UICollectionViewDelegateFlowLayout, UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: self.view.bounds.width, height: self.view.bounds.height)
+        return CGSize(width: self.view.bounds.width - 32, height: self.view.bounds.height)
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -67,14 +69,29 @@ extension WishTabViewController : UICollectionViewDelegateFlowLayout, UICollecti
         
         let cell = wishTabView.dequeueReusableCell(withReuseIdentifier: "WishCollectionViewCell", for: indexPath) as! WishCollectionViewCell
         
+        cell.wishCellDelegate = self
               //  cell.cafeImg.sizeToFit()
+        cell.cafeName.text = "스타벅스 안양운동장사거리DT점"
+        cell.cafeLocal.text = "경기 안양시 동안구 관악대로 234"
         
-                cell.layer.borderColor = UIColor.lightGray.cgColor
-                cell.layer.borderWidth = 1
-                cell.layer.cornerRadius = 15
-
+        cell.cafeName.textColor = .secondary
+        cell.cafeLocal.textColor = .gray
         
-                return cell
+        cell.cafeName.font = UIFont(name: "SUITVariable-Bold", size: 12)
+        cell.cafeLocal.font = UIFont(name: "SUITVariable-Medium", size: 10)
+        
+        
+        cell.wishBtn.setImage(UIImage(named: "nice1"), for: .normal)
+        cell.wishBtn.setImage(UIImage(named: "nice2"), for: .selected)
+        cell.wishBtn.isSelected = true
+        
+        cell.layer.borderColor = UIColor.lightGray.cgColor
+        cell.layer.borderWidth = 1
+        cell.layer.cornerRadius = 4
+                
+        
+        
+        return cell
         
     }
     
@@ -88,5 +105,16 @@ extension WishTabViewController : UICollectionViewDelegateFlowLayout, UICollecti
 //        return 16.0
 //    }
     
+}
+
+extension WishTabViewController : WishCollectionViewCellDelegate {
+    func wishBtnClicked(_ sender: UIButton) {
+        print("wishBtnClicked")
+        if sender.isSelected {
+            sender.isSelected = false
+        }else {
+            sender.isSelected = true
+        }
+    }
 }
 
